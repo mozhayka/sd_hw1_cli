@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "hw1-cli"
+version = "0.1.0"
+description = "Homework Assignment for System Design course at ITMO University"
+authors = [
+    "Matveii Mogilevskii <fixme@to.do>",
+    "Andrey Mozhaev <fixme@to.do>",
+    "Mikhail Shadrin <shadrin.michael@yandex.ru>",
+    "Kirill Yatsenko <kirillyat@gmail.com>"
+]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "cli_interpretator" }]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
