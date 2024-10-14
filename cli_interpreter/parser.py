@@ -1,6 +1,5 @@
 import re
 import shlex
-from typing import List
 
 from cli_interpreter.commands import Command, CatCommand, EchoCommand, WcCommand, PwdCommand, ExitCommand, \
     UnknownCommand, AssignCommand
@@ -15,14 +14,14 @@ class UserInputParser:
     def __init__(self, cli_context: CliContext):
         self.context = cli_context
 
-    def parse(self, input_string: str) -> List[Command]:
+    def parse(self, input_string: str) -> list[Command]:
         """
         Преобразует пользовательский ввод в последовательность экземпляров `Command`
 
         :param input_string: строка, введенная пользователем
         :return: список команд для выполнения
         """
-        commands: List[Command] = []
+        commands: list[Command] = []
         command_strings = input_string.split('|')  # Если это pipeline, разобьём его на команды
         for command_string in command_strings:
             tokens = self.__tokenize_command(command_string)  # Разделим строку команды на токены
@@ -37,7 +36,7 @@ class UserInputParser:
 
         return commands
 
-    def __tokenize_command(self, command_string: str) -> List[str]:
+    def __tokenize_command(self, command_string: str) -> list[str]:
         """
         Разделяет строку на команды с учетом кавычек
 
@@ -49,7 +48,7 @@ class UserInputParser:
         tokens.escapedquotes = True
         return list(iter(tokens.get_token, ''))
 
-    def __substitute_envs(self, tokens: List[str]) -> List[str]:
+    def __substitute_envs(self, tokens: list[str]) -> list[str]:
         """
         Подставляет значения переменных окружения в токены.
         Если токен ограничен одинарными кавычками, подстановку не выполняет
@@ -78,7 +77,7 @@ class UserInputParser:
         variable = match.group(1)
         return self.context.get(variable)
 
-    def __extract_assignments(self, tokens: List[str]) -> (List[AssignCommand], List[str]):
+    def __extract_assignments(self, tokens: list[str]) -> (list[AssignCommand], list[str]):
         """
         Извлекает из токенов все впереди идущие операции присвоения
 
@@ -110,7 +109,7 @@ class UserInputParser:
 
         return assignments, tokens[i:]
 
-    def __create_command(self, tokens: List[str]) -> Command:
+    def __create_command(self, tokens: list[str]) -> Command:
         """Создает команду на основе токенов
 
         :param tokens: список токенов команды
@@ -133,7 +132,7 @@ class UserInputParser:
 
         return UnknownCommand(args=tokens)  # Передадим все токены на исполнение ОС
 
-    def __strip_quotes(self, args: List[str]):
+    def __strip_quotes(self, args: list[str]):
         """
         Удаляет кавычки у аргументов, если они есть
 

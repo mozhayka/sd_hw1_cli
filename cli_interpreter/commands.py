@@ -1,6 +1,6 @@
 import sys
 from abc import ABC, abstractmethod
-from typing import List, TextIO
+from typing import TextIO
 
 
 class Command(ABC):
@@ -9,7 +9,7 @@ class Command(ABC):
     """
 
     def __init__(self,
-                 args: List[str] = None,
+                 args: list[str] = None,
                  input_stream: TextIO = None,
                  output_stream: TextIO = None):
         """Конструктор класса команды

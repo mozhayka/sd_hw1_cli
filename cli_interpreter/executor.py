@@ -1,5 +1,3 @@
-from typing import List
-
 from cli_interpreter.commands import Command
 
 
@@ -16,7 +14,7 @@ class CommandExecutor:
         self.sce = SingleCommandExecutor()
         self.pe = PipeExecutor()
 
-    def execute(self, commands: List[Command]) -> str:
+    def execute(self, commands: list[Command]) -> str:
         """
         Запуск обработки списка команд.
         Если список единичной длины, передает обработку первого элемента списка в `SingleCommandExecutor`.
@@ -47,7 +45,7 @@ class PipeExecutor:
     Обработчик нескольких команд, выстроенных в pipeline
     """
 
-    def execute(self, commands: List[Command]) -> str:
+    def execute(self, commands: list[Command]) -> str:
         """
         Последовательно исполняет каждую команду, для команд не в начале и не в конце последовательности
         переопределяет потоки ввода и вывода
