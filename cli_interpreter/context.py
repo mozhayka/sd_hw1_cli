@@ -1,10 +1,15 @@
-from typing import Dict
+import os
+import re
 
 
 class CliContext:
 
     def __init__(self):
-        self.env: Dict[str, str] = dict()  # TODO: попробовать сделать импорт переменных окружения текущего пользователя
+        self.env: dict[str, str] = dict(os.environ)
+
+    @staticmethod
+    def _is_valid_variable_name(variable: str):
+        return re.match(r'^[A-Za-z_][A-Za-z0-9_]*$', variable) is not None
 
     def get(self, variable: str) -> str:
         """
@@ -12,10 +17,7 @@ class CliContext:
         :param variable: Название переменной окружения
         :return: Значение переменной окружения, если такая есть в контексте; иначе возвращает пустую строку
         """
-        if variable in self.env:
-            return self.env[variable]
-
-        return ''
+        return self.env.get(variable, "")
 
     def set(self, variable: str, value: str) -> None:
         """
@@ -25,4 +27,6 @@ class CliContext:
         :param variable: Название переменной окружения
         :param value: Значение переменной окружения
         """
+        if not self._is_valid_variable_name(variable):
+            raise ValueError(f"Invalid environment variable name: '{variable}'")
         self.env[variable] = value
