@@ -1,4 +1,5 @@
 import os
+import subprocess
 import sys
 from abc import ABC, abstractmethod
 from typing import TextIO
@@ -57,6 +58,19 @@ class Command(ABC):
         """
         return f"{type(self).__name__}{self.__dict__}"
 
+    def _write_output(self, output: str) -> None:
+        """
+        Выводит переданный текст в поток вывода
+
+        :param output: выводимый текст
+        """
+        if self.output_stream:
+            self.output_stream.write(output)
+            self.output_stream.flush()
+        else:
+            sys.stdout.write(output)
+            sys.stdout.flush()
+
 
 class CatCommand(Command):
     """
@@ -69,11 +83,7 @@ class CatCommand(Command):
             try:
                 with open(filename, "r") as file:
                     content = file.read()
-                    if self.output_stream:
-                        self.output_stream.write(content)
-                        self.output_stream.flush()
-                    else:
-                        sys.stdout.write(content)
+                    self._write_output(content)
             except FileNotFoundError:
                 sys.stderr.write(f"cat: {filename}: No such file or directory\n")
             except Exception as e:
@@ -97,11 +107,7 @@ class EchoCommand(Command):
             output = " ".join(self.args)
 
         output = f"{output}\n"
-        if self.output_stream is None:
-            sys.stdout.write(output)
-        else:
-            self.output_stream.write(output)
-            self.output_stream.flush()
+        self._write_output(output)
 
 
 class WcCommand(Command):
@@ -120,11 +126,7 @@ class WcCommand(Command):
                     num_bytes = len(content.encode("utf-8"))
 
                     result = f"{num_lines} {num_words} {num_bytes} {filename}\n"
-                    if self.output_stream:
-                        self.output_stream.write(result)
-                        self.output_stream.flush()
-                    else:
-                        sys.stdout.write(result)
+                    self._write_output(result)
             except FileNotFoundError:
                 sys.stderr.write(f"wc: {filename}: No such file or directory\n")
             except Exception as e:
@@ -140,11 +142,7 @@ class PwdCommand(Command):
 
     def execute(self):
         current_dir = os.getcwd() + "\n"
-        if self.output_stream:
-            self.output_stream.write(current_dir)
-            self.output_stream.flush()
-        else:
-            sys.stdout.write(current_dir)
+        self._write_output(current_dir)
 
 
 class ExitCommand(Command):
@@ -178,5 +176,5 @@ class UnknownCommand(Command):
     """
 
     def execute(self):
-        command = " ".join(self.args)
-        os.system(command)
+        output = subprocess.run(self.args, capture_output=True)
+        self._write_output(output.stdout.decode("utf-8"))
