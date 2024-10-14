@@ -1,7 +1,14 @@
 import pytest
 
-from cli_interpreter.commands import CatCommand, EchoCommand, WcCommand, PwdCommand, ExitCommand, \
-    UnknownCommand, AssignCommand
+from cli_interpreter.commands import (
+    CatCommand,
+    EchoCommand,
+    WcCommand,
+    PwdCommand,
+    ExitCommand,
+    UnknownCommand,
+    AssignCommand,
+)
 from cli_interpreter.context import CliContext
 from cli_interpreter.parser import UserInputParser
 
@@ -75,14 +82,14 @@ def test_substitution():
 
 def test_substitution_weak_quoting():
     context.set("A", "foo")
-    commands = parser.parse("echo \"$A\"")
+    commands = parser.parse('echo "$A"')
     assert len(commands) == 1
     assert commands[0] == EchoCommand(["foo"])
 
 
 def test_substitution_full_quoting():
     context.set("A", "foo")
-    commands = parser.parse("echo \'$A\'")
+    commands = parser.parse("echo '$A'")
     assert len(commands) == 1
     assert commands[0] == EchoCommand(["$A"])
 
