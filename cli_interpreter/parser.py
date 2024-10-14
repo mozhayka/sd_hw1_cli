@@ -40,16 +40,20 @@ class UserInputParser:
             tokens = self.__substitute_envs(
                 tokens
             )  # Подставляем значения из переменных окружения
-            assignments, tokens = self.__extract_assignments(
+            assignment, tokens = self.__extract_assignments(
                 tokens
             )  # Извлечем операции присвоения
-            if tokens:  # Если после всех присвоений еще остались токены в команде
-                command = self.__create_command(
-                    tokens
-                )  # Создадим команду на основе имеющихся токенов, игнорируя присвоения
-                commands.append(command)
-            else:
-                commands += assignments  # Иначе сохраним все команды присвоения
+
+            if (
+                    assignment  # Если строка состоит из операций присвоения
+                    and not tokens  # И других токенов нет
+            ):
+                return [assignment]  # Вернем команды присвоения переменных окружения
+
+            command = self.__create_command(
+                tokens
+            )  # Иначе создадим команду на основе имеющихся токенов, игнорируя присвоения
+            commands.append(command)
 
         return commands
 
@@ -98,14 +102,16 @@ class UserInputParser:
 
     def __extract_assignments(
         self, tokens: list[str]
-    ) -> (list[AssignCommand], list[str]):
+    ) -> (AssignCommand | None, list[str]):
         """
         Извлекает из токенов все впереди идущие операции присвоения
 
         :param tokens: список токенов команды
         :return: кортеж из команд присвоения и оставшихся токенов, если такие есть
         """
-        assignments = []
+        assignments: list[str] = (
+            []
+        )  # список, хранящий пары аргументов для операций присвоения
 
         i = 0
         while i < len(tokens):
@@ -122,15 +128,20 @@ class UserInputParser:
                 if not re.fullmatch(r"(\w+|\".*\"|\'.*\')", value):
                     break  # Если это не валидное значение переменной, прекратим обработку
                 else:
-                    value = self.__strip_quotes(value)[0]
+                    value = self.__strip_single_argument_quotes(value)
 
-                assignment = AssignCommand(args=[variable, value], context=self.context)
-                assignments.append(assignment)
+                assignments.append(variable)
+                assignments.append(value)
             else:
                 break
             i += 1
 
-        return assignments, tokens[i:]
+        assignment_command = (
+            AssignCommand(args=assignments, context=self.context)
+            if len(assignments) > 0
+            else None
+        )
+        return assignment_command, tokens[i:]
 
     def __create_command(self, tokens: list[str]) -> Command:
         """Создает команду на основе токенов
@@ -163,6 +174,15 @@ class UserInputParser:
         :return: аргументы команды без кавычек
         """
         stripped = []
-        for _arg in args:
-            stripped.append(_arg.strip("'\""))
+        for argument in args:
+            stripped.append(self.__strip_single_argument_quotes(argument))
         return stripped
+
+    def __strip_single_argument_quotes(self, argument: str):
+        """
+        Удаляет кавычки у строкового аргумента, если они есть
+
+        :param argument: строковый аргумент
+        :return: строковый аргумент без кавычек
+        """
+        return argument.strip("'\"")
