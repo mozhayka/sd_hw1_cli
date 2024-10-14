@@ -1,6 +1,10 @@
+import re
+import shlex
 from typing import List
 
-from cli_interpretator.commands.command import Command
+from cli_interpretator.commands.command import Command, CatCommand, EchoCommand, WcCommand, PwdCommand, ExitCommand, \
+    UnknownCommand, AssignCommand
+from cli_interpretator.context import CliContext
 
 
 class UserInputParser:
@@ -8,22 +12,135 @@ class UserInputParser:
     Модуль отвечает за преобразование входной строки в последовательность команд для последующего их исполнения
     """
 
-    def __init__(self, cli_context):
+    def __init__(self, cli_context: CliContext):
         self.context = cli_context
 
     def parse(self, input_string: str) -> List[Command]:
         """
         Преобразует пользовательский ввод в последовательность экземпляров `Command`
+
         :param input_string: строка, введенная пользователем
         :return: список команд для выполнения
         """
-        commands = []
-        pipes = input_string.split('|')
-        for pipe_command_string in pipes:
-            pipe_command = self.__parse_command(pipe_command_string)
-            commands.append(pipe_command)
+        commands: List[Command] = []
+        command_strings = input_string.split('|')  # Если это pipeline, разобьём его на команды
+        for command_string in command_strings:
+            tokens = self.__tokenize_command(command_string)  # Разделим строку команды на токены
+            tokens = self.__substitute_envs(tokens)  # Подставляем значения из переменных окружения
+            assignments, tokens = self.__extract_assignments(tokens)  # Извлечем операции присвоения
+            if tokens:  # Если после всех присвоений еще остались токены в команде
+                command = self.__create_command(
+                    tokens)  # Создадим команду на основе имеющихся токенов, игнорируя присвоения
+                commands.append(command)
+            else:
+                commands += assignments  # Иначе сохраним все команды присвоения
 
         return commands
 
-    def __parse_command(self, command_string: str) -> Command:
-        pass
+    def __tokenize_command(self, command_string: str) -> List[str]:
+        """
+        Разделяет строку на команды с учетом кавычек
+
+        :param command_string: строка команды
+        :return: список токенов
+        """
+        tokens = shlex.shlex(command_string, posix=False)
+        tokens.whitespace_split = True
+        tokens.escapedquotes = True
+        return list(iter(tokens.get_token, ''))
+
+    def __substitute_envs(self, tokens: List[str]) -> List[str]:
+        """
+        Подставляет значения переменных окружения в токены.
+        Если токен ограничен одинарными кавычками, подстановку не выполняет
+
+        :param tokens: список токенов
+        :return: список токенов с подставленными значениями переменных окружения
+        """
+        substituted_tokens = []
+        for token in tokens:
+            if token.startswith("'") and token.endswith("'"):
+                substituted_tokens.append(token)  # Пропускаем токены, начинающиеся в одинарных кавычках
+                continue
+
+            substituted_token = re.sub(r"\$(\w+)", self.__replace_env, token)
+            substituted_tokens.append(substituted_token)
+
+        return substituted_tokens
+
+    def __replace_env(self, match: re.Match) -> str:
+        """
+        По найденному совпадению извлекает значение переменной окружения и запрашивает её значение
+
+        :param match: найденное совпадение регулярного выражения
+        :return: значение переменной окружения
+        """
+        variable = match.group(1)
+        return self.context.get(variable)
+
+    def __extract_assignments(self, tokens: List[str]) -> (List[AssignCommand], List[str]):
+        """
+        Извлекает из токенов все впереди идущие операции присвоения
+
+        :param tokens: список токенов команды
+        :return: кортеж из команд присвоения и оставшихся токенов, если такие есть
+        """
+        assignments = []
+
+        i = 0
+        while i < len(tokens):
+            token = tokens[i]
+            assignment_params = token.split("=", 1)  # Разделяем присвоение на переменную и значение
+            if len(assignment_params) == 2:
+                variable = assignment_params[0]
+                if not re.fullmatch(r'\w+', variable):
+                    break  # Если это не валидное имя переменной, прекратим обработку
+
+                value = assignment_params[1]
+                if not re.fullmatch(r'(\w+|\".*\"|\'.*\')', value):
+                    break  # Если это не валидное значение переменной, прекратим обработку
+                else:
+                    value = self.__strip_quotes(value)[0]
+
+                assignment = AssignCommand(args=[variable, value])
+                assignments.append(assignment)
+            else:
+                break
+            i += 1
+
+        return assignments, tokens[i:]
+
+    def __create_command(self, tokens: List[str]) -> Command:
+        """Создает команду на основе токенов
+
+        :param tokens: список токенов команды
+        :return: экземпляр команды
+        """
+        command_name = tokens[0]
+        command_args = tokens[1:] if len(tokens) > 1 else []
+
+        # Сначала посмотрим, является ли эта команда одной из реализуемых нами
+        if command_name == "cat":
+            return CatCommand(self.__strip_quotes(command_args))
+        elif command_name == "echo":
+            return EchoCommand(self.__strip_quotes(command_args))
+        elif command_name == "wc":
+            return WcCommand(self.__strip_quotes(command_args))
+        elif command_name == "pwd":
+            return PwdCommand()
+        elif command_name == "exit":
+            return ExitCommand()
+
+        return UnknownCommand(args=tokens)  # Передадим все токены на исполнение ОС
+
+    def __strip_quotes(self, args: List[str]):
+        """
+        Удаляет кавычки у аргументов, если они есть
+
+        :param args: аргументы команды
+        :return: аргументы команды без кавычек
+        """
+        stripped = []
+        for _arg in args:
+            stripped.append(_arg.strip("'\""))
+        return stripped

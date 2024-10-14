@@ -6,6 +6,7 @@ from cli_interpretator.commands.command import Command
 class EchoCommand(Command):
     """
     Команда `echo` — вывести на экран свой аргумент (или аргументы)
+    # TODO: удалить
     """
 
     def execute(self):
