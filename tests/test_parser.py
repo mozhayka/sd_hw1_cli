@@ -56,8 +56,8 @@ def test_unknown_command():
 def test_assignment():
     commands = parser.parse("A=1 B=2")
     assert len(commands) == 2
-    assert commands[0] == AssignCommand(["A", "1"])
-    assert commands[1] == AssignCommand(["B", "2"])
+    assert commands[0] == AssignCommand(["A", "1"], context)
+    assert commands[1] == AssignCommand(["B", "2"], context)
 
 
 def test_ignore_assignment():

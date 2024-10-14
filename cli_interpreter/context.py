@@ -30,6 +30,3 @@ class CliContext:
         if not self._is_valid_variable_name(variable):
             raise ValueError(f"Invalid environment variable name: '{variable}'")
         self.env[variable] = value
-
-
-context = CliContext()

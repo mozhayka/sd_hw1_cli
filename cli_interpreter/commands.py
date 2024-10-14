@@ -2,7 +2,8 @@ import os
 import sys
 from abc import ABC, abstractmethod
 from typing import TextIO
-from cli_interpreter.context import context
+
+from cli_interpreter.context import CliContext
 
 
 class Command(ABC):
@@ -160,9 +161,13 @@ class AssignCommand(Command):
     Команда `VAR=VAL` - сохраняет в переменные окружения указанную переменную с указанным значением
     """
 
+    def __init__(self, args: list[str], context: CliContext):
+        super().__init__(args)
+        self.context = context
+
     def execute(self):
         if len(self.args) > 0:
-            context.set(self.args[0], self.args[1])
+            self.context.set(self.args[0], self.args[1])
         else:
             sys.stderr.write("No arguments for variable assignment\n")
 

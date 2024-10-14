@@ -124,7 +124,7 @@ class UserInputParser:
                 else:
                     value = self.__strip_quotes(value)[0]
 
-                assignment = AssignCommand(args=[variable, value])
+                assignment = AssignCommand(args=[variable, value], context=self.context)
                 assignments.append(assignment)
             else:
                 break
