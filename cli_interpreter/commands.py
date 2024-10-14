@@ -3,6 +3,8 @@ import sys
 from abc import ABC, abstractmethod
 from typing import TextIO
 
+from cli_interpreter.context import CliContext
+
 
 class Command(ABC):
     """
@@ -15,6 +17,11 @@ class Command(ABC):
         input_stream: TextIO = None,
         output_stream: TextIO = None,
     ):
+        """Конструктор класса команды
+        :param args: список строк-аргументов команды
+        :param input_stream: поток ввода
+        :param output_stream: поток вывода
+        """
         if args is None:
             args = []
         self.args = args
@@ -23,11 +30,19 @@ class Command(ABC):
 
     @abstractmethod
     def execute(self):
+        """Абстрактный метод, реализующий логику работы команды в наследнике"""
         pass
 
     def __eq__(self, other):
+        """
+        Переопределенный метод сравнения двух экземпляров команд
+
+        :param other: команда для сравнения
+        :return: `True`, если тип и значения полей совпадают; иначе `False`
+        """
         if type(self).__name__ != type(other).__name__:
             return False
+
         return (
             self.args == other.args
             and self.input_stream == other.input_stream
@@ -35,6 +50,11 @@ class Command(ABC):
         )
 
     def __str__(self):
+        """
+        Переопределенный метод отображения состояния объекта в строку
+
+        :return: строковое представление объекта
+        """
         return f"{type(self).__name__}{self.__dict__}"
 
 
@@ -141,13 +161,13 @@ class AssignCommand(Command):
     Команда `VAR=VAL` - сохраняет в переменные окружения указанную переменную с указанным значением
     """
 
+    def __init__(self, args: list[str], context: CliContext):
+        super().__init__(args)
+        self.context = context
+
     def execute(self):
         if len(self.args) > 0:
-            assignment = self.args[0].split("=", 1)
-            if len(assignment) == 2:
-                os.environ[assignment[0]] = assignment[1]
-            else:
-                sys.stderr.write("Invalid variable assignment\n")
+            self.context.set(self.args[0], self.args[1])
         else:
             sys.stderr.write("No arguments for variable assignment\n")
 
@@ -160,46 +180,3 @@ class UnknownCommand(Command):
     def execute(self):
         command = " ".join(self.args)
         os.system(command)
-
-
-def parse_command(input_string: str):
-    """
-    Разбирает строку команды и возвращает соответствующий объект команды
-    """
-    tokens = input_string.strip().split()
-
-    if len(tokens) == 0:
-        return None
-
-    if tokens[0] == "cat":
-        return CatCommand(args=tokens[1:])
-    elif tokens[0] == "echo":
-        return EchoCommand(args=tokens[1:])
-    elif tokens[0] == "wc":
-        return WcCommand(args=tokens[1:])
-    elif tokens[0] == "pwd":
-        return PwdCommand(args=tokens[1:])
-    elif tokens[0] == "exit":
-        return ExitCommand(args=tokens[1:])
-    elif "=" in tokens[0]:
-        return AssignCommand(args=[tokens[0]])
-    else:
-        return UnknownCommand(args=tokens)
-
-
-def main():
-    while True:
-        try:
-            input_command = input("shell> ")
-            command = parse_command(input_command)
-            if command:
-                command.execute()
-        except KeyboardInterrupt:
-            print("\nKeyboardInterrupt. Type 'exit' to quit.")
-        except EOFError:
-            print("\nEOFError. Exiting.")
-            break
-
-
-if __name__ == "__main__":
-    main()

@@ -1,5 +1,6 @@
 import io
 import os
+from unittest.mock import patch
 
 from cli_interpreter.commands import (
     EchoCommand,
@@ -9,7 +10,6 @@ from cli_interpreter.commands import (
     ExitCommand,
     UnknownCommand,
 )
-from unittest.mock import patch
 
 
 def test_echo_command_with_arguments():
@@ -20,8 +20,8 @@ def test_echo_command_with_arguments():
     cmd = EchoCommand(args=args, output_stream=output_stream)
     cmd.execute()
 
-    output = output_stream.getvalue().strip()
-    assert output == "Hello World"
+    output = output_stream.getvalue()
+    assert output == "Hello World\n"
 
 
 def test_echo_command_with_input_stream():
@@ -33,8 +33,8 @@ def test_echo_command_with_input_stream():
     cmd = EchoCommand(input_stream=input_stream, output_stream=output_stream)
     cmd.execute()
 
-    output = output_stream.getvalue().strip()
-    assert output == expected
+    output = output_stream.getvalue()
+    assert output == f"{expected}\n"
 
 
 def test_cat_command_with_existing_file(tmp_path):
@@ -48,7 +48,7 @@ def test_cat_command_with_existing_file(tmp_path):
     cmd = CatCommand(args=[str(file_path)], output_stream=output_stream)
     cmd.execute()
 
-    output = output_stream.getvalue().strip()
+    output = output_stream.getvalue()
     assert output == test_content
 
 

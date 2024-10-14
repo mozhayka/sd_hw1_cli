@@ -1,7 +1,6 @@
 from cli_interpreter.context import CliContext
 from cli_interpreter.executor import CommandExecutor
 from cli_interpreter.parser import UserInputParser
-from commands import Command
 
 
 class REPL:
@@ -38,7 +37,7 @@ class REPL:
 
             # Обработка ошибок при выполнении команд
             try:
-                commands[0].execute()
+                self.executor.execute(commands)
             except Exception as e:
                 print(f"Error while executing commands: {e}")
                 continue

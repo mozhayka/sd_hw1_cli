@@ -14,7 +14,7 @@ class CommandExecutor:
         self.sce = SingleCommandExecutor()
         self.pe = PipeExecutor()
 
-    def execute(self, commands: list[Command]) -> str:
+    def execute(self, commands: list[Command]) -> None:
         """
         Запуск обработки списка команд.
         Если список единичной длины, передает обработку первого элемента списка в `SingleCommandExecutor`.
@@ -23,7 +23,10 @@ class CommandExecutor:
         :param commands: список команд на исполнение
         :return: результат исполнения списка команд
         """
-        pass
+        if len(commands) == 1:
+            self.sce.execute(commands[0])
+        else:
+            self.pe.execute(commands)
 
 
 class SingleCommandExecutor:
@@ -31,13 +34,14 @@ class SingleCommandExecutor:
     Обработчик единичной команды
     """
 
-    def execute(self, command: Command) -> str:
+    @staticmethod
+    def execute(command: Command) -> None:
         """
         Исполняет переданную на вход команду и возвращает результат её исполнения
         :param command: исполняемая команда
         :return: результат исполнения
         """
-        pass  # TODO: реализовать
+        command.execute()
 
 
 class PipeExecutor:
