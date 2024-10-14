@@ -1,3 +1,4 @@
+import os
 import sys
 from abc import ABC, abstractmethod
 from typing import TextIO
@@ -8,15 +9,12 @@ class Command(ABC):
     Базовый класс команды, хранящий данные для выполнения команды
     """
 
-    def __init__(self,
-                 args: list[str] = None,
-                 input_stream: TextIO = None,
-                 output_stream: TextIO = None):
-        """Конструктор класса команды
-        :param args: список строк-аргументов команды
-        :param input_stream: поток ввода
-        :param output_stream: поток вывода
-        """
+    def __init__(
+        self,
+        args: list[str] = None,
+        input_stream: TextIO = None,
+        output_stream: TextIO = None,
+    ):
         if args is None:
             args = []
         self.args = args
@@ -25,27 +23,18 @@ class Command(ABC):
 
     @abstractmethod
     def execute(self):
-        """Абстрактный метод, реализующий логику работы команды в наследнике"""
         pass
 
     def __eq__(self, other):
-        """
-        Переопределенный метод сравнения двух экземпляров команд
-
-        :param other: команда для сравнения
-        :return: `True`, если тип и значения полей совпадают; иначе `False`
-        """
         if type(self).__name__ != type(other).__name__:
             return False
-
-        return self.args == other.args and self.input_stream == other.input_stream and self.output_stream == other.output_stream
+        return (
+            self.args == other.args
+            and self.input_stream == other.input_stream
+            and self.output_stream == other.output_stream
+        )
 
     def __str__(self):
-        """
-        Переопределенный метод отображения состояния объекта в строку
-
-        :return: строковое представление объекта
-        """
         return f"{type(self).__name__}{self.__dict__}"
 
 
@@ -55,7 +44,22 @@ class CatCommand(Command):
     """
 
     def execute(self):
-        pass
+        if len(self.args) > 0:
+            filename = self.args[0]
+            try:
+                with open(filename, "r") as file:
+                    content = file.read()
+                    if self.output_stream:
+                        self.output_stream.write(content)
+                        self.output_stream.flush()
+                    else:
+                        sys.stdout.write(content)
+            except FileNotFoundError:
+                sys.stderr.write(f"cat: {filename}: No such file or directory\n")
+            except Exception as e:
+                sys.stderr.write(f"cat: Error reading {filename}: {e}\n")
+        else:
+            sys.stderr.write("cat: Missing file argument\n")
 
 
 class EchoCommand(Command):
@@ -86,7 +90,27 @@ class WcCommand(Command):
     """
 
     def execute(self):
-        pass
+        if len(self.args) > 0:
+            filename = self.args[0]
+            try:
+                with open(filename, "r") as file:
+                    content = file.read()
+                    num_lines = content.count("\n")
+                    num_words = len(content.split())
+                    num_bytes = len(content.encode("utf-8"))
+
+                    result = f"{num_lines} {num_words} {num_bytes} {filename}\n"
+                    if self.output_stream:
+                        self.output_stream.write(result)
+                        self.output_stream.flush()
+                    else:
+                        sys.stdout.write(result)
+            except FileNotFoundError:
+                sys.stderr.write(f"wc: {filename}: No such file or directory\n")
+            except Exception as e:
+                sys.stderr.write(f"wc: Error reading {filename}: {e}\n")
+        else:
+            sys.stderr.write("wc: Missing file argument\n")
 
 
 class PwdCommand(Command):
@@ -95,7 +119,12 @@ class PwdCommand(Command):
     """
 
     def execute(self):
-        pass
+        current_dir = os.getcwd() + "\n"
+        if self.output_stream:
+            self.output_stream.write(current_dir)
+            self.output_stream.flush()
+        else:
+            sys.stdout.write(current_dir)
 
 
 class ExitCommand(Command):
@@ -104,22 +133,73 @@ class ExitCommand(Command):
     """
 
     def execute(self):
-        pass
+        sys.exit(0)
 
 
 class AssignCommand(Command):
     """
-    Команда `VAR=VAL` - сохраняет в переменные окружения указанную переменную с указанным значение
+    Команда `VAR=VAL` - сохраняет в переменные окружения указанную переменную с указанным значением
     """
 
     def execute(self):
-        pass
+        if len(self.args) > 0:
+            assignment = self.args[0].split("=", 1)
+            if len(assignment) == 2:
+                os.environ[assignment[0]] = assignment[1]
+            else:
+                sys.stderr.write("Invalid variable assignment\n")
+        else:
+            sys.stderr.write("No arguments for variable assignment\n")
 
 
 class UnknownCommand(Command):
     """
-    Любая другая команда, которую мы не смогли определить. Передает выполнение неизвестной команды ядру ОС
+    Любая другая команда, которую мы не смогли определить. Передает выполнение команды ядру ОС
     """
 
     def execute(self):
-        pass
+        command = " ".join(self.args)
+        os.system(command)
+
+
+def parse_command(input_string: str):
+    """
+    Разбирает строку команды и возвращает соответствующий объект команды
+    """
+    tokens = input_string.strip().split()
+
+    if len(tokens) == 0:
+        return None
+
+    if tokens[0] == "cat":
+        return CatCommand(args=tokens[1:])
+    elif tokens[0] == "echo":
+        return EchoCommand(args=tokens[1:])
+    elif tokens[0] == "wc":
+        return WcCommand(args=tokens[1:])
+    elif tokens[0] == "pwd":
+        return PwdCommand(args=tokens[1:])
+    elif tokens[0] == "exit":
+        return ExitCommand(args=tokens[1:])
+    elif "=" in tokens[0]:
+        return AssignCommand(args=[tokens[0]])
+    else:
+        return UnknownCommand(args=tokens)
+
+
+def main():
+    while True:
+        try:
+            input_command = input("shell> ")
+            command = parse_command(input_command)
+            if command:
+                command.execute()
+        except KeyboardInterrupt:
+            print("\nKeyboardInterrupt. Type 'exit' to quit.")
+        except EOFError:
+            print("\nEOFError. Exiting.")
+            break
+
+
+if __name__ == "__main__":
+    main()
