@@ -2,7 +2,7 @@ import re
 import shlex
 from typing import List
 
-from cli_interpretator.commands.command import Command, CatCommand, EchoCommand, WcCommand, PwdCommand, ExitCommand, \
+from cli_interpretator.commands import Command, CatCommand, EchoCommand, WcCommand, PwdCommand, ExitCommand, \
     UnknownCommand, AssignCommand
 from cli_interpretator.context import CliContext
 

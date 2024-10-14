@@ -64,7 +64,7 @@ class EchoCommand(Command):
     """
 
     def execute(self):
-        if self.args is None:
+        if len(self.args) == 0:
             if self.input_stream is None:
                 output = sys.stdin.read()
             else:

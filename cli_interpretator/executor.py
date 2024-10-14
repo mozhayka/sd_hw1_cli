@@ -1,6 +1,6 @@
 from typing import List
 
-from cli_interpretator.commands.command import Command
+from cli_interpretator.commands import Command
 
 
 class CommandExecutor:

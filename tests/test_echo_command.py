@@ -1,6 +1,6 @@
 import io
 
-from cli_interpretator.commands.echo_command import EchoCommand
+from cli_interpretator.commands import EchoCommand
 
 
 def test_execute_with_arguments(monkeypatch):
