@@ -3,7 +3,7 @@ from unittest.mock import patch, MagicMock
 import sys
 from io import StringIO
 
-from cli_repl import REPL
+from cli_interpreter.cli_repl import REPL
 
 
 class TestREPL(unittest.TestCase):
