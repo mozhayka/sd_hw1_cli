@@ -1,6 +1,7 @@
 from cli_interpreter.context import CliContext
 from cli_interpreter.executor import CommandExecutor
 from cli_interpreter.parser import UserInputParser
+from commands import Command
 
 
 class REPL:
@@ -8,7 +9,7 @@ class REPL:
     Главный модуль системы и точка входа. Оркеструет работу приложения и реализует Read-Execute-Print Loop.
     """
 
-    def init(self):
+    def __init__(self):
         """
         Конструктор класса. Инициализирует все необходимые для работы модули
         """
@@ -37,12 +38,12 @@ class REPL:
 
             # Обработка ошибок при выполнении команд
             try:
-                result = self.executor.execute(commands)
+                commands[0].execute()
             except Exception as e:
                 print(f"Error while executing commands: {e}")
                 continue
 
 
-if __name__ == "main":
+if __name__ == "__main__":
     repl = REPL()
     repl.run()
