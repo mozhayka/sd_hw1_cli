@@ -37,7 +37,7 @@ class REPL:
 
             # Обработка ошибок при выполнении команд
             try:
-                commands[0].execute()
+                self.executor.execute(commands)
             except Exception as e:
                 print(f"Error while executing commands: {e}")
                 continue

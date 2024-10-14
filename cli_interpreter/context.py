@@ -9,7 +9,7 @@ class CliContext:
 
     @staticmethod
     def _is_valid_variable_name(variable: str):
-        return re.match(r'^[A-Za-z_][A-Za-z0-9_]*$', variable) is not None
+        return re.match(r"^[A-Za-z_][A-Za-z0-9_]*$", variable) is not None
 
     def get(self, variable: str) -> str:
         """
