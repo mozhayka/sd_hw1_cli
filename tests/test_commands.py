@@ -9,7 +9,9 @@ from cli_interpreter.commands import (
     PwdCommand,
     ExitCommand,
     UnknownCommand,
+    AssignCommand,
 )
+from cli_interpreter.context import CliContext
 
 
 def test_echo_command_with_arguments():
@@ -132,3 +134,16 @@ def test_unknown_command():
 
         # Проверяем, что os.system был вызван с верным аргументом
         mock_system.assert_called_once_with("ls -la")
+
+
+def test_assign_command():
+    expected_env = "A"
+    expected_value = "1"
+
+    context = CliContext()
+    assert context.get(expected_env) == ""
+
+    command = AssignCommand(args=[expected_env, expected_value], context=context)
+    command.execute()
+
+    assert context.get(expected_env) == expected_value
