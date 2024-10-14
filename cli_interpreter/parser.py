@@ -2,9 +2,9 @@ import re
 import shlex
 from typing import List
 
-from cli_interpretator.commands import Command, CatCommand, EchoCommand, WcCommand, PwdCommand, ExitCommand, \
+from cli_interpreter.commands import Command, CatCommand, EchoCommand, WcCommand, PwdCommand, ExitCommand, \
     UnknownCommand, AssignCommand
-from cli_interpretator.context import CliContext
+from cli_interpreter.context import CliContext
 
 
 class UserInputParser:

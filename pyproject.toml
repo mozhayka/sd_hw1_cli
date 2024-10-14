@@ -10,7 +10,7 @@ authors = [
 ]
 license = "MIT"
 readme = "README.md"
-packages = [{ include = "cli_interpretator" }]
+packages = [{ include = "cli_interpreter" }]
 
 [tool.poetry.dependencies]
 python = "^3.12"
