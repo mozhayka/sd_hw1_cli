@@ -1,5 +1,4 @@
 import re
-import shlex
 
 from cli_interpreter.commands import (
     Command,
@@ -64,10 +63,18 @@ class UserInputParser:
         :param command_string: строка команды
         :return: список токенов
         """
-        tokens = shlex.shlex(command_string, posix=False)
-        tokens.whitespace_split = True
-        tokens.escapedquotes = True
-        return list(iter(tokens.get_token, ""))
+        special_delimiters = [("'", "'"), ('"', '"')]
+        regex_subexpressions = []
+        for start_delimiter, end_delimiter in special_delimiters:
+            regex_subexpressions.append(
+                r"\S*\{0}[^{1}]*\{1}".format(start_delimiter, end_delimiter)
+            )  # Регулярное выражение для подстрок, отделенных специальными разделителями
+        regex = (
+                "|".join(regex_subexpressions) + r"|\S+"
+        )  # Регулярное выражение для любых не пробельных символов
+
+        tokens = re.findall(regex, command_string)
+        return tokens
 
     def __substitute_envs(self, tokens: list[str]) -> list[str]:
         """
