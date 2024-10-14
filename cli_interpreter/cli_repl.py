@@ -1,4 +1,4 @@
-from cli_interpreter.context import CliContext
+from cli_interpreter.context import context
 from cli_interpreter.executor import CommandExecutor
 from cli_interpreter.parser import UserInputParser
 from commands import Command
@@ -13,7 +13,7 @@ class REPL:
         """
         Конструктор класса. Инициализирует все необходимые для работы модули
         """
-        self.context = CliContext()
+        self.context = context
         self.parser = UserInputParser(self.context)
         self.executor = CommandExecutor()
 

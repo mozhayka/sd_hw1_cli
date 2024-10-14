@@ -1,8 +1,16 @@
 import re
 import shlex
 
-from cli_interpreter.commands import Command, CatCommand, EchoCommand, WcCommand, PwdCommand, ExitCommand, \
-    UnknownCommand, AssignCommand
+from cli_interpreter.commands import (
+    Command,
+    CatCommand,
+    EchoCommand,
+    WcCommand,
+    PwdCommand,
+    ExitCommand,
+    UnknownCommand,
+    AssignCommand,
+)
 from cli_interpreter.context import CliContext
 
 
@@ -22,14 +30,23 @@ class UserInputParser:
         :return: список команд для выполнения
         """
         commands: list[Command] = []
-        command_strings = input_string.split('|')  # Если это pipeline, разобьём его на команды
+        command_strings = input_string.split(
+            "|"
+        )  # Если это pipeline, разобьём его на команды
         for command_string in command_strings:
-            tokens = self.__tokenize_command(command_string)  # Разделим строку команды на токены
-            tokens = self.__substitute_envs(tokens)  # Подставляем значения из переменных окружения
-            assignments, tokens = self.__extract_assignments(tokens)  # Извлечем операции присвоения
+            tokens = self.__tokenize_command(
+                command_string
+            )  # Разделим строку команды на токены
+            tokens = self.__substitute_envs(
+                tokens
+            )  # Подставляем значения из переменных окружения
+            assignments, tokens = self.__extract_assignments(
+                tokens
+            )  # Извлечем операции присвоения
             if tokens:  # Если после всех присвоений еще остались токены в команде
                 command = self.__create_command(
-                    tokens)  # Создадим команду на основе имеющихся токенов, игнорируя присвоения
+                    tokens
+                )  # Создадим команду на основе имеющихся токенов, игнорируя присвоения
                 commands.append(command)
             else:
                 commands += assignments  # Иначе сохраним все команды присвоения
@@ -46,7 +63,7 @@ class UserInputParser:
         tokens = shlex.shlex(command_string, posix=False)
         tokens.whitespace_split = True
         tokens.escapedquotes = True
-        return list(iter(tokens.get_token, ''))
+        return list(iter(tokens.get_token, ""))
 
     def __substitute_envs(self, tokens: list[str]) -> list[str]:
         """
@@ -59,7 +76,9 @@ class UserInputParser:
         substituted_tokens = []
         for token in tokens:
             if token.startswith("'") and token.endswith("'"):
-                substituted_tokens.append(token)  # Пропускаем токены, начинающиеся в одинарных кавычках
+                substituted_tokens.append(
+                    token
+                )  # Пропускаем токены, начинающиеся в одинарных кавычках
                 continue
 
             substituted_token = re.sub(r"\$(\w+)", self.__replace_env, token)
@@ -77,7 +96,9 @@ class UserInputParser:
         variable = match.group(1)
         return self.context.get(variable)
 
-    def __extract_assignments(self, tokens: list[str]) -> (list[AssignCommand], list[str]):
+    def __extract_assignments(
+        self, tokens: list[str]
+    ) -> (list[AssignCommand], list[str]):
         """
         Извлекает из токенов все впереди идущие операции присвоения
 
@@ -89,14 +110,16 @@ class UserInputParser:
         i = 0
         while i < len(tokens):
             token = tokens[i]
-            assignment_params = token.split("=", 1)  # Разделяем присвоение на переменную и значение
+            assignment_params = token.split(
+                "=", 1
+            )  # Разделяем присвоение на переменную и значение
             if len(assignment_params) == 2:
                 variable = assignment_params[0]
-                if not re.fullmatch(r'\w+', variable):
+                if not re.fullmatch(r"\w+", variable):
                     break  # Если это не валидное имя переменной, прекратим обработку
 
                 value = assignment_params[1]
-                if not re.fullmatch(r'(\w+|\".*\"|\'.*\')', value):
+                if not re.fullmatch(r"(\w+|\".*\"|\'.*\')", value):
                     break  # Если это не валидное значение переменной, прекратим обработку
                 else:
                     value = self.__strip_quotes(value)[0]
