@@ -2,7 +2,7 @@ import os
 import sys
 from abc import ABC, abstractmethod
 from typing import TextIO
-from context import context
+from cli_interpreter.context import context
 
 
 class Command(ABC):
