@@ -42,9 +42,6 @@ class REPL:
                 print(f"Error while executing commands: {e}")
                 continue
 
-            if result == 1:
-                break
-
 
 if __name__ == "main":
     repl = REPL()
