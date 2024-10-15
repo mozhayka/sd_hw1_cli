@@ -1,6 +1,6 @@
 import io
 import os
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 
 from cli_interpreter.commands import (
     EchoCommand,
@@ -9,7 +9,9 @@ from cli_interpreter.commands import (
     PwdCommand,
     ExitCommand,
     UnknownCommand,
+    AssignCommand,
 )
+from cli_interpreter.context import CliContext
 
 
 def test_echo_command_with_arguments():
@@ -126,9 +128,26 @@ def test_exit_command():
 
 def test_unknown_command():
     """Тест команды UnknownCommand"""
-    with patch("os.system") as mock_system:
-        cmd = UnknownCommand(args=["ls", "-la"])
+    with patch("subprocess.run") as mock_subprocess_run:
+        mock_proc = MagicMock(stdout=b"foo")
+        mock_subprocess_run.return_value = mock_proc
+
+        args = ["ls", "-la"]
+        cmd = UnknownCommand(args=args)
         cmd.execute()
 
         # Проверяем, что os.system был вызван с верным аргументом
-        mock_system.assert_called_once_with("ls -la")
+        mock_subprocess_run.assert_called_once_with(args, capture_output=True)
+
+
+def test_assign_command():
+    expected_env = "A"
+    expected_value = "1"
+
+    context = CliContext()
+    assert context.get(expected_env) == ""
+
+    command = AssignCommand(args=[expected_env, expected_value], context=context)
+    command.execute()
+
+    assert context.get(expected_env) == expected_value

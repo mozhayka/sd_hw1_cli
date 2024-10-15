@@ -1,7 +1,14 @@
 import pytest
 
-from cli_interpreter.commands import CatCommand, EchoCommand, WcCommand, PwdCommand, ExitCommand, \
-    UnknownCommand, AssignCommand
+from cli_interpreter.commands import (
+    CatCommand,
+    EchoCommand,
+    WcCommand,
+    PwdCommand,
+    ExitCommand,
+    UnknownCommand,
+    AssignCommand,
+)
 from cli_interpreter.context import CliContext
 from cli_interpreter.parser import UserInputParser
 
@@ -54,10 +61,9 @@ def test_unknown_command():
 
 
 def test_assignment():
-    commands = parser.parse("A=1 B=2")
-    assert len(commands) == 2
-    assert commands[0] == AssignCommand(["A", "1"], context)
-    assert commands[1] == AssignCommand(["B", "2"], context)
+    commands = parser.parse("A=1 B=\"foo bar\"")
+    assert len(commands) == 1
+    assert commands[0] == AssignCommand(["A", "1", "B", "foo bar"], context)
 
 
 def test_ignore_assignment():
@@ -75,14 +81,14 @@ def test_substitution():
 
 def test_substitution_weak_quoting():
     context.set("A", "foo")
-    commands = parser.parse("echo \"$A\"")
+    commands = parser.parse('echo "$A"')
     assert len(commands) == 1
     assert commands[0] == EchoCommand(["foo"])
 
 
 def test_substitution_full_quoting():
     context.set("A", "foo")
-    commands = parser.parse("echo \'$A\'")
+    commands = parser.parse("echo '$A'")
     assert len(commands) == 1
     assert commands[0] == EchoCommand(["$A"])
 
