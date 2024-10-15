@@ -29,34 +29,28 @@ class UserInputParser:
         :return: список команд для выполнения
         """
         commands: list[Command] = []
-        command_strings = input_string.split(
-            "|"
-        )  # Если это pipeline, разобьём его на команды
+        # Если это pipeline, разобьём его на команды
+        command_strings = input_string.split("|")
         for command_string in command_strings:
-            tokens = self.__tokenize_command(
-                command_string
-            )  # Разделим строку команды на токены
-            tokens = self.__substitute_envs(
-                tokens
-            )  # Подставляем значения из переменных окружения
-            assignment, tokens = self.__extract_assignments(
-                tokens
-            )  # Извлечем операции присвоения
+            # Разделим строку команды на токены
+            tokens = self.__tokenize_command(command_string)
+            # Подставляем значения из переменных окружения
+            tokens = self.__substitute_envs(tokens)
+            # Извлечем операции присвоения
+            assignment, tokens = self.__extract_assignments(tokens)
 
-            if (
-                    assignment  # Если строка состоит из операций присвоения
-                    and not tokens  # И других токенов нет
-            ):
+            # Если строка состоит из операций присвоения, и других токенов нет
+            if assignment and not tokens:
                 return [assignment]  # Вернем команды присвоения переменных окружения
 
-            command = self.__create_command(
-                tokens
-            )  # Иначе создадим команду на основе имеющихся токенов, игнорируя присвоения
+            # Иначе создадим команду на основе имеющихся токенов, игнорируя присвоения
+            command = self.__create_command(tokens)
             commands.append(command)
 
         return commands
 
-    def __tokenize_command(self, command_string: str) -> list[str]:
+    @staticmethod
+    def __tokenize_command(command_string: str) -> list[str]:
         """
         Разделяет строку на команды с учетом кавычек
 
@@ -66,14 +60,14 @@ class UserInputParser:
         special_delimiters = [("'", "'"), ('"', '"')]
         regex_subexpressions = []
         for start_delimiter, end_delimiter in special_delimiters:
+            # Регулярное выражение для подстрок, отделенных специальными разделителями
             regex_subexpressions.append(
                 r"\S*\{0}[^{1}]*\{1}".format(start_delimiter, end_delimiter)
-            )  # Регулярное выражение для подстрок, отделенных специальными разделителями
-        regex = (
-                "|".join(regex_subexpressions) + r"|\S+"
-        )  # Регулярное выражение для любых не пробельных символов
+            )
 
-        tokens = re.findall(regex, command_string)
+        # Регулярное выражение для любых не пробельных символов
+        tokenizing_regex = "|".join(regex_subexpressions) + r"|\S+"
+        tokens = re.findall(tokenizing_regex, command_string)
         return tokens
 
     def __substitute_envs(self, tokens: list[str]) -> list[str]:
@@ -87,9 +81,8 @@ class UserInputParser:
         substituted_tokens = []
         for token in tokens:
             if token.startswith("'") and token.endswith("'"):
-                substituted_tokens.append(
-                    token
-                )  # Пропускаем токены, начинающиеся в одинарных кавычках
+                # Пропускаем токены, начинающиеся в одинарных кавычках
+                substituted_tokens.append(token)
                 continue
 
             substituted_token = re.sub(r"\$(\w+)", self.__replace_env, token)
@@ -116,16 +109,14 @@ class UserInputParser:
         :param tokens: список токенов команды
         :return: кортеж из команд присвоения и оставшихся токенов, если такие есть
         """
-        assignments: list[str] = (
-            []
-        )  # список, хранящий пары аргументов для операций присвоения
+        # список, хранящий пары аргументов для операций присвоения
+        assignments: list[str] = []
 
         i = 0
         while i < len(tokens):
             token = tokens[i]
-            assignment_params = token.split(
-                "=", 1
-            )  # Разделяем присвоение на переменную и значение
+            # Разделяем присвоение на переменную и значение
+            assignment_params = token.split("=", 1)
             if len(assignment_params) == 2:
                 variable = assignment_params[0]
                 if not re.fullmatch(r"\w+", variable):
@@ -185,7 +176,8 @@ class UserInputParser:
             stripped.append(self.__strip_single_argument_quotes(argument))
         return stripped
 
-    def __strip_single_argument_quotes(self, argument: str):
+    @staticmethod
+    def __strip_single_argument_quotes(argument: str):
         """
         Удаляет кавычки у строкового аргумента, если они есть
 
