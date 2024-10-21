@@ -10,6 +10,6 @@ def test_assign_command():
     assert context.get(expected_env) == ""
 
     command = AssignCommand(args=[expected_env, expected_value], context=context)
-    command.execute()
+    assert AssignCommand.OK == command.execute()
 
     assert context.get(expected_env) == expected_value

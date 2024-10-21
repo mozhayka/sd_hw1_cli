@@ -8,5 +8,5 @@ class ExitCommand(Command):
     Команда `exit` — выйти из интерпретатора
     """
 
-    def execute(self):
+    def execute(self) -> None:
         sys.exit(0)
