@@ -1,4 +1,5 @@
 import subprocess
+import sys
 
 from cli_interpreter.commands.command import Command
 
@@ -9,5 +10,11 @@ class UnknownCommand(Command):
     """
 
     def execute(self):
-        output = subprocess.run(self.args, capture_output=True)
-        self._write_output(output.stdout.decode("utf-8"))
+        try:
+            proc_in = self.input_stream.read().encode("utf-8") if self.input_stream else None
+            proc = subprocess.run(self.args, input=proc_in, capture_output=True)
+            self._write_output(proc.stdout.decode("utf-8"))
+            return proc.returncode
+        except Exception as e:
+            sys.stderr.write(f"{str(e)}\n")
+            return UnknownCommand.DEFAULT_ERROR

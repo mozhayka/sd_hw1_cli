@@ -9,7 +9,7 @@ def test_echo_command_with_arguments():
     output_stream = io.StringIO()
 
     cmd = EchoCommand(args=args, output_stream=output_stream)
-    cmd.execute()
+    assert EchoCommand.OK == cmd.execute()
 
     output = output_stream.getvalue()
     assert output == "Hello World\n"
@@ -22,7 +22,7 @@ def test_echo_command_with_input_stream():
     output_stream = io.StringIO()
 
     cmd = EchoCommand(input_stream=input_stream, output_stream=output_stream)
-    cmd.execute()
+    assert EchoCommand.OK == cmd.execute()
 
     output = output_stream.getvalue()
     assert output == f"{expected}\n"

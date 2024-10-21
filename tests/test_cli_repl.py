@@ -1,4 +1,5 @@
 import os
+import re
 
 import pytest
 
@@ -105,3 +106,48 @@ def test_environment_variables(monkeypatch, repl, capsys):
 
     captured = capsys.readouterr()
     assert "12345\n" in captured.out
+
+
+def test_pipe_echo_wc(monkeypatch, repl, capsys):
+    """Тест пайпа из двух команд"""
+    inputs = iter(["echo 123 | wc", "exit"])
+
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+
+    with pytest.raises(SystemExit):
+        repl.run()
+
+    captured = capsys.readouterr()
+    assert "1 1 4\n" in captured.out
+
+
+def test_pipe_cat_tail_wc(monkeypatch, repl, capsys, tmp_path):
+    """Тест пайпа из трех команд"""
+    gitignore = tmp_path / ".gitignore"
+    gitignore.write_text("*.pyc\n*.log\n")
+    pipe_command = f"cat {gitignore} | tail -n 1 | wc"
+    inputs = iter([pipe_command, "exit"])
+
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+
+    with pytest.raises(SystemExit):
+        repl.run()
+
+    captured = capsys.readouterr()
+    assert captured.out.strip() == re.sub(
+        r"\s+", " ", os.popen(pipe_command).read().strip()
+    )
+
+
+@pytest.mark.skip()
+def test_exit_first(monkeypatch, repl, capsys):
+    """Тест пайпа из двух команд"""
+    inputs = iter(["exit | echo 123 | wc", "exit"])
+
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+
+    with pytest.raises(SystemExit):
+        repl.run()
+
+    captured = capsys.readouterr()
+    pass  # TODO: подумать, что мы хотим увидеть в результате

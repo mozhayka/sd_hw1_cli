@@ -8,6 +8,10 @@ class Command(ABC):
     Базовый класс команды, хранящий данные для выполнения команды
     """
 
+    OK: int = 0
+    ILLEGAL_ARGUMENT: int = 1
+    DEFAULT_ERROR: int = 69
+
     def __init__(
             self,
             args: list[str] = None,
@@ -26,8 +30,11 @@ class Command(ABC):
         self.output_stream = output_stream
 
     @abstractmethod
-    def execute(self):
-        """Абстрактный метод, реализующий логику работы команды в наследнике"""
+    def execute(self) -> int:
+        """
+        Абстрактный метод, реализующий логику работы команды в наследнике
+        @:return код ответа команды; 0 в случае успеха, иначе `int`
+        """
         pass
 
     def __eq__(self, other):

@@ -10,7 +10,7 @@ def test_pwd_command():
     output_stream = io.StringIO()
 
     cmd = PwdCommand(output_stream=output_stream)
-    cmd.execute()
+    assert PwdCommand.OK == cmd.execute()
 
     output = output_stream.getvalue().strip()
     assert output == current_working_dir

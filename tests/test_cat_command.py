@@ -13,7 +13,7 @@ def test_cat_command_with_existing_file(tmp_path):
     output_stream = io.StringIO()
 
     cmd = CatCommand(args=[str(file_path)], output_stream=output_stream)
-    cmd.execute()
+    assert CatCommand.OK == cmd.execute()
 
     output = output_stream.getvalue()
     assert output == test_content
@@ -27,7 +27,7 @@ def test_cat_command_with_missing_file():
 
     # Перехватываем вывод в stderr с помощью patch
     with patch("sys.stderr", new_callable=io.StringIO) as mock_stderr:
-        cmd.execute()
+        assert CatCommand.MISSING_INPUT == cmd.execute()
         error_output = mock_stderr.getvalue().strip()
 
     # Проверяем, что вывод в stderr содержит сообщение об ошибке
