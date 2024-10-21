@@ -1,3 +1,5 @@
+from io import StringIO
+
 from cli_interpreter.commands.command import Command
 
 
@@ -49,11 +51,37 @@ class PipeExecutor:
     Обработчик нескольких команд, выстроенных в pipeline
     """
 
-    def execute(self, commands: list[Command]) -> str:
+    @staticmethod
+    def execute(commands: list[Command]) -> None:
         """
         Последовательно исполняет каждую команду, для команд не в начале и не в конце последовательности
         переопределяет потоки ввода и вывода
         :param commands: список команд для исполнения
         :return: результат выполнения последней команды из списка
         """
-        pass
+        if not commands:
+            return None
+
+        for i in range(1, len(commands)):
+            if not commands[i - 1].output_stream:
+                commands[i - 1].output_stream = StringIO()
+            commands[i].input_stream = commands[i - 1].output_stream
+
+        for i, command in enumerate(commands):
+            is_first = i == 0
+            is_last = i == (len(commands) - 1)
+
+            if not is_last:
+                # Для не последней команды заводим временной поток ввода/вывода
+                command.output_stream = StringIO()
+
+            if not is_first:
+                # Для не первой команды
+                prev_command = commands[i - 1]
+                # Вернемся в начало потока, куда записала результат предыдущая команда
+                prev_command.output_stream.seek(0)
+                # И укажем его как поток ввода для текущей команды
+                command.input_stream = prev_command.output_stream
+
+            # Теперь можно вызывать текущую команду
+            command.execute()
