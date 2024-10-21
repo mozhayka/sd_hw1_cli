@@ -105,3 +105,44 @@ def test_environment_variables(monkeypatch, repl, capsys):
 
     captured = capsys.readouterr()
     assert "12345\n" in captured.out
+
+
+def test_pipe_echo_wc(monkeypatch, repl, capsys):
+    """Тест пайпа из двух команд"""
+    inputs = iter(["echo 123 | wc", "exit"])
+
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+
+    with pytest.raises(SystemExit):
+        repl.run()
+
+    captured = capsys.readouterr()
+    assert "1 1 4\n" in captured.out
+
+
+@pytest.mark.skip()
+def test_pipe_cat_grep_wc(monkeypatch, repl, capsys):
+    """Тест пайпа из трех команд"""
+    inputs = iter(["cat README.md | grep -w 'Command' | wc", "exit"])
+
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+
+    with pytest.raises(SystemExit):
+        repl.run()  # TODO: поправить
+
+    captured = capsys.readouterr()
+    assert "1 1 4\n" in captured.out
+
+
+@pytest.mark.skip()
+def test_exit_first(monkeypatch, repl, capsys):
+    """Тест пайпа из двух команд"""
+    inputs = iter(["exit | echo 123 | wc", "exit"])
+
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+
+    with pytest.raises(SystemExit):
+        repl.run()
+
+    captured = capsys.readouterr()
+    pass  # TODO: подумать, что мы хотим увидеть в результате

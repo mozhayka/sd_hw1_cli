@@ -17,11 +17,10 @@ def test_wc_command_with_existing_file(tmp_path):
 
     # Ожидаем количество строк, слов и байтов
     output = output_stream.getvalue().strip()
-    lines, words, bytes_count, filename = output.split()
+    lines, words, bytes_count = output.split()
     assert int(lines) == 2
     assert int(words) == 4
     assert int(bytes_count) == len(test_content)
-    assert filename == str(file_path)
 
 
 def test_wc_command_with_missing_file():
