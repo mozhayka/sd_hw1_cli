@@ -1,14 +1,12 @@
 import pytest
 
-from cli_interpreter.commands import (
-    CatCommand,
-    EchoCommand,
-    WcCommand,
-    PwdCommand,
-    ExitCommand,
-    UnknownCommand,
-    AssignCommand,
-)
+from cli_interpreter.commands.assign_command import AssignCommand
+from cli_interpreter.commands.cat_command import CatCommand
+from cli_interpreter.commands.echo_command import EchoCommand
+from cli_interpreter.commands.exit_command import ExitCommand
+from cli_interpreter.commands.pwd_command import PwdCommand
+from cli_interpreter.commands.unknown_command import UnknownCommand
+from cli_interpreter.commands.wc_command import WcCommand
 from cli_interpreter.context import CliContext
 from cli_interpreter.parser import UserInputParser
 

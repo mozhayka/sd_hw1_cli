@@ -1,4 +1,4 @@
-from cli_interpreter.commands import Command
+from cli_interpreter.commands.command import Command
 
 
 class CommandExecutor:
