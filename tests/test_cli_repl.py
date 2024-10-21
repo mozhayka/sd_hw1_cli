@@ -121,9 +121,11 @@ def test_pipe_echo_wc(monkeypatch, repl, capsys):
     assert "1 1 4\n" in captured.out
 
 
-def test_pipe_cat_tail_wc(monkeypatch, repl, capsys):
+def test_pipe_cat_tail_wc(monkeypatch, repl, capsys, tmp_path):
     """Тест пайпа из трех команд"""
-    pipe_command = "cat test_parser.py | tail -n 10 | wc"
+    gitignore = tmp_path / ".gitignore"
+    gitignore.write_text("*.pyc\n*.log\n")
+    pipe_command = f"cat {gitignore} | tail -n 1 | wc"
     inputs = iter([pipe_command, "exit"])
 
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
@@ -132,7 +134,9 @@ def test_pipe_cat_tail_wc(monkeypatch, repl, capsys):
         repl.run()
 
     captured = capsys.readouterr()
-    assert captured.out.strip() == re.sub(r"\s+", " ", os.popen(pipe_command).read().strip())
+    assert captured.out.strip() == re.sub(
+        r"\s+", " ", os.popen(pipe_command).read().strip()
+    )
 
 
 @pytest.mark.skip()
