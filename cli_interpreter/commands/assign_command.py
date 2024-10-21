@@ -13,14 +13,16 @@ class AssignCommand(Command):
         super().__init__(args)
         self.context = context
 
-    def execute(self):
+    def execute(self) -> int:
         assert len(self.args) % 2 == 0  # Количество аргументов должно быть четным
 
         if len(self.args) == 0:
             sys.stderr.write("No arguments for variable assignment\n")
-            return
+            return AssignCommand.ILLEGAL_ARGUMENT
 
         for i in range(0, len(self.args), 2):
             env_variable = self.args[i]
             env_value = self.args[i + 1]
             self.context.set(env_variable, env_value)
+
+        return AssignCommand.OK

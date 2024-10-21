@@ -8,10 +8,13 @@ class WcCommand(Command):
     Команда `wc [FILE]` — вывести количество строк, слов и байт в файле
     """
 
-    def execute(self):
+    MISSING_INPUT: int = 2
+
+    def execute(self) -> int:
         has_args = len(self.args) > 0
         if not has_args and self.input_stream is None:
             sys.stderr.write("wc: Missing file argument\n")
+            return WcCommand.ILLEGAL_ARGUMENT
 
         try:
             if has_args:
@@ -26,7 +29,10 @@ class WcCommand(Command):
 
             result = f"{num_lines} {num_words} {num_bytes}\n"
             self._write_output(result)
+            return WcCommand.OK
         except FileNotFoundError:
             sys.stderr.write(f"wc: {self.args[0]}: No such file or directory\n")
+            return WcCommand.MISSING_INPUT
         except Exception as e:
             sys.stderr.write(f"wc: Error reading {file}: {e}\n")
+            return WcCommand.DEFAULT_ERROR
