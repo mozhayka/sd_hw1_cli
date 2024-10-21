@@ -1,4 +1,5 @@
 import os
+import re
 
 import pytest
 
@@ -120,18 +121,18 @@ def test_pipe_echo_wc(monkeypatch, repl, capsys):
     assert "1 1 4\n" in captured.out
 
 
-@pytest.mark.skip()
-def test_pipe_cat_grep_wc(monkeypatch, repl, capsys):
+def test_pipe_cat_tail_wc(monkeypatch, repl, capsys):
     """Тест пайпа из трех команд"""
-    inputs = iter(["cat README.md | grep -w 'Command' | wc", "exit"])
+    pipe_command = "cat test_parser.py | tail -n 10 | wc"
+    inputs = iter([pipe_command, "exit"])
 
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
 
     with pytest.raises(SystemExit):
-        repl.run()  # TODO: поправить
+        repl.run()
 
     captured = capsys.readouterr()
-    assert "1 1 4\n" in captured.out
+    assert captured.out.strip() == re.sub(r"\s+", " ", os.popen(pipe_command).read().strip())
 
 
 @pytest.mark.skip()

@@ -84,4 +84,11 @@ class PipeExecutor:
                 command.input_stream = prev_command.output_stream
 
             # Теперь можно вызывать текущую команду
-            command.execute()
+            result_code = command.execute()
+
+            if result_code != Command.OK:
+                break  # TODO: наверное, поведение должно быть все-таки немного другим
+
+            # Закрываем поток на ввод, который больше не пригодится
+            if command.input_stream:
+                command.input_stream.close()
