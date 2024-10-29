@@ -55,17 +55,47 @@ class UserInputParser:
         :param command_string: строка команды
         :return: список токенов
         """
-        special_delimiters = [("'", "'"), ('"', '"')]
-        regex_subexpressions = []
-        for start_delimiter, end_delimiter in special_delimiters:
-            # Регулярное выражение для подстрок, отделенных специальными разделителями
-            regex_subexpressions.append(
-                r"\S*\{0}[^{1}]*\{1}".format(start_delimiter, end_delimiter)
-            )
+        tokens: list[str] = []
+        current_token: str = ""
+        in_single_quote = False
+        in_double_quote = False
 
-        # Регулярное выражение для любых не пробельных символов
-        tokenizing_regex = "|".join(regex_subexpressions) + r"|\S+"
-        tokens = re.findall(tokenizing_regex, command_string)
+        for ch in command_string:
+            # Обработка одиночных кавычек
+            if ch == "'" and not in_double_quote:
+                if in_single_quote:
+                    in_single_quote = False  # Закрываем одиночные кавычки
+                else:
+                    in_single_quote = True  # Открываем одиночные кавычки
+                current_token += ch
+
+            # Обработка двойных кавычек
+            elif ch == '"' and not in_single_quote:
+                if in_double_quote:
+                    in_double_quote = False  # Закрываем двойные кавычки
+                else:
+                    in_double_quote = True  # Открываем двойные кавычки
+                current_token += ch
+
+            # Обработка пробелов вне кавычек
+            elif ch.isspace() and not in_single_quote and not in_double_quote:
+                if current_token:
+                    tokens.append(current_token)  # Завершаем текущий токен
+                    current_token = ""
+
+            # Добавляем символ в текущий токен
+            else:
+                current_token += ch
+
+        if in_single_quote and current_token != "'":
+            raise RuntimeError("Обнаружены не парные одинарные кавычки")
+
+        if in_double_quote and current_token != '"':
+            raise RuntimeError("Обнаружены не парные двойные кавычки")
+
+        if len(current_token) > 0:
+            tokens.append(current_token)
+
         return tokens
 
     def __substitute_envs(self, tokens: list[str]) -> list[str]:
@@ -175,11 +205,17 @@ class UserInputParser:
         return stripped
 
     @staticmethod
-    def __strip_single_argument_quotes(argument: str):
+    def __strip_single_argument_quotes(argument: str) -> str:
         """
         Удаляет кавычки у строкового аргумента, если они есть
 
         :param argument: строковый аргумент
         :return: строковый аргумент без кавычек
         """
-        return argument.strip("'\"")
+        if argument.startswith("'") and argument.endswith("'"):
+            return argument.strip("'")
+
+        if argument.startswith('"') and argument.endswith('"'):
+            return argument.strip('"')
+
+        return argument

@@ -24,7 +24,7 @@ def test_unknown_command(monkeypatch, repl, capsys):
 
 def test_bad_quotes(monkeypatch, repl, capsys):
     """Не хватает парной кавычки"""
-    inputs = iter(["echo \"", "exit"])
+    inputs = iter(['echo "123', "exit"])
 
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
 

@@ -43,7 +43,12 @@ class SingleCommandExecutor:
         :param command: исполняемая команда
         :return: результат исполнения
         """
-        command.execute()
+        result_code = command.execute()
+
+        if result_code != Command.OK:
+            raise RuntimeError(
+                f"Command {command} ended with unexpected error code {result_code}"
+            )
 
 
 class PipeExecutor:
@@ -87,7 +92,10 @@ class PipeExecutor:
             result_code = command.execute()
 
             if result_code != Command.OK:
-                break  # TODO: наверное, поведение должно быть все-таки немного другим
+                # TODO: наверное, поведение должно быть все-таки немного другим
+                raise RuntimeError(
+                    f"Command {command} ended with unexpected error code {result_code}"
+                )
 
             # Закрываем поток на ввод, который больше не пригодится
             if command.input_stream:
