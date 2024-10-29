@@ -17,7 +17,7 @@ class UserInputParser:
     """
 
     def __init__(self, cli_context: CliContext):
-        self.context = cli_context
+        self.__context = cli_context
 
     def parse(self, input_string: str) -> list[Command]:
         """
@@ -126,7 +126,7 @@ class UserInputParser:
         :return: значение переменной окружения
         """
         variable = match.group(1)
-        return self.context.get(variable)
+        return self.__context.get(variable)
 
     def __extract_assignments(
         self, tokens: list[str]
@@ -163,7 +163,7 @@ class UserInputParser:
             i += 1
 
         assignment_command = (
-            AssignCommand(args=assignments, context=self.context)
+            AssignCommand(args=assignments, context=self.__context)
             if len(assignments) > 0
             else None
         )

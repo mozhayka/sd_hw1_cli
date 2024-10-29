@@ -61,7 +61,7 @@ ___
 
 ## Архитектура
 
-![image](docs/class_schema.png)
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mozhayka/sd_hw1_cli/refs/heads/grep/docs/class_schema.puml)
 
 ### CliInterpreter
 

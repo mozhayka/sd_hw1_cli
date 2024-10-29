@@ -1,0 +1,97 @@
+@startuml
+skinparam groupInheritance 4
+
+class CliInterpreter {
+}
+
+class CliContext {
+    # envs: dict[str, str]
+    + setEnv(str, str): None
+    + getEnv(str): str
+}
+
+class UserInputParser {
+    - context: CliContext
+    + parse(str): list[Command]
+    - {static} tokenize_command(str): list[str]
+    - substitute_envs(list[str]) -> list[str]
+    - replace_env(re.Match) -> str
+    - extract_assignments(list[str]) -> (AssignCommand | None, list[str])
+    - create_command(list[str]) -> Command
+    - strip_quotes(list[str]) -> None
+    - {static} strip_single_argument_quotes(str) -> str
+}
+
+class CommandExecutor {
+    - sce: SingleCommandExecutor
+    - pe: PipeExecutor
+    + execute(list[Command]) -> None
+}
+
+class SingleCommandExecutor {
+    + {static} execute(Command) -> None
+}
+
+class PipeExecutor {
+    + {static} execute(list[Command]) -> None
+}
+
+package commands {
+    abstract class Command {
+        + args: list[str]
+        + input: TextIO
+        + output: TextIO
+        + {abstract} execute(self) -> int
+        + __eq__(other) -> bool
+        + __str__() -> str
+        # write_output(str) -> None
+    }
+
+    class CatCommand {
+    }
+
+    class EchoCommand {
+    }
+
+    class WcCommand {
+    }
+
+    class PwdCommand {
+    }
+
+    class ExitCommand {
+    }
+
+    class AssignCommand {
+    }
+
+    class UnknownCommand {
+    }
+
+    class GrepCommand {
+    }
+
+    note top of GrepCommand
+      TBD в текущей итерации
+    end note
+}
+
+CliInterpreter *-- UserInputParser
+CliInterpreter *-- CommandExecutor
+CliInterpreter *-- CliContext
+
+UserInputParser --> Command
+CommandExecutor *-- SingleCommandExecutor
+CommandExecutor *-- PipeExecutor
+
+Command <|-- CatCommand
+Command <|-- EchoCommand
+Command <|-- WcCommand
+Command <|-- PwdCommand
+Command <|-- ExitCommand
+Command <|-- AssignCommand
+CliContext <-- AssignCommand
+Command <|-- UnknownCommand
+Command <|-- GrepCommand
+
+@enduml

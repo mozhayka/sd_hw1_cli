@@ -13,8 +13,8 @@ class CommandExecutor:
         """
         Конструктор класса. Инициализирует обработчики команд
         """
-        self.sce = SingleCommandExecutor()
-        self.pe = PipeExecutor()
+        self.__sce = SingleCommandExecutor()
+        self.__pe = PipeExecutor()
 
     def execute(self, commands: list[Command]) -> None:
         """
@@ -26,9 +26,9 @@ class CommandExecutor:
         :return: результат исполнения списка команд
         """
         if len(commands) == 1:
-            self.sce.execute(commands[0])
+            self.__sce.execute(commands[0])
         else:
-            self.pe.execute(commands)
+            self.__pe.execute(commands)
 
 
 class SingleCommandExecutor:

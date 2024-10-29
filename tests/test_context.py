@@ -18,7 +18,7 @@ class TestCliContext:
 
     def test_initialization_with_environment_variables(self):
         """Test that the initial environment matches os.environ."""
-        assert self.cli_context.env == self._DEFAULT_ENVS
+        assert self.cli_context._env == self._DEFAULT_ENVS
 
     def test_set_and_get_valid_variable(self):
         """Test setting and getting a valid environment variable."""
