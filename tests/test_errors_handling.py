@@ -22,9 +22,9 @@ def test_unknown_command(monkeypatch, repl, capsys):
     assert "Error " in captured.out
 
 
-def test_bad_quotes(monkeypatch, repl, capsys):
+def test_bad_weak_quotes(monkeypatch, repl, capsys):
     """Не хватает парной кавычки"""
-    inputs = iter(['echo "123', "exit"])
+    inputs = iter(['echo "', "exit"])
 
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
 
@@ -32,7 +32,20 @@ def test_bad_quotes(monkeypatch, repl, capsys):
         repl.run()
 
     captured = capsys.readouterr()
-    assert "Error " in captured.out
+    assert "Обнаружены не парные двойные кавычки" in captured.out
+
+
+def test_bad_full_quotes(monkeypatch, repl, capsys):
+    """Не хватает парной кавычки"""
+    inputs = iter(['echo \'1"2"3', "exit"])
+
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+
+    with pytest.raises(SystemExit):
+        repl.run()
+
+    captured = capsys.readouterr()
+    assert "Обнаружены не парные одинарные кавычки" in captured.out
 
 
 def test_bad_pipe(monkeypatch, repl, capsys):

@@ -89,7 +89,7 @@ def test_real_quotes_README(monkeypatch, repl, capsys):
 
 def test_real_quotes_spaces(monkeypatch, repl, capsys):
     """Запуск файла с пробелами в названии"""
-    inputs = iter(['./"file with spaces.sh"', "exit"])
+    inputs = iter(['./resources/"file with spaces.sh"', "exit"])
 
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
 

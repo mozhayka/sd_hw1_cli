@@ -11,8 +11,15 @@ class UnknownCommand(Command):
 
     def execute(self):
         try:
-            proc_in = self.input_stream.read().encode("utf-8") if self.input_stream else None
-            proc = subprocess.run(self.args, input=proc_in, capture_output=True)
+            arguments = [
+                # считаем кавычки лишними среди аргументов, если мы передаем их на откуп терминалу
+                arg.replace('"', "").replace("'", "")
+                for arg in self.args
+            ]
+            proc_in = (
+                self.input_stream.read().encode("utf-8") if self.input_stream else None
+            )
+            proc = subprocess.run(arguments, input=proc_in, capture_output=True)
             self._write_output(proc.stdout.decode("utf-8"))
             return proc.returncode
         except Exception as e:

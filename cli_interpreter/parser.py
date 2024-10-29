@@ -87,10 +87,14 @@ class UserInputParser:
             else:
                 current_token += ch
 
-        if in_single_quote and current_token != "'":
+        if in_single_quote and (
+                current_token == "'" or not current_token.endswith("'")
+        ):
             raise RuntimeError("Обнаружены не парные одинарные кавычки")
 
-        if in_double_quote and current_token != '"':
+        if in_double_quote and (
+                current_token == '"' or not current_token.endswith('"')
+        ):
             raise RuntimeError("Обнаружены не парные двойные кавычки")
 
         if len(current_token) > 0:
