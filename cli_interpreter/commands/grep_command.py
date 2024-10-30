@@ -1,7 +1,5 @@
-import argparse
-import shlex
-import sys
 import re
+import sys
 
 from cli_interpreter.commands.command import Command
 
@@ -34,7 +32,7 @@ class GrepCommand(Command):
             regex_flags |= re.IGNORECASE
 
         if w:
-            pattern = r'\b' + re.escape(word) + r'\b'  # ищем только целое слово
+            pattern = r"\b" + re.escape(word) + r"\b"  # ищем только целое слово
         else:
             pattern = word
 
@@ -51,10 +49,9 @@ class GrepCommand(Command):
                 if re.search(pattern, line, regex_flags):
                     matches.append(line.strip())
                     if A > 0:
-                        matches.extend(content[i + 1:i + 1 + A])
+                        matches.extend(content[i + 1: i + 1 + A])
 
-            for match in matches:
-                self._write_output(match)
+            self._write_output("\n".join(matches))
             return Command.OK
         except FileNotFoundError:
             sys.stderr.write(f"grep: {filename}: No such file or directory\n")

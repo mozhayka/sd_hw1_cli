@@ -67,6 +67,9 @@ class Command(ABC):
 
         :param output: выводимый текст
         """
+        if not output.endswith("\n"):
+            output += "\n"
+
         if self.output_stream:
             self.output_stream.write(output)
             self.output_stream.flush()

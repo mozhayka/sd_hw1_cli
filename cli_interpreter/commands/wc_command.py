@@ -27,7 +27,7 @@ class WcCommand(Command):
             num_words = len(content.split())
             num_bytes = len(content.encode("utf-8"))
 
-            result = f"{num_lines} {num_words} {num_bytes}\n"
+            result = f"{num_lines} {num_words} {num_bytes}"
             self._write_output(result)
             return WcCommand.OK
         except FileNotFoundError:

@@ -17,6 +17,5 @@ class EchoCommand(Command):
         else:
             output = " ".join(self.args)
 
-        output = f"{output}\n"
         self._write_output(output)
         return EchoCommand.OK
