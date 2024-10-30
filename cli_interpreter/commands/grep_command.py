@@ -39,20 +39,23 @@ class GrepCommand(Command):
             pattern = word
 
         try:
-            with open(filename, "r") as file:
-                content = file.readlines()
+            if self.input_stream is None:
+                with open(self.args[0], "r") as file:
+                    content = file.read()
+            else:
+                content = self.input_stream
 
-                """Построчно парсим"""
-                matches = []
-                for i, line in enumerate(content):
-                    if re.search(pattern, line, regex_flags):
-                        matches.append(line.strip())
-                        if A > 0:
-                            matches.extend(content[i + 1:i + 1 + A])
+            """Построчно парсим"""
+            matches = []
+            for i, line in enumerate(content):
+                if re.search(pattern, line, regex_flags):
+                    matches.append(line.strip())
+                    if A > 0:
+                        matches.extend(content[i + 1:i + 1 + A])
 
-                for match in matches:
-                    self._write_output(match)
-                return Command.OK
+            for match in matches:
+                self._write_output(match)
+            return Command.OK
         except FileNotFoundError:
             sys.stderr.write(f"grep: {filename}: No such file or directory\n")
             return Command.ILLEGAL_ARGUMENT

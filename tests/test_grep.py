@@ -105,3 +105,19 @@ def test_grep_A(monkeypatch, repl, tmp_path, capsys):
 
     captured = capsys.readouterr()
     assert "" in captured.out
+
+
+def test_grep_pipe(monkeypatch, repl, tmp_path, capsys):
+    """Тест на ключ -A"""
+    test_content = "Минимальный синтаксис grep"
+    file_path = tmp_path / "README.md"
+    file_path.write_text(test_content)
+    inputs = iter([f'echo \"Минимальный синтаксис grep\" | grep \"Минимал\"', "exit"])
+
+    monkeypatch.setattr("builtins.input", lambda _: next(inputs))
+
+    with pytest.raises(SystemExit):
+        repl.run()
+
+    captured = capsys.readouterr()
+    assert "Минимальный синтаксис grep" in captured.out
