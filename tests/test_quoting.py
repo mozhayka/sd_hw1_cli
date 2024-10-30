@@ -1,3 +1,5 @@
+import os
+
 import pytest
 
 from cli_interpreter.cli_repl import REPL
@@ -62,7 +64,7 @@ def test_quoting_12(monkeypatch, repl, capsys):
 
 
 def test_real_quotes_echo(monkeypatch, repl, capsys):
-    """echo в двойных кавычках"""
+    """Команда echo в двойных кавычках"""
     inputs = iter(['"echo" 123', "exit"])
 
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
@@ -74,9 +76,12 @@ def test_real_quotes_echo(monkeypatch, repl, capsys):
     assert "" in captured.out
 
 
-def test_real_quotes_README(monkeypatch, repl, capsys):
+def test_real_quotes_readme(monkeypatch, repl, tmp_path, capsys):
     """Название файла в кавычках"""
-    inputs = iter(['cat "resources/README.md"', "exit"])
+    test_content = "test"
+    file_path = tmp_path / "README.md"
+    file_path.write_text(test_content)
+    inputs = iter([f'cat "{file_path}"', "exit"])
 
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
 
@@ -87,9 +92,15 @@ def test_real_quotes_README(monkeypatch, repl, capsys):
     assert "test" in captured.out
 
 
-def test_real_quotes_spaces(monkeypatch, repl, capsys):
+def test_real_quotes_spaces(monkeypatch, repl, tmp_path, capsys):
     """Запуск файла с пробелами в названии"""
-    inputs = iter(['./resources/"file with spaces.sh"', "exit"])
+    test_content = """#!/bin/bash
+    echo 123
+    """
+    file_path = tmp_path / "file with spaces.sh"
+    file_path.write_text(test_content)
+    os.chmod(file_path, 0o777)
+    inputs = iter([f'{tmp_path}/"file with spaces.sh"', "exit"])
 
     monkeypatch.setattr("builtins.input", lambda _: next(inputs))
 
