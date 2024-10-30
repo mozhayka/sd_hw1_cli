@@ -40,10 +40,10 @@ class GrepCommand(Command):
 
         try:
             if self.input_stream is None:
-                with open(self.args[0], "r") as file:
-                    content = file.read()
+                with open(filename, "r") as file:
+                    content = file.readlines()
             else:
-                content = self.input_stream
+                content = self.input_stream.read().split("\n")
 
             """Построчно парсим"""
             matches = []
