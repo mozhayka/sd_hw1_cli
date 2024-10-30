@@ -9,6 +9,7 @@ from cli_interpreter.commands.unknown_command import UnknownCommand
 from cli_interpreter.commands.wc_command import WcCommand
 from cli_interpreter.context import CliContext
 from cli_interpreter.parser import UserInputParser
+from cli_interpreter.commands.grep_command import GrepCommand
 
 context: CliContext
 parser: UserInputParser
@@ -104,3 +105,13 @@ def test_pipe():
     assert len(commands) == 2
     assert commands[0] == CatCommand(["foo.txt"])
     assert commands[1] == WcCommand()
+
+def test_grep():
+    commands = parser.parse("grep \"test\" Readme.md")
+    assert len(commands) == 1
+    assert commands[0] == GrepCommand(["test",  "Readme.md", False, False, 0])
+
+def test_grep_with_args():
+    commands = parser.parse("grep -i \"test\" -A 10 Readme.md")
+    assert len(commands) == 1
+    assert commands[0] == GrepCommand(["test",  "Readme.md", False, True, 10])

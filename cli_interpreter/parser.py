@@ -1,3 +1,4 @@
+import argparse
 import re
 
 from cli_interpreter.commands.assign_command import AssignCommand
@@ -195,7 +196,18 @@ class UserInputParser:
         elif command_name == "exit":
             return ExitCommand()
         elif command_name == "grep":
-            return GrepCommand(self.__strip_quotes(command_args))
+            """Парсим аргументы"""
+            parser = argparse.ArgumentParser(add_help=False)
+            parser.add_argument('word', type=str, help='искомое слово')
+            parser.add_argument('file', type=str, help='файл, в котором ищем')
+            parser.add_argument('-w', action='store_true', help='поиск только слова целиком')
+            parser.add_argument('-i', action='store_true', help='регистронезависимый (case-insensitive) поиск')
+            parser.add_argument('-A', type=int, default=0, help='сколько строк после совпадения надо распечатать')
+            try:
+                args = parser.parse_args(self.__strip_quotes(command_args))
+                return GrepCommand([args.word, args.file, args.w, args.i, args.A])
+            except SystemExit as e:
+                raise RuntimeError("Произошла ошибка при разборе аргументов")
 
         return UnknownCommand(args=tokens)  # Передадим все токены на исполнение ОС
 
