@@ -60,7 +60,7 @@ def test_grep_no_args2(monkeypatch, repl, tmp_path, capsys):
 
 
 def test_grep_i(monkeypatch, repl, tmp_path, capsys):
-    """Простой тест на grep"""
+    """Тест на ключ -i"""
     test_content = " Минимальный синтаксис grep"
     file_path = tmp_path / "README.md"
     file_path.write_text(test_content)
@@ -76,7 +76,7 @@ def test_grep_i(monkeypatch, repl, tmp_path, capsys):
 
 
 def test_grep_w(monkeypatch, repl, tmp_path, capsys):
-    """Простой тест на grep"""
+    """Тест на ключ -w"""
     test_content = " Минимальный синтаксис grep"
     file_path = tmp_path / "README.md"
     file_path.write_text(test_content)
@@ -92,7 +92,7 @@ def test_grep_w(monkeypatch, repl, tmp_path, capsys):
 
 
 def test_grep_A(monkeypatch, repl, tmp_path, capsys):
-    """Простой тест на grep"""
+    """Тест на ключ -A"""
     test_content = " Минимальный синтаксис grep"
     file_path = tmp_path / "README.md"
     file_path.write_text(test_content)
