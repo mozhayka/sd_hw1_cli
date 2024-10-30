@@ -58,7 +58,7 @@ ___
 
 ## Архитектура
 
-![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mozhayka/sd_hw1_cli/refs/heads/grep/docs/class_schema.puml)
+![Class Diagram](http://www.plantuml.com/plantuml/png/VLJ1Jjj04BtxArRgnHJ2gQS8LI24gXpQHcfH3mXPosRghEBicfanH8NyUvtDEkinbZaOcFVcpUpEsxacriZDjifeOrsjKMzLYRwf5suDQ5ax0-fBbfbA4wdRoYuS0zO8xLUzPViUSkjRQCTjLBK_dnIu5vghbJNyG8mNglqy1kXS4V2TUycxyDbS_V0E8bX6CCJRRofoJu0BLpUyr4Y0iT9CcMFbUQ-Bg5KVY56giiGFjtwxrMxr63FVY3LRirViD-3iFoZCaP1oGlSTdvedOiiDGt4uNdx2pzJiwmSsGbrf4wWvmkLtpMOTY2qdKc37g0qNciYMRWkEXwBvJO1Yu-ezNDM5IgJk4X0qf_wbICoEr3Piw-AvyGo3Qa5yS3UHJjQL5HGQo-RGPfVUWY5H32gMkzk1QTYdGP61kVeLX0QKIAXRV6bh4E5p1U5VoCK8J_sckb9QLZzF1-ha8d54AFGmcJ_TJgtDHfUWuZGeQkWd2kDMufeYU2oYiIJXknDY3ywVgz-muyNFNjmtF0wyTULInmJLtz2eTTnZ5WKy5qNkUGqOu2VlAu4JOqiGvZs-ybUq3CMnXs06uQ9z5dx5useM9vRedLdx2VYFcG2NhwifvPsTAYpVrmZXtcsSVvrYV4EeFmvpTXXcs40uF_rvUHCVq380FNA0J--BZfTzsf4NOIRTrpe-wwKYaAzUe40eOLSNOOq30r8-o4oQIM9_CEnWit-UpORRTemYNzeu9QtaRA2ePhtD9AL2xlXp7cFAdT4nrDLx2oNNoNZocmIIqsGuUKp6axia87sLfNjGLn8SvWcxIQnlj2ox1hTgjjL_)
 
 ### CliInterpreter
 
@@ -109,7 +109,12 @@ ___
 - `AssignCommand` - сохраняет в переменные окружения указанную переменную с указанным значением
 - `UknownCommand` - передает выполнение неизвестной команды ядру ОС
 - `GrepCommand` - используется для поиска текста в файлах с использованием регулярных выражений\
-Для парсинга ключей поиска решено использовать библиотеку argparse, так как является простой и удобной в использовании, первые ссылки в гугле ведут именно на нее. Есть поддержка позиционных и необязательных аргументов: можно легко определять как позиционные, так и необязательные аргументы, а также задавать значения по умолчанию для необязательных. argparse является частью стандартной библиотеки Python, что означает, что не нужно устанавливать дополнительные пакеты. Были рассмотрены варианты docopt (более сложная для понимания) и click (не входит в стандартную библиотеку, что требует дополнительной установки)
+  Для парсинга ключей поиска решено использовать библиотеку argparse, так как является простой и удобной в
+  использовании, первые ссылки в гугле ведут именно на нее. Есть поддержка позиционных и необязательных аргументов:
+  можно легко определять как позиционные, так и необязательные аргументы, а также задавать значения по умолчанию для
+  необязательных. argparse является частью стандартной библиотеки Python, что означает, что не нужно устанавливать
+  дополнительные пакеты. Были рассмотрены варианты docopt (более сложная для понимания) и click (не входит в стандартную
+  библиотеку, что требует дополнительной установки)
 
 ### CommandExecutor
 
