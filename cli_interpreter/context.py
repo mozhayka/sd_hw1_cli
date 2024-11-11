@@ -5,7 +5,7 @@ import re
 class CliContext:
 
     def __init__(self):
-        self.env: dict[str, str] = dict(os.environ)
+        self._env: dict[str, str] = dict(os.environ)
 
     @staticmethod
     def _is_valid_variable_name(variable: str):
@@ -17,7 +17,7 @@ class CliContext:
         :param variable: Название переменной окружения
         :return: Значение переменной окружения, если такая есть в контексте; иначе возвращает пустую строку
         """
-        return self.env.get(variable, "")
+        return self._env.get(variable, "")
 
     def set(self, variable: str, value: str) -> None:
         """
@@ -29,4 +29,4 @@ class CliContext:
         """
         if not self._is_valid_variable_name(variable):
             raise ValueError(f"Invalid environment variable name: '{variable}'")
-        self.env[variable] = value
+        self._env[variable] = value

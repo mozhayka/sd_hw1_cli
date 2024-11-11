@@ -13,15 +13,14 @@ def test_wc_command_with_existing_file(tmp_path):
     output_stream = io.StringIO()
 
     cmd = WcCommand(args=[str(file_path)], output_stream=output_stream)
-    cmd.execute()
+    assert WcCommand.OK == cmd.execute()
 
     # Ожидаем количество строк, слов и байтов
     output = output_stream.getvalue().strip()
-    lines, words, bytes_count, filename = output.split()
+    lines, words, bytes_count = output.split()
     assert int(lines) == 2
     assert int(words) == 4
     assert int(bytes_count) == len(test_content)
-    assert filename == str(file_path)
 
 
 def test_wc_command_with_missing_file():
@@ -32,7 +31,7 @@ def test_wc_command_with_missing_file():
 
     # Перехватываем вывод в stderr с помощью patch
     with patch("sys.stderr", new_callable=io.StringIO) as mock_stderr:
-        cmd.execute()
+        assert WcCommand.MISSING_INPUT == cmd.execute()
         error_output = mock_stderr.getvalue().strip()
 
     # Проверяем, что вывод в stderr содержит сообщение об ошибке

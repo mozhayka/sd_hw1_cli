@@ -18,11 +18,12 @@ ___
 - [x] Окружение (команды вида “имя=значение”), оператор $
 - [x] Вызов внешней программы через Process (или его аналоги)
 - [x] Классы команд должны быть разделены по отдельным файлам
+- [x] Команды должны поддерживать код возврата
+- [x] Пайплайны (оператор “|”)
 
 ### Задачи последующих итераций
 
-- [ ] Команды должны поддерживать код возврата
-- [ ] Пайплайны (оператор “|”)
+- [ ] grep
 
 ___
 
@@ -60,7 +61,7 @@ ___
 
 ## Архитектура
 
-![image](docs/class_schema.png)
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/mozhayka/sd_hw1_cli/refs/heads/grep/docs/class_schema.puml)
 
 ### CliInterpreter
 
