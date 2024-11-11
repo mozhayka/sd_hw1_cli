@@ -5,6 +5,7 @@ from cli_interpreter.commands.cat_command import CatCommand
 from cli_interpreter.commands.command import Command
 from cli_interpreter.commands.echo_command import EchoCommand
 from cli_interpreter.commands.exit_command import ExitCommand
+from cli_interpreter.commands.grep_command import GrepCommand
 from cli_interpreter.commands.pwd_command import PwdCommand
 from cli_interpreter.commands.unknown_command import UnknownCommand
 from cli_interpreter.commands.wc_command import WcCommand
@@ -193,6 +194,8 @@ class UserInputParser:
             return PwdCommand()
         elif command_name == "exit":
             return ExitCommand()
+        elif command_name == "grep":
+            return GrepCommand(self.__strip_quotes(command_args))
 
         return UnknownCommand(args=tokens)  # Передадим все токены на исполнение ОС
 

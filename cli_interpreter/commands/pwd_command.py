@@ -9,6 +9,6 @@ class PwdCommand(Command):
     """
 
     def execute(self) -> int:
-        current_dir = os.getcwd() + "\n"
+        current_dir = os.getcwd()
         self._write_output(current_dir)
         return PwdCommand.OK

@@ -69,11 +69,10 @@ package commands {
     }
 
     class GrepCommand {
+        - argparser: argparse.ArgumentParser
+        - parse_arguments() -> (str, str, bool, bool, int)
+        - resolve_regexp_parameters(str, bool, bool) -> (str, int)
     }
-
-    note top of GrepCommand
-      TBD в текущей итерации
-    end note
 }
 
 CliInterpreter *-- UserInputParser

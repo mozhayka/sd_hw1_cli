@@ -4,6 +4,7 @@ from cli_interpreter.commands.assign_command import AssignCommand
 from cli_interpreter.commands.cat_command import CatCommand
 from cli_interpreter.commands.echo_command import EchoCommand
 from cli_interpreter.commands.exit_command import ExitCommand
+from cli_interpreter.commands.grep_command import GrepCommand
 from cli_interpreter.commands.pwd_command import PwdCommand
 from cli_interpreter.commands.unknown_command import UnknownCommand
 from cli_interpreter.commands.wc_command import WcCommand
@@ -59,7 +60,7 @@ def test_unknown_command():
 
 
 def test_assignment():
-    commands = parser.parse("A=1 B=\"foo bar\"")
+    commands = parser.parse('A=1 B="foo bar"')
     assert len(commands) == 1
     assert commands[0] == AssignCommand(["A", "1", "B", "foo bar"], context)
 
@@ -104,3 +105,15 @@ def test_pipe():
     assert len(commands) == 2
     assert commands[0] == CatCommand(["foo.txt"])
     assert commands[1] == WcCommand()
+
+
+def test_grep():
+    commands = parser.parse('grep "test" Readme.md')
+    assert len(commands) == 1
+    assert commands[0] == GrepCommand(["test", "Readme.md"])
+
+
+def test_grep_with_args():
+    commands = parser.parse('grep -i "test" -A 10 Readme.md')
+    assert len(commands) == 1
+    assert commands[0] == GrepCommand(["-i", "test", "-A", "10", "Readme.md"])

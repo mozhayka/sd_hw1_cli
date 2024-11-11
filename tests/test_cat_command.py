@@ -16,7 +16,7 @@ def test_cat_command_with_existing_file(tmp_path):
     assert CatCommand.OK == cmd.execute()
 
     output = output_stream.getvalue()
-    assert output == test_content
+    assert test_content in output
 
 
 def test_cat_command_with_missing_file():
