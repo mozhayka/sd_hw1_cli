@@ -1,3 +1,4 @@
+from cli_interpreter.commands.cd_command import CdCommand
 import pytest
 
 from cli_interpreter.commands.assign_command import AssignCommand
@@ -45,7 +46,13 @@ def test_wc_command():
 def test_ls_command():
     commands = parser.parse("ls -lat test")
     assert len(commands) == 1
-    assert commands[0] == LsCommand(["-lat", "test"])
+    assert commands[0] == LsCommand(["-lat", "test"], context=context)
+
+
+def test_cd_command():
+    commands = parser.parse("cd ..")
+    assert len(commands) == 1
+    assert commands[0] == CdCommand([".."], context=context)
 
 
 def test_pwd_command():
@@ -61,9 +68,9 @@ def test_exit_command():
 
 
 def test_unknown_command():
-    commands = parser.parse("unknown -l")
+    commands = parser.parse("mv -b")
     assert len(commands) == 1
-    assert commands[0] == UnknownCommand(["ls", "-l"], context=context)
+    assert commands[0] == UnknownCommand(["mv", "-b"], context=context)
 
 
 def test_assignment():

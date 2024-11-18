@@ -201,7 +201,7 @@ class UserInputParser:
         elif command_name == "cd":
             return CdCommand(self.__strip_quotes(command_args), self.__context)
         elif command_name == "ls":
-            return LsCommand(self.__strip_quotes(command_args))
+            return LsCommand(self.__strip_quotes(command_args), self.__context)
 
         return UnknownCommand(args=tokens, context=self.__context)  # Передадим все токены на исполнение ОС
 

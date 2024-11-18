@@ -5,6 +5,7 @@ from datetime import datetime
 from typing import TextIO
 
 from cli_interpreter.commands.command import Command
+from cli_interpreter.context import CliContext
 
 
 class LsCommand(Command):
@@ -20,20 +21,21 @@ class LsCommand(Command):
 
     def __init__(self,
                  args: list[str],
+                 context: CliContext,
                  input_stream: TextIO = None,
                  output_stream: TextIO = None):
         """
         Конструктор инициализирует утилиту для разбора аргументов команды `ls`
         @:param args - аргументы, полученные из пользовательского ввода
         """
-        super().__init__(args=args, input_stream=input_stream, output_stream=output_stream)
+        super().__init__(args=args, input_stream=input_stream, output_stream=output_stream, context=context)
 
         parser = argparse.ArgumentParser(add_help=False)
         parser.add_argument(
             "directory",
             type=str,
             nargs="?",
-            default=".",
+            default=self.context.get_working_dir(),
             help="директория для отображения"
         )
         parser.add_argument(

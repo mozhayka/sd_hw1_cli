@@ -4,6 +4,7 @@ import time
 from unittest.mock import patch
 
 from cli_interpreter.commands.ls_command import LsCommand
+from cli_interpreter.context import CliContext
 
 
 def test_ls_command_default():
@@ -12,7 +13,7 @@ def test_ls_command_default():
 
     output_stream = io.StringIO()
 
-    cmd = LsCommand(args=[], output_stream=output_stream, input_stream=None)
+    cmd = LsCommand(args=[], output_stream=output_stream, input_stream=None, context=CliContext())
 
     with patch("os.listdir", return_value=files):
         assert LsCommand.OK == cmd.execute()
@@ -26,7 +27,7 @@ def test_ls_command_non_existing_directory():
     """Тест команды LsCommand для несуществующей директории"""
     output_stream = io.StringIO()
 
-    cmd = LsCommand(args=["non_existing_dir"], output_stream=output_stream, input_stream=None)
+    cmd = LsCommand(args=["non_existing_dir"], output_stream=output_stream, input_stream=None, context=CliContext())
 
     with patch("sys.stderr", new_callable=io.StringIO) as mock_stderr:
         assert LsCommand.ILLEGAL_ARGUMENT == cmd.execute()
@@ -43,7 +44,7 @@ def test_ls_command_with_a_option(tmp_path):
 
     output_stream = io.StringIO()
 
-    cmd = LsCommand(args=["-a", str(tmp_path)], output_stream=output_stream, input_stream=None)
+    cmd = LsCommand(args=["-a", str(tmp_path)], output_stream=output_stream, input_stream=None, context=CliContext())
 
     assert LsCommand.OK == cmd.execute()
 
@@ -67,7 +68,7 @@ def test_ls_command_with_l_option(tmp_path):
 
     output_stream = io.StringIO()
 
-    cmd = LsCommand(args=["-l", str(tmp_path)], output_stream=output_stream, input_stream=None)
+    cmd = LsCommand(args=["-l", str(tmp_path)], output_stream=output_stream, input_stream=None, context=CliContext())
 
     assert LsCommand.OK == cmd.execute()
 
@@ -95,7 +96,7 @@ def test_ls_command_with_t_option(tmp_path):
 
     output_stream = io.StringIO()
 
-    cmd = LsCommand(args=["-t", str(tmp_path)], output_stream=output_stream, input_stream=None)
+    cmd = LsCommand(args=["-t", str(tmp_path)], output_stream=output_stream, input_stream=None, context=CliContext())
 
     assert LsCommand.OK == cmd.execute()
 
@@ -139,7 +140,7 @@ def test_ls_command_with_all_options(tmp_path):
 
     output_stream = io.StringIO()
 
-    cmd = LsCommand(args=["-a", "-l", "-t", str(tmp_path)], output_stream=output_stream, input_stream=None)
+    cmd = LsCommand(args=["-a", "-l", "-t", str(tmp_path)], output_stream=output_stream, input_stream=None, context=CliContext())
 
     assert LsCommand.OK == cmd.execute()
 
