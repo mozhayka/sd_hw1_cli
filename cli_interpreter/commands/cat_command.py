@@ -1,3 +1,4 @@
+import os
 import sys
 
 from cli_interpreter.commands.command import Command
@@ -8,8 +9,6 @@ class CatCommand(Command):
     Команда `cat [FILE]` — вывести на экран содержимое файла
     """
 
-    MISSING_INPUT: int = 2
-
     def execute(self) -> int:
         has_args = len(self.args) > 0
         if not has_args and self.input_stream is None:
@@ -18,7 +17,8 @@ class CatCommand(Command):
 
         try:
             if has_args:
-                with open(self.args[0], "r") as file:
+                absolute_path = os.path.join(self.context.get_working_dir(), self.args[0])
+                with open(absolute_path, "r") as file:
                     content = file.read()
             else:
                 content = self.input_stream
@@ -30,4 +30,4 @@ class CatCommand(Command):
             return CatCommand.MISSING_INPUT
         except Exception as e:
             sys.stderr.write(f"cat: Error reading {file}: {e}\n")
-            return CatCommand.DEFAULT_ERROR
+            return CatCommand.DEFAULT_ERROR1

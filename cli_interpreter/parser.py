@@ -2,6 +2,7 @@ import re
 
 from cli_interpreter.commands.assign_command import AssignCommand
 from cli_interpreter.commands.cat_command import CatCommand
+from cli_interpreter.commands.cd_command import CdCommand
 from cli_interpreter.commands.command import Command
 from cli_interpreter.commands.echo_command import EchoCommand
 from cli_interpreter.commands.exit_command import ExitCommand
@@ -185,19 +186,21 @@ class UserInputParser:
 
         # Сначала посмотрим, является ли эта команда одной из реализуемых нами
         if command_name == "cat":
-            return CatCommand(self.__strip_quotes(command_args))
+            return CatCommand(self.__strip_quotes(command_args), context=self.__context)
         elif command_name == "echo":
             return EchoCommand(self.__strip_quotes(command_args))
         elif command_name == "wc":
-            return WcCommand(self.__strip_quotes(command_args))
+            return WcCommand(self.__strip_quotes(command_args), context=self.__context)
         elif command_name == "pwd":
-            return PwdCommand()
+            return PwdCommand(context=self.__context)
         elif command_name == "exit":
             return ExitCommand()
         elif command_name == "grep":
-            return GrepCommand(self.__strip_quotes(command_args))
+            return GrepCommand(self.__strip_quotes(command_args), self.__context)
+        elif command_name == "cd":
+            return CdCommand(self.__strip_quotes(command_args), self.__context)
 
-        return UnknownCommand(args=tokens)  # Передадим все токены на исполнение ОС
+        return UnknownCommand(args=tokens, context=self.__context)  # Передадим все токены на исполнение ОС
 
     def __strip_quotes(self, args: list[str]):
         """

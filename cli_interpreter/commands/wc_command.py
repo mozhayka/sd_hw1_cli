@@ -1,3 +1,4 @@
+import os
 import sys
 
 from cli_interpreter.commands.command import Command
@@ -18,7 +19,8 @@ class WcCommand(Command):
 
         try:
             if has_args:
-                with open(self.args[0], "r") as file:
+                absolute_path = str(os.path.join(self.context.get_working_dir(), self.args[0]))
+                with open(absolute_path, "r") as file:
                     content = file.read()
             else:
                 content = self.input_stream.read()

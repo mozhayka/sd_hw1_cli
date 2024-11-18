@@ -26,7 +26,7 @@ def set_up():
 def test_cat_command():
     commands = parser.parse("cat foo")
     assert len(commands) == 1
-    assert commands[0] == CatCommand(["foo"])
+    assert commands[0] == CatCommand(["foo"], context=context)
 
 
 def test_echo_command():
@@ -38,13 +38,13 @@ def test_echo_command():
 def test_wc_command():
     commands = parser.parse("wc foo")
     assert len(commands) == 1
-    assert commands[0] == WcCommand(["foo"])
+    assert commands[0] == WcCommand(["foo"], context=context)
 
 
 def test_pwd_command():
     commands = parser.parse("pwd")
     assert len(commands) == 1
-    assert commands[0] == PwdCommand()
+    assert commands[0] == PwdCommand(context=context)
 
 
 def test_exit_command():
@@ -56,13 +56,13 @@ def test_exit_command():
 def test_unknown_command():
     commands = parser.parse("ls -l")
     assert len(commands) == 1
-    assert commands[0] == UnknownCommand(["ls", "-l"])
+    assert commands[0] == UnknownCommand(["ls", "-l"], context=context)
 
 
 def test_assignment():
     commands = parser.parse('A=1 B="foo bar"')
     assert len(commands) == 1
-    assert commands[0] == AssignCommand(["A", "1", "B", "foo bar"], context)
+    assert commands[0] == AssignCommand(["A", "1", "B", "foo bar"], context=context)
 
 
 def test_ignore_assignment():
@@ -97,23 +97,23 @@ def test_substitution_before_command_resolution():
     context.set("B", "wd")
     commands = parser.parse("$A$B")
     assert len(commands) == 1
-    assert commands[0] == PwdCommand()
+    assert commands[0] == PwdCommand(context=context)
 
 
 def test_pipe():
     commands = parser.parse("cat foo.txt | wc")
     assert len(commands) == 2
-    assert commands[0] == CatCommand(["foo.txt"])
-    assert commands[1] == WcCommand()
+    assert commands[0] == CatCommand(["foo.txt"], context=context)
+    assert commands[1] == WcCommand(context=context)
 
 
 def test_grep():
     commands = parser.parse('grep "test" Readme.md')
     assert len(commands) == 1
-    assert commands[0] == GrepCommand(["test", "Readme.md"])
+    assert commands[0] == GrepCommand(["test", "Readme.md"], context=context)
 
 
 def test_grep_with_args():
     commands = parser.parse('grep -i "test" -A 10 Readme.md')
     assert len(commands) == 1
-    assert commands[0] == GrepCommand(["-i", "test", "-A", "10", "Readme.md"])
+    assert commands[0] == GrepCommand(["-i", "test", "-A", "10", "Readme.md"], context=context)

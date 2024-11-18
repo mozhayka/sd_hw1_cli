@@ -2,6 +2,7 @@ import io
 from unittest.mock import patch
 
 from cli_interpreter.commands.cat_command import CatCommand
+from cli_interpreter.context import CliContext
 
 
 def test_cat_command_with_existing_file(tmp_path):
@@ -12,7 +13,7 @@ def test_cat_command_with_existing_file(tmp_path):
 
     output_stream = io.StringIO()
 
-    cmd = CatCommand(args=[str(file_path)], output_stream=output_stream)
+    cmd = CatCommand(args=[str(file_path)], output_stream=output_stream, context=CliContext())
     assert CatCommand.OK == cmd.execute()
 
     output = output_stream.getvalue()
@@ -23,7 +24,7 @@ def test_cat_command_with_missing_file():
     """Тест команды CatCommand для несуществующего файла"""
     output_stream = io.StringIO()
 
-    cmd = CatCommand(args=["non_existing_file.txt"], output_stream=output_stream)
+    cmd = CatCommand(args=["non_existing_file.txt"], output_stream=output_stream, context=CliContext())
 
     # Перехватываем вывод в stderr с помощью patch
     with patch("sys.stderr", new_callable=io.StringIO) as mock_stderr:
