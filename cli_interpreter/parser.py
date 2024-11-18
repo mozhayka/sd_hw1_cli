@@ -9,6 +9,7 @@ from cli_interpreter.commands.grep_command import GrepCommand
 from cli_interpreter.commands.pwd_command import PwdCommand
 from cli_interpreter.commands.unknown_command import UnknownCommand
 from cli_interpreter.commands.wc_command import WcCommand
+from cli_interpreter.commands.ls_command import LsCommand
 from cli_interpreter.context import CliContext
 
 
@@ -196,6 +197,8 @@ class UserInputParser:
             return ExitCommand()
         elif command_name == "grep":
             return GrepCommand(self.__strip_quotes(command_args))
+        elif command_name == "ls":
+            return LsCommand(self.__strip_quotes(command_args))
 
         return UnknownCommand(args=tokens)  # Передадим все токены на исполнение ОС
 

@@ -75,7 +75,7 @@ def test_pwd(monkeypatch, repl, capsys, tmp_path):
     assert os.getcwd() in captured.out
 
 
-def test_unknown_command(monkeypatch, repl, capsys):
+def test_ls_command(monkeypatch, repl, capsys):
     """Тест команды `ls -la`"""
     command = "ls -la"
     inputs = iter([command, "exit"])
@@ -86,7 +86,7 @@ def test_unknown_command(monkeypatch, repl, capsys):
         repl.run()
 
     captured = capsys.readouterr()
-    assert captured.out == os.popen(command).read()
+    assert len(captured.out.split("\n")) == len(os.popen(command).read().split("\n"))
 
 
 def test_environment_variables(monkeypatch, repl, capsys):

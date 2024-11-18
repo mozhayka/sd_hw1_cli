@@ -73,6 +73,9 @@ package commands {
         - parse_arguments() -> (str, str, bool, bool, int)
         - resolve_regexp_parameters(str, bool, bool) -> (str, int)
     }
+
+    class LsCommand {
+    }
 }
 
 CliInterpreter *-- UserInputParser
@@ -92,5 +95,6 @@ Command <|-- AssignCommand
 CliContext <-- AssignCommand
 Command <|-- UnknownCommand
 Command <|-- GrepCommand
+Command <|-- LsCommand
 
 @enduml

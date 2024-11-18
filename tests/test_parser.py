@@ -8,6 +8,7 @@ from cli_interpreter.commands.grep_command import GrepCommand
 from cli_interpreter.commands.pwd_command import PwdCommand
 from cli_interpreter.commands.unknown_command import UnknownCommand
 from cli_interpreter.commands.wc_command import WcCommand
+from cli_interpreter.commands.ls_command import LsCommand
 from cli_interpreter.context import CliContext
 from cli_interpreter.parser import UserInputParser
 
@@ -41,6 +42,12 @@ def test_wc_command():
     assert commands[0] == WcCommand(["foo"])
 
 
+def test_ls_command():
+    commands = parser.parse("ls -lat test")
+    assert len(commands) == 1
+    assert commands[0] == LsCommand(["-lat", "test"])
+
+
 def test_pwd_command():
     commands = parser.parse("pwd")
     assert len(commands) == 1
@@ -54,9 +61,9 @@ def test_exit_command():
 
 
 def test_unknown_command():
-    commands = parser.parse("ls -l")
+    commands = parser.parse("unknown -l")
     assert len(commands) == 1
-    assert commands[0] == UnknownCommand(["ls", "-l"])
+    assert commands[0] == UnknownCommand(["unknown", "-l"])
 
 
 def test_assignment():
