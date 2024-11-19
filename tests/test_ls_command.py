@@ -139,8 +139,9 @@ def test_ls_command_with_all_options(tmp_path):
     )
 
     output_stream = io.StringIO()
-
-    cmd = LsCommand(args=["-a", "-l", "-t", str(tmp_path)], output_stream=output_stream, input_stream=None, context=CliContext())
+    context = CliContext()
+    context.set_working_dir(tmp_path)
+    cmd = LsCommand(args=["-a", "-l", "-t", str(tmp_path)], output_stream=output_stream, input_stream=None, context=context)
 
     assert LsCommand.OK == cmd.execute()
 
