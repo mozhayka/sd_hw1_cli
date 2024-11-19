@@ -131,6 +131,8 @@ def test_ls_command_with_all_options(tmp_path):
     stats_dir2 = os.lstat(dir2)
 
     expected_total = (
+            getattr(os.lstat("."), 'st_blocks', 0) +
+            getattr(os.lstat(".."), 'st_blocks', 0) +
             getattr(stats_file1, 'st_blocks', 0) +
             getattr(stats_file2, 'st_blocks', 0) +
             getattr(stats_hidden, 'st_blocks', 0) +
@@ -141,7 +143,8 @@ def test_ls_command_with_all_options(tmp_path):
     output_stream = io.StringIO()
     context = CliContext()
     context.set_working_dir(os.path.abspath(tmp_path))
-    cmd = LsCommand(args=["-a", "-l", "-t", str(tmp_path)], output_stream=output_stream, input_stream=None, context=context)
+    cmd = LsCommand(args=["-a", "-l", "-t"], output_stream=output_stream, input_stream=None,
+                    context=context)
 
     assert LsCommand.OK == cmd.execute()
 
