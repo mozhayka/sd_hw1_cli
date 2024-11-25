@@ -25,23 +25,30 @@ class CdCommand(Command):
             if args_len:
                 new_dir = self.args[0]
 
+                # Дополнительно обрабатываем случай знака '~', так как он не разрешается автоматически
+                # Без обработки:
+                # pwd: /Documents/dir1
+                # cd ~: /Documents/dir1/~, а надо просто ~/
                 if new_dir.split('/')[0] == HOME_DIR:
                     absolute_path = Path(new_dir).expanduser()
                 else:
-                    absolute_path = Path(os.path.join(self.context.get_working_dir(), new_dir)).expanduser().resolve()
+                    absolute_path = Path(self.context.get_working_dir_absolute_path_with_file(new_dir)).expanduser().resolve()
 
                 if not os.path.exists(absolute_path):
-                    raise Exception(f"no such file or directory: {new_dir}")
+                    raise FileNotFoundError(f"no such file or directory: {new_dir}")
                 
-                if os.path.isdir(absolute_path):
-                    self.context.set_working_dir(str(absolute_path))
-                else:
-                    raise Exception(f"not a directory: {new_dir}")
+                if not os.path.isdir(absolute_path):
+                    raise FileNotFoundError(f"not a directory: {new_dir}")
+
+                self.context.set_working_dir(str(absolute_path))
+                    
             else:
                 self.context.set_working_dir(str(Path(HOME_DIR).expanduser()))
 
             return CdCommand.OK
-        except Exception as e:
+        except FileNotFoundError as e:
             sys.stderr.write(f"cd: {e}\n")
             return CdCommand.MISSING_INPUT
+        except Exception as e:
+            return CdCommand.DEFAULT_ERROR
             

@@ -99,7 +99,7 @@ Command <|-- WcCommand
 Command <|-- PwdCommand
 Command <|-- ExitCommand
 Command <|-- AssignCommand
-CliContext <-- AssignCommand
+CliContext <-- Command
 Command <|-- UnknownCommand
 Command <|-- GrepCommand
 Command <|-- LsCommand

@@ -19,7 +19,7 @@ class WcCommand(Command):
 
         try:
             if has_args:
-                absolute_path = str(os.path.join(self.context.get_working_dir(), self.args[0]))
+                absolute_path = self.context.get_working_dir_absolute_path_with_file(self.args[0])
                 with open(absolute_path, "r") as file:
                     content = file.read()
             else:

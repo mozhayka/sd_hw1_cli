@@ -38,3 +38,6 @@ class CliContext:
     def get_working_dir(self) -> str:
         return self._working_dir
     
+    def get_working_dir_absolute_path_with_file(self, filename) -> str:
+        return os.path.join(self.get_working_dir(), filename)
+    

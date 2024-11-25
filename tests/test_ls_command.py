@@ -149,7 +149,6 @@ def test_ls_command_with_all_options(tmp_path):
     assert LsCommand.OK == cmd.execute()
 
     output = output_stream.getvalue().strip().split('\n')
-
     assert len(output) == 8
 
     assert output[0].startswith("total ")

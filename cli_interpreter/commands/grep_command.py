@@ -55,7 +55,7 @@ class GrepCommand(Command):
 
         try:
             if self.input_stream is None:
-                absolute_path = os.path.join(self.context.get_working_dir(), filename)
+                absolute_path = self.context.get_working_dir_absolute_path_with_file(filename)
                 with open(absolute_path, "r") as file:
                     content = file.readlines()
             else:

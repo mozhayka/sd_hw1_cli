@@ -81,3 +81,4 @@ class Command(ABC):
         else:
             sys.stdout.write(output)
             sys.stdout.flush()
+
