@@ -89,7 +89,7 @@ class LsCommand(Command):
 
                 if long_format:
                     # Длинный формат вывода
-                    detailed_entries = [LsCommand._get_detailed_entry(entry, directory) for entry in entries]
+                    detailed_entries = [LsCommand.__get_detailed_entry(entry, directory) for entry in entries]
                     total_blocks = LsCommand.__calculate_total_blocks(detailed_entries)
                     output = LsCommand.__format_long_output(detailed_entries, total_blocks)
                 else:
@@ -107,7 +107,7 @@ class LsCommand(Command):
             return Command.ILLEGAL_ARGUMENT
 
     @staticmethod
-    def _get_detailed_entry(entry: str, directory: str) -> dict:
+    def __get_detailed_entry(entry: str, directory: str) -> dict:
         """Получает подробную информацию о файле или директории."""
         path = os.path.join(directory, entry)
         stats = os.lstat(path)
@@ -162,7 +162,7 @@ class LsCommand(Command):
         return "\n".join(lines)
 
     @staticmethod
-    def __get_permissions(path: str, mode: int):
+    def __get_permissions(path: str, mode: int) -> str:
         """Возвращает строку с правами доступа файла."""
         perms = [
             'r' if mode & 0o400 else '-',
@@ -179,7 +179,7 @@ class LsCommand(Command):
         return file_type + ''.join(perms)
 
     @staticmethod
-    def __get_file_type(path: str):
+    def __get_file_type(path: str) -> str:
         """Определяет тип файла."""
         if os.path.isdir(path):
             return 'd'
@@ -188,7 +188,7 @@ class LsCommand(Command):
         return '-'
 
     @staticmethod
-    def __get_owner(uid):
+    def __get_owner(uid: int) -> str:
         """Возвращает имя владельца по UID."""
         try:
             import pwd
@@ -199,7 +199,7 @@ class LsCommand(Command):
             return str(uid)
 
     @staticmethod
-    def __get_group(gid):
+    def __get_group(gid: int) -> str:
         """Возвращает имя группы по GID."""
         try:
             import grp
@@ -210,7 +210,7 @@ class LsCommand(Command):
             return str(gid)
 
     @staticmethod
-    def __format_time(timestamp):
+    def __format_time(timestamp: float) -> str:
         """Форматирует время последнего изменения."""
         dt = datetime.fromtimestamp(timestamp)
         return dt.strftime("%b %d %H:%M")
