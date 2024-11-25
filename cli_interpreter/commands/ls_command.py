@@ -185,8 +185,7 @@ class LsCommand(Command):
             return 'd'
         elif os.path.islink(path):
             return 'l'
-        else:
-            return '-'
+        return '-'
 
     @staticmethod
     def __get_owner(uid):
