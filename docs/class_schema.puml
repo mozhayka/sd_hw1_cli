@@ -79,6 +79,14 @@ package commands {
     }
 
     class LsCommand {
+        ~ __get_detailed_entry(str, str) -> dict
+        ~ __format_long_output(list, int) -> str
+        ~ __get_permissions(str, int) -> str
+        ~ __get_file_type(str) -> str
+        ~ __get_owner(int) -> str
+        ~ __get_group(int) -> str
+        ~ __format_time(float) -> str
+        ~ __calculate_total_blocks(list) -> int
     }
 
     class CdCommand {
