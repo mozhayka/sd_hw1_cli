@@ -2,6 +2,8 @@ import sys
 from abc import ABC, abstractmethod
 from typing import TextIO
 
+from cli_interpreter.context import CliContext
+
 
 class Command(ABC):
     """
@@ -10,6 +12,7 @@ class Command(ABC):
 
     OK: int = 0
     ILLEGAL_ARGUMENT: int = 1
+    MISSING_INPUT: int = 2
     DEFAULT_ERROR: int = 69
 
     def __init__(
@@ -17,6 +20,7 @@ class Command(ABC):
             args: list[str] = None,
             input_stream: TextIO = None,
             output_stream: TextIO = None,
+            context: CliContext = None,
     ):
         """Конструктор класса команды
         :param args: список строк-аргументов команды
@@ -28,6 +32,7 @@ class Command(ABC):
         self.args = args
         self.input_stream = input_stream
         self.output_stream = output_stream
+        self.context = context
 
     @abstractmethod
     def execute(self) -> int:
@@ -76,3 +81,4 @@ class Command(ABC):
         else:
             sys.stdout.write(output)
             sys.stdout.flush()
+

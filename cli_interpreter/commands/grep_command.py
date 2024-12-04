@@ -1,4 +1,5 @@
 import argparse
+import os
 import re
 import sys
 
@@ -20,12 +21,12 @@ class GrepCommand(Command):
         - `grep -w "Минимал" README.md > grep -A 1 "II" README.md`
     """
 
-    def __init__(self, args: list[str]):
+    def __init__(self, args: list[str], context):
         """
         Конструктор инициализирует утилиту для разбора аргументов команды `grep`
         @:param args - аргументы, полученные из пользовательского ввода
         """
-        super().__init__(args=args)
+        super().__init__(args=args, context=context)
 
         parser = argparse.ArgumentParser(add_help=False)
         parser.add_argument("word", type=str, help="искомое слово")
@@ -54,7 +55,8 @@ class GrepCommand(Command):
 
         try:
             if self.input_stream is None:
-                with open(filename, "r") as file:
+                absolute_path = self.context.get_working_dir_absolute_path_with_file(filename)
+                with open(absolute_path, "r") as file:
                     content = file.readlines()
             else:
                 content = self.input_stream.read().split("\n")

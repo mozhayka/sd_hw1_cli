@@ -10,8 +10,7 @@ class AssignCommand(Command):
     """
 
     def __init__(self, args: list[str], context: CliContext):
-        super().__init__(args)
-        self.context = context
+        super().__init__(args, context=context)
 
     def execute(self) -> int:
         assert len(self.args) % 2 == 0  # Количество аргументов должно быть четным

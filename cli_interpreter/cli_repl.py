@@ -1,3 +1,4 @@
+import os
 from cli_interpreter.context import CliContext
 from cli_interpreter.executor import CommandExecutor
 from cli_interpreter.parser import UserInputParser
@@ -26,7 +27,7 @@ class REPL:
         - Выводит результат исполнения на экран.
         """
         while True:
-            user_input = input("Enter command: ")
+            user_input = input(f"{os.path.basename(self.context.get_working_dir())}/: ")
 
             # Обработка ошибок при парсинге
             try:

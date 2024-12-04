@@ -2,6 +2,7 @@ import io
 from unittest.mock import patch
 
 from cli_interpreter.commands.wc_command import WcCommand
+from cli_interpreter.context import CliContext
 
 
 def test_wc_command_with_existing_file(tmp_path):
@@ -12,7 +13,7 @@ def test_wc_command_with_existing_file(tmp_path):
 
     output_stream = io.StringIO()
 
-    cmd = WcCommand(args=[str(file_path)], output_stream=output_stream)
+    cmd = WcCommand(args=[str(file_path)], output_stream=output_stream, context=CliContext())
     assert WcCommand.OK == cmd.execute()
 
     # Ожидаем количество строк, слов и байтов
@@ -27,7 +28,7 @@ def test_wc_command_with_missing_file():
     """Тест команды WcCommand для несуществующего файла"""
     output_stream = io.StringIO()
 
-    cmd = WcCommand(args=["non_existing_file.txt"], output_stream=output_stream)
+    cmd = WcCommand(args=["non_existing_file.txt"], output_stream=output_stream, context=CliContext())
 
     # Перехватываем вывод в stderr с помощью patch
     with patch("sys.stderr", new_callable=io.StringIO) as mock_stderr:

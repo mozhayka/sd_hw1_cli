@@ -6,6 +6,7 @@ class CliContext:
 
     def __init__(self):
         self._env: dict[str, str] = dict(os.environ)
+        self._working_dir: str = os.getcwd()
 
     @staticmethod
     def _is_valid_variable_name(variable: str):
@@ -30,3 +31,13 @@ class CliContext:
         if not self._is_valid_variable_name(variable):
             raise ValueError(f"Invalid environment variable name: '{variable}'")
         self._env[variable] = value
+
+    def set_working_dir(self, new_dir: str) -> None:
+        self._working_dir = new_dir
+
+    def get_working_dir(self) -> str:
+        return self._working_dir
+    
+    def get_working_dir_absolute_path_with_file(self, filename) -> str:
+        return os.path.join(self.get_working_dir(), filename)
+    

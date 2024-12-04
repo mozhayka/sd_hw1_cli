@@ -6,8 +6,11 @@ class CliInterpreter {
 
 class CliContext {
     # envs: dict[str, str]
+    # working_dir: str
     + setEnv(str, str): None
     + getEnv(str): str
+    + setWorkingDir(str): None
+    + getWorkingDir(): str
 }
 
 class UserInputParser {
@@ -41,6 +44,7 @@ package commands {
         + args: list[str]
         + input: TextIO
         + output: TextIO
+        + context: CliContext
         + {abstract} execute(self) -> int
         + __eq__(other) -> bool
         + __str__() -> str
@@ -73,6 +77,20 @@ package commands {
         - parse_arguments() -> (str, str, bool, bool, int)
         - resolve_regexp_parameters(str, bool, bool) -> (str, int)
     }
+
+    class LsCommand {
+        ~ __get_detailed_entry(str, str) -> dict
+        ~ __format_long_output(list, int) -> str
+        ~ __get_permissions(str, int) -> str
+        ~ __get_file_type(str) -> str
+        ~ __get_owner(int) -> str
+        ~ __get_group(int) -> str
+        ~ __format_time(float) -> str
+        ~ __calculate_total_blocks(list) -> int
+    }
+
+    class CdCommand {
+    }
 }
 
 CliInterpreter *-- UserInputParser
@@ -89,8 +107,10 @@ Command <|-- WcCommand
 Command <|-- PwdCommand
 Command <|-- ExitCommand
 Command <|-- AssignCommand
-CliContext <-- AssignCommand
+CliContext <-- Command
 Command <|-- UnknownCommand
 Command <|-- GrepCommand
+Command <|-- LsCommand
+Command <|-- CdCommand
 
 @enduml

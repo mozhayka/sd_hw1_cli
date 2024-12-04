@@ -1,6 +1,7 @@
 import io
 
 from cli_interpreter.commands.echo_command import EchoCommand
+from cli_interpreter.context import CliContext
 
 
 def test_echo_command_with_arguments():
@@ -8,7 +9,7 @@ def test_echo_command_with_arguments():
     args = ["Hello", "World"]
     output_stream = io.StringIO()
 
-    cmd = EchoCommand(args=args, output_stream=output_stream)
+    cmd = EchoCommand(args=args, output_stream=output_stream, context=CliContext())
     assert EchoCommand.OK == cmd.execute()
 
     output = output_stream.getvalue()
@@ -21,7 +22,7 @@ def test_echo_command_with_input_stream():
     input_stream = io.StringIO(expected)
     output_stream = io.StringIO()
 
-    cmd = EchoCommand(input_stream=input_stream, output_stream=output_stream)
+    cmd = EchoCommand(input_stream=input_stream, output_stream=output_stream, context=CliContext())
     assert EchoCommand.OK == cmd.execute()
 
     output = output_stream.getvalue()
