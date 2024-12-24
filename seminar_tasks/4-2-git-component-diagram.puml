@@ -1,0 +1,17 @@
+@startuml
+package "Version Control System" {
+    component "Commit"
+    component "Branches"
+    component "Checkout"
+    component "Log"
+    component "Merge"
+    component "Remote Repositories"
+}
+
+"Commit" --> "Branches" : Depends
+"Branches" --> "Checkout" : Uses
+"Log" --> "Branches" : Accesses history
+"Merge" --> "Branches" : Operates on
+"Remote Repositories" --> "Commit" : Synchronizes
+"Remote Repositories" --> "Branches" : Sync branches
+@enduml
