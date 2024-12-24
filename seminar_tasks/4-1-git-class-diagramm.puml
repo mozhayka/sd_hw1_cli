@@ -1,0 +1,33 @@
+@startuml
+class Repository {
+    List<Branch> branches
+    clone()
+    fetch()
+    pull()
+    push()
+}
+
+class Commit {
+    String message
+    Date date
+    String author
+}
+
+class Branch {
+    String name
+    List<Commit> commits
+    create()
+    delete()
+    checkout()
+    log() : List<Commit>
+}
+
+class MergeTool {
+    merge(sourceBranch: Branch, targetBranch: Branch)
+    resolveConflicts()
+}
+
+Repository "1" --> "*" Branch
+Branch "1" --> "*" Commit
+Branch "1" --> "1" MergeTool : uses
+@enduml
