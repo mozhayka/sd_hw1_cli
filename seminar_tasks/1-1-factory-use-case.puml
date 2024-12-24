@@ -1,0 +1,60 @@
+@startuml
+!theme materia
+!define RECTANGLE class
+
+actor "Диспетчер" as Dispatcher
+actor "Бригадир" as Foreman
+actor "Рабочий" as Worker
+actor "Отдел контроля качества" as QC
+actor "Начальник цеха" as Manager
+actor "Бухгалтерия" as Accounting
+
+rectangle "Ремонтные операции" {
+    usecase "Регистрация дефекта" as UC2
+    usecase "Фиксация времени начала и конца ремонта" as UC3
+    usecase "Принятие работ по ремонту" as UC11
+    usecase "Возврат автомобиля на тестирование" as UC12
+}
+
+rectangle "Управление ресурсами" {
+    usecase "Учет данных о ремонтных зонах, местах и бригадах" as UC1
+    usecase "Мониторинг свободных мест и рабочих" as UC6
+    usecase "Направление автомобиля в ремонт" as UC7
+    usecase "Назначение ремонта рабочему" as UC4
+    usecase "Регистрация рабочего как доступного" as UC5
+}
+
+rectangle "Отчетность" {
+    usecase "Получение сводного отчета" as UC8
+    usecase "Получение отчета о ремонтах" as UC9
+    usecase "Получение отчета по рабочим" as UC10
+}
+
+Dispatcher --> UC6
+Dispatcher --> UC7
+Dispatcher --> UC8
+
+Foreman --> UC4
+Foreman --> UC8
+Foreman --> UC10
+
+Worker --> UC5
+Worker --> UC2
+Worker --> UC3
+Worker --> UC11
+
+QC --> UC12
+QC --> UC8
+
+Manager --> UC9
+Manager --> UC8
+
+Accounting --> UC10
+Accounting --> UC8
+
+UC2 --> UC7 : "Требует направления автомобиля"
+UC3 --> UC11 : "После завершения ремонта"
+UC11 --> UC12 : "Автомобиль возвращен на тестирование"
+UC6 --> UC7 : "Использует данные о местах"
+UC4 --> UC3 : "Связь рабочего с задачей"
+@enduml

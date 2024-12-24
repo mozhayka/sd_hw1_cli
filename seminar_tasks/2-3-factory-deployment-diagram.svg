@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="929px" preserveAspectRatio="none" style="width:542px;height:929px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 542 929" width="542px" zoomAndPan="magnify">
+    <defs/>
+    <g><!--cluster ??????????????-->
+        <g id="cluster_&#1048;&#1085;&#1092;&#1088;&#1072;&#1089;&#1090;&#1088;&#1091;&#1082;&#1090;&#1091;&#1088;&#1072;">
+            <path d="M8.5,144.99 L132.3008,144.99 A3.75,3.75 0 0 1 134.8008,147.49 L141.8008,167.4783 L459.5,167.4783 A2.5,2.5 0 0 1 462,169.9783 L462,920.44 A2.5,2.5 0 0 1 459.5,922.94 L8.5,922.94 A2.5,2.5 0 0 1 6,920.44 L6,147.49 A2.5,2.5 0 0 1 8.5,144.99 "
+                  fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="141.8008" y1="167.4783" y2="167.4783"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="122.8008" x="10" y="160.5252">&#1048;&#1085;&#1092;&#1088;&#1072;&#1089;&#1090;&#1088;&#1091;&#1082;&#1090;&#1091;&#1088;&#1072;
+            </text>
+        </g><!--cluster Server1C-->
+        <g id="cluster_Server1C">
+            <polygon fill="none" points="30,197.99,40,187.99,216,187.99,216,409.48,206,419.48,30,419.48,30,197.99"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="206" x2="216" y1="197.99" y2="187.99"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="30" x2="206" y1="197.99" y2="197.99"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="206" x2="206" y1="197.99" y2="419.48"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="77.0752" x="80.4624" y="214.5252">&#1057;&#1077;&#1088;&#1074;&#1077;&#1088; 1&#1057;
+            </text>
+        </g><!--cluster Report1C-->
+        <g id="cluster_Report1C">
+            <rect fill="none" height="143.49" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1;" width="122"
+                  x="62" y="243.99"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="106.5381" x="69.731" y="259.5252">&#1054;&#1090;&#1095;&#1077;&#1090;&#1085;&#1086;&#1089;&#1090;&#1100;
+                1&#1057;
+            </text>
+        </g><!--cluster KubernetesCluster-->
+        <g id="cluster_KubernetesCluster">
+            <polygon fill="none" points="30,478.48,40,468.48,438,468.48,438,888.94,428,898.94,30,898.94,30,478.48"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="428" x2="438" y1="478.48" y2="468.48"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="30" x2="428" y1="478.48" y2="478.48"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="428" x2="428" y1="478.48" y2="898.94"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="145.2021" x="157.3989" y="495.0152">&#1050;&#1083;&#1072;&#1089;&#1090;&#1077;&#1088;
+                Kubernetes
+            </text>
+        </g><!--cluster BackendPod-->
+        <g id="cluster_BackendPod">
+            <polygon fill="none" points="152,526.48,162,516.48,323,516.48,323,601.96,313,611.96,152,611.96,152,526.48"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="313" x2="323" y1="526.48" y2="516.48"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="152" x2="313" y1="526.48" y2="526.48"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="313" x2="313" y1="526.48" y2="611.96"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="95.3682" x="185.8159" y="543.0152">&#1055;&#1086;&#1076; &#1073;&#1077;&#1082;&#1077;&#1085;&#1076;&#1072;
+            </text>
+        </g><!--cluster DatabaseNode-->
+        <g id="cluster_DatabaseNode">
+            <polygon fill="none" points="54,670.96,64,660.96,223,660.96,223,746.45,213,756.45,54,756.45,54,670.96"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="213" x2="223" y1="670.96" y2="660.96"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="54" x2="213" y1="670.96" y2="670.96"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="213" x2="213" y1="670.96" y2="756.45"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="93.4814" x="87.7593" y="687.4952">&#1041;&#1072;&#1079;&#1072; &#1076;&#1072;&#1085;&#1085;&#1099;&#1093;
+            </text>
+        </g><!--cluster MonitoringNode-->
+        <g id="cluster_MonitoringNode">
+            <polygon fill="none" points="247,670.96,257,660.96,414,660.96,414,864.94,404,874.94,247,874.94,247,670.96"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="404" x2="414" y1="670.96" y2="660.96"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="247" x2="404" y1="670.96" y2="670.96"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="404" x2="404" y1="670.96" y2="874.94"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="91.4854" x="280.7573" y="687.4952">&#1052;&#1086;&#1085;&#1080;&#1090;&#1086;&#1088;&#1080;&#1085;&#1075;
+            </text>
+        </g><!--cluster LoadBalancer-->
+        <g id="cluster_LoadBalancer">
+            <polygon fill="none" points="240,275.49,250,265.49,433,265.49,433,350.98,423,360.98,240,360.98,240,275.49"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="423" x2="433" y1="275.49" y2="265.49"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="240" x2="423" y1="275.49" y2="275.49"/>
+            <line style="stroke:#181818;stroke-width:1;" x1="423" x2="423" y1="275.49" y2="360.98"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="117.8447" x="273.5776" y="292.0252">&#1041;&#1072;&#1083;&#1072;&#1085;&#1089;&#1080;&#1088;&#1086;&#1074;&#1097;&#1080;&#1082;
+            </text>
+        </g><!--entity color-->
+        <g id="elem_color">
+            <ellipse cx="112.0028" cy="295.49" fill="#E3F2FD" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M112.0028,303.49 L112.0028,330.49 M99.0028,311.49 L125.0028,311.49 M112.0028,330.49 L99.0028,345.49 M112.0028,330.49 L125.0028,345.49 "
+                  fill="none" style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34.1455"
+                  x="94.93" y="360.5252">color
+            </text>
+        </g><!--entity Backend-->
+        <g id="elem_Backend">
+            <rect fill="#F1F1F1" height="39.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="109.584" x="182.21" y="556.48"/>
+            <polygon fill="#F1F1F1"
+                     points="274.794,561.48,274.794,575.48,286.794,575.48,286.794,567.48,280.794,561.48,274.794,561.48"
+                     style="stroke:#181818;stroke-width:0.5;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="280.794" x2="280.794" y1="561.48" y2="567.48"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="286.794" x2="280.794" y1="567.48" y2="567.48"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.584"
+                  x="192.21" y="583.0152">Go Backend
+            </text>
+        </g><!--entity Database-->
+        <g id="elem_Database">
+            <rect fill="#F1F1F1" height="39.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="106.8496" x="96.58" y="700.96"/>
+            <polygon fill="#F1F1F1"
+                     points="186.4296,705.96,186.4296,719.96,198.4296,719.96,198.4296,711.96,192.4296,705.96,186.4296,705.96"
+                     style="stroke:#181818;stroke-width:0.5;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="192.4296" x2="192.4296" y1="705.96" y2="711.96"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="198.4296" x2="192.4296" y1="711.96" y2="711.96"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76.8496"
+                  x="106.58" y="727.4952">PostgreSQL
+            </text>
+        </g><!--entity Prometheus-->
+        <g id="elem_Prometheus">
+            <rect fill="#F1F1F1" height="39.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="110.4863" x="275.76" y="700.96"/>
+            <polygon fill="#F1F1F1"
+                     points="369.2463,705.96,369.2463,719.96,381.2463,719.96,381.2463,711.96,375.2463,705.96,369.2463,705.96"
+                     style="stroke:#181818;stroke-width:0.5;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="375.2463" x2="375.2463" y1="705.96" y2="711.96"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="381.2463" x2="375.2463" y1="711.96" y2="711.96"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80.4863"
+                  x="285.76" y="727.4952">Prometheus
+            </text>
+        </g><!--entity Grafana-->
+        <g id="elem_Grafana">
+            <rect fill="#F1F1F1" height="39.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="82.876" x="289.56" y="819.45"/>
+            <polygon fill="#F1F1F1"
+                     points="355.436,824.45,355.436,838.45,367.436,838.45,367.436,830.45,361.436,824.45,355.436,824.45"
+                     style="stroke:#181818;stroke-width:0.5;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="361.436" x2="361.436" y1="824.45" y2="830.45"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="367.436" x2="361.436" y1="830.45" y2="830.45"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52.876"
+                  x="299.56" y="845.9852">Grafana
+            </text>
+        </g><!--entity Ingress-->
+        <g id="elem_Ingress">
+            <rect fill="#F1F1F1" height="39.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="127.2822" x="256.36" y="305.49"/>
+            <polygon fill="#F1F1F1"
+                     points="366.6422,310.49,366.6422,324.49,378.6422,324.49,378.6422,316.49,372.6422,310.49,366.6422,310.49"
+                     style="stroke:#181818;stroke-width:0.5;"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="372.6422" x2="372.6422" y1="310.49" y2="316.49"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="378.6422" x2="372.6422" y1="316.49" y2="316.49"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="97.2822"
+                  x="266.36" y="332.0252">NGINX Ingress
+            </text>
+        </g><!--entity User1C-->
+        <g id="elem_User1C">
+            <ellipse cx="319.9973" cy="14" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/>
+            <path d="M319.9973,22 L319.9973,49 M306.9973,30 L332.9973,30 M319.9973,49 L306.9973,64 M319.9973,49 L332.9973,64 "
+                  fill="none" style="stroke:#181818;stroke-width:0.5;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117.4346"
+                  x="261.28" y="79.0352">&#1055;&#1086;&#1083;&#1100;&#1079;&#1086;&#1074;&#1072;&#1090;&#1077;&#1083;&#1100;
+                1&#1057;
+            </text>
+        </g><!--link User1C to Report1C-->
+        <g id="link_User1C_Report1C">
+            <path d="M281.83,82.19 C267.25,98.05 251.4,117.38 240,136.99 C219.21,172.745 203.4075,216.1225 192.485,252.12 C189.7544,261.1194 187.3287,269.6575 185.2064,277.5 C184.9412,278.4803 184.6806,279.4497 184.4248,280.4078 C184.2969,280.8869 185.7083,275.5636 185.5828,276.0369 "
+                  fill="none" id="User1C-to-Report1C" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="184.0446,281.8364,190.2182,274.1626,185.3264,277.0035,182.4855,272.1118,184.0446,281.8364"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="70.4844"
+                  x="257.75" y="125.5584">HTTP/REST
+            </text>
+        </g><!--link Report1C to Backend-->
+        <g id="link_Report1C_Backend">
+            <path d="M184.0259,365.8502 C184.0995,366.141 184.1734,366.433 184.2476,366.7262 C184.3959,367.3125 184.5455,367.9035 184.6962,368.4991 C185.299,370.8812 185.9201,373.336 186.5578,375.856 C187.8331,380.8958 189.1742,386.1961 190.566,391.6963 C193.3495,402.6969 196.3353,414.4975 199.4013,426.615 C211.665,475.085 223.7392,522.8081 230.7392,550.4931 "
+                  fill="none" id="Report1C-to-Backend" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="232.21,556.31,233.8818,546.6041,230.9843,551.4625,226.1259,548.5651,232.21,556.31"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32.5063"
+                  x="206.5" y="449.0484">gRPC
+            </text>
+        </g><!--link Backend to Database-->
+        <g id="link_Backend_Database">
+            <path d="M182.35,596.23 C168.38,603.85 155.05,614.18 147,627.96 C133.98,650.26 137.1091,675.2686 142.2891,694.8986 "
+                  fill="none" id="Backend-to-Database" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="143.82,700.7,145.3913,690.9773,142.5443,695.8655,137.6561,693.0185,143.82,700.7"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="107.9609"
+                  x="148" y="641.5284">SQL (PostgreSQL)
+            </text>
+        </g><!--link Backend to Prometheus-->
+        <g id="link_Backend_Prometheus">
+            <path d="M249.68,596.44 C267.72,623.78 297.2861,668.6116 315.2161,695.7916 " fill="none"
+                  id="Backend-to-Prometheus" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="318.52,700.8,316.903,691.0848,315.7667,696.6263,310.2252,695.49,318.52,700.8"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="121.3228"
+                  x="282.18" y="641.5284">HTTP/Pushgateway
+            </text>
+        </g><!--link Prometheus to Grafana-->
+        <g id="link_Prometheus_Grafana">
+            <path d="M331,740.94 C331,762.66 331,791.75 331,813.32 " fill="none" id="Prometheus-to-Grafana"
+                  style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="331,819.32,335,810.32,331,814.32,327,810.32,331,819.32"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="70.7446"
+                  x="332" y="786.0184">HTTP/JSON
+            </text>
+        </g><!--link User1C to Grafana-->
+        <g id="link_User1C_Grafana">
+            <path d="M358.12,82.21 C372.7,98.08 388.55,117.41 400,136.99 C444.61,213.29 467,235.84 467,324.23 C467,324.23 467,324.23 467,721.71 C467,771.92 418.3569,802.7123 378.3969,820.3923 "
+                  fill="none" id="User1C-to-Grafana" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="372.91,822.82,382.7588,822.8365,377.4824,820.797,379.522,815.5206,372.91,822.82"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="66.5425"
+                  x="468" y="581.2884">HTTP/Web
+            </text>
+        </g><!--link Ingress to Backend-->
+        <g id="link_Ingress_Backend">
+            <path d="M313.62,345.36 C298.18,391.7 260.7674,503.9279 245.2974,550.3379 " fill="none"
+                  id="Ingress-to-Backend" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="243.4,556.03,250.0408,548.7568,244.9811,551.2866,242.4513,546.2269,243.4,556.03"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="80.1772"
+                  x="284.47" y="449.0484">HTTP/HTTPS
+            </text>
+        </g><!--SRC=[hLFDRXCn4BxxAKoumA6g2hSSaEWs3OMmMNQ3w0qvkyus8jYLrm4XX9IcHGZ1XHj25LNV89HML8asps2_4UFzoVuWGA9OMg_j-SRppJVZQm4T31d5RilgtRNRdTPJgzlfklXww_RshUqjX8WlkS0DTQAMQg4_gX_mFrCpFLKNPeytr6a3amW_ZgZOi13Q9_up4bBm-AnYVQGdW3tGKptHXseE_qDpqi2l4OR1U62Gf-e2Ji_ClBhFe-A5kJ53cY6eBmaBHyRbArpr3XocAbRB9411nQNxNCYAgna-7q4cjKHNY3SedSkylgX5oZvXzc3Sfu9HIQCaIh6rHkD8Kb4Ab_aRpSwn-WPIpU6BrRb97NmtGIJA0eS7DOv4oE409CUDDizHPOyQ_Ezf5QcLqYjH_AHcKD8PDjI0OAm_wBT9m2qYIPz4r3Qutv5qU2H3GRr7dOhFVsTv34B6wX8AiOH6kOJrzoJWGyw6q9v35lwPfk3FgToZuxHonVQAH6iL4sH064b2PEih2_5hJvg2BKojz048CZ6lKRy7IUP9t0udmIOP4UPN-h4WQRTtx5symw1gKQf6jlwdnmBKqdUFrzRk5E-kYU_rUiwws_9wQ7Le47aNDt7eEXRAjyQqwfqcXdR2DuhMkbd1bOgNXN76qLv897r9Ng6IrO3pCcJ8-rxNBXEkcP_GFihLgB9Dp6RoVW80]-->
+    </g>
+</svg>

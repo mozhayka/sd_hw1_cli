@@ -1,0 +1,24 @@
+@startuml
+title "Microwave Timing Diagram"
+
+participant "Microwave" as Microwave
+participant "User" as User
+
+User -> Microwave : Press Start Button
+activate Microwave
+Microwave -> Microwave : Start Timer
+Microwave -> Microwave : Turn On Light
+Microwave -> Microwave : Rotate Plate
+Microwave -> Microwave : Activate Magnetron (Heating)
+
+== Heating Period (30 seconds) ==
+Microwave --> User : Beep on Completion
+Microwave -> Microwave : Turn Off Light
+Microwave -> Microwave : Stop Plate
+Microwave -> Microwave : Deactivate Magnetron
+
+== Cooling Period (5 seconds) ==
+Microwave -> Microwave : Wait before allowing door to open
+
+deactivate Microwave
+@enduml

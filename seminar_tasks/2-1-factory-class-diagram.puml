@@ -1,0 +1,53 @@
+@startuml
+class Order {
+    int id
+    int quantity
+    void createProductionPlan()
+}
+
+class Car {
+    String vin
+    String model
+    String color
+    void assemblyBody()
+}
+
+class Defect {
+    int id
+    String location
+    String possibleCause
+    Date dateOccurred
+    void registerDefect()
+}
+
+class QualityControl {
+    Car carData
+    void generateReport()
+}
+
+class RepairTeam {
+    int id
+    List<Worker> teamMembers
+    void assignDefect(defectId)
+}
+
+class Worker {
+    int id
+    String firstName
+    String secondName
+    String jobTitle
+    int monthTenure
+    void startWork()
+}
+
+class RepairZone {
+    int id
+    void assignRepair(RepairTeam)
+}
+
+Order "1" --> "*" Car : produces
+Car "1" --> "*" Defect : has
+
+RepairTeam "1" --> "*" Worker : employs
+QualityControl "1" --> "*" RepairZone : inspects
+@enduml

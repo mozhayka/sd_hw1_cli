@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="613px" preserveAspectRatio="none" style="width:330px;height:613px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 330 613" width="330px" zoomAndPan="magnify">
+    <title>Microwave Timing Diagram</title>
+    <defs/>
+    <g>
+        <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+              textLength="198.126" x="62.1531" y="28.5352">Microwave Timing Diagram
+        </text>
+        <rect fill="#FFFFFF" height="447.416" style="stroke:#181818;stroke-width:1;" width="10" x="42.5845"
+              y="105.2871"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="47" x2="47" y1="73.9766"
+              y2="577.7031"/>
+        <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="296.0669" x2="296.0669" y1="73.9766"
+              y2="577.7031"/>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="85.1689"
+              x="5" y="42.4883"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71.1689" x="12"
+              y="63.0234">Microwave
+        </text>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="85.1689"
+              x="5" y="576.7031"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71.1689" x="12"
+              y="597.2383">Microwave
+        </text>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="44.3652"
+              x="274.0669" y="42.4883"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30.3652"
+              x="281.0669" y="63.0234">User
+        </text>
+        <rect fill="#E2E2F0" height="30.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="44.3652"
+              x="274.0669" y="576.7031"/>
+        <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30.3652"
+              x="281.0669" y="597.2383">User
+        </text>
+        <rect fill="#FFFFFF" height="447.416" style="stroke:#181818;stroke-width:1;" width="10" x="42.5845"
+              y="105.2871"/>
+        <polygon fill="#181818" points="63.5845,101.2871,53.5845,105.2871,63.5845,109.2871,59.5845,105.2871"
+                 style="stroke:#181818;stroke-width:1;"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="57.5845" x2="295.2495" y1="105.2871" y2="105.2871"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="111.7759"
+              x="69.5845" y="100.5449">Press Start Button
+        </text>
+        <line style="stroke:#181818;stroke-width:1;" x1="52.5845" x2="94.5845" y1="134.5977" y2="134.5977"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="94.5845" x2="94.5845" y1="134.5977" y2="147.5977"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="53.5845" x2="94.5845" y1="147.5977" y2="147.5977"/>
+        <polygon fill="#181818" points="63.5845,143.5977,53.5845,147.5977,63.5845,151.5977,59.5845,147.5977"
+                 style="stroke:#181818;stroke-width:1;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="70.0146"
+              x="59.5845" y="129.8555">Start Timer
+        </text>
+        <line style="stroke:#181818;stroke-width:1;" x1="52.5845" x2="94.5845" y1="176.9082" y2="176.9082"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="94.5845" x2="94.5845" y1="176.9082" y2="189.9082"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="53.5845" x2="94.5845" y1="189.9082" y2="189.9082"/>
+        <polygon fill="#181818" points="63.5845,185.9082,53.5845,189.9082,63.5845,193.9082,59.5845,189.9082"
+                 style="stroke:#181818;stroke-width:1;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="87.7944"
+              x="59.5845" y="172.166">Turn On Light
+        </text>
+        <line style="stroke:#181818;stroke-width:1;" x1="52.5845" x2="94.5845" y1="219.2188" y2="219.2188"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="94.5845" x2="94.5845" y1="219.2188" y2="232.2188"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="53.5845" x2="94.5845" y1="232.2188" y2="232.2188"/>
+        <polygon fill="#181818" points="63.5845,228.2188,53.5845,232.2188,63.5845,236.2188,59.5845,232.2188"
+                 style="stroke:#181818;stroke-width:1;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="74.6929"
+              x="59.5845" y="214.4766">Rotate Plate
+        </text>
+        <line style="stroke:#181818;stroke-width:1;" x1="52.5845" x2="94.5845" y1="261.5293" y2="261.5293"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="94.5845" x2="94.5845" y1="261.5293" y2="274.5293"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="53.5845" x2="94.5845" y1="274.5293" y2="274.5293"/>
+        <polygon fill="#181818" points="63.5845,270.5293,53.5845,274.5293,63.5845,278.5293,59.5845,274.5293"
+                 style="stroke:#181818;stroke-width:1;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="183.7393"
+              x="59.5845" y="256.7871">Activate Magnetron (Heating)
+        </text>
+        <rect fill="#EEEEEE" height="3" style="stroke:#EEEEEE;stroke-width:1;" width="323.4321" x="0" y="303.1846"/>
+        <line style="stroke:#000000;stroke-width:1;" x1="0" x2="323.4321" y1="303.1846" y2="303.1846"/>
+        <line style="stroke:#000000;stroke-width:1;" x1="0" x2="323.4321" y1="306.1846" y2="306.1846"/>
+        <rect fill="#EEEEEE" height="23.3105" style="stroke:#000000;stroke-width:2;" width="207.2734" x="58.0793"
+              y="292.5293"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="188.9888" x="64.0793" y="309.0977">Heating Period (30 seconds)
+        </text>
+        <polygon fill="#181818" points="284.2495,343.1504,294.2495,347.1504,284.2495,351.1504,288.2495,347.1504"
+                 style="stroke:#181818;stroke-width:1;"/>
+        <line style="stroke:#181818;stroke-width:1;stroke-dasharray:2.0,2.0;" x1="52.5845" x2="290.2495" y1="347.1504"
+              y2="347.1504"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="127.3975"
+              x="59.5845" y="342.4082">Beep on Completion
+        </text>
+        <line style="stroke:#181818;stroke-width:1;" x1="52.5845" x2="94.5845" y1="376.4609" y2="376.4609"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="94.5845" x2="94.5845" y1="376.4609" y2="389.4609"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="53.5845" x2="94.5845" y1="389.4609" y2="389.4609"/>
+        <polygon fill="#181818" points="63.5845,385.4609,53.5845,389.4609,63.5845,393.4609,59.5845,389.4609"
+                 style="stroke:#181818;stroke-width:1;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="89.2861"
+              x="59.5845" y="371.7188">Turn Off Light
+        </text>
+        <line style="stroke:#181818;stroke-width:1;" x1="52.5845" x2="94.5845" y1="418.7715" y2="418.7715"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="94.5845" x2="94.5845" y1="418.7715" y2="431.7715"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="53.5845" x2="94.5845" y1="431.7715" y2="431.7715"/>
+        <polygon fill="#181818" points="63.5845,427.7715,53.5845,431.7715,63.5845,435.7715,59.5845,431.7715"
+                 style="stroke:#181818;stroke-width:1;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="62.3721"
+              x="59.5845" y="414.0293">Stop Plate
+        </text>
+        <line style="stroke:#181818;stroke-width:1;" x1="52.5845" x2="94.5845" y1="461.082" y2="461.082"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="94.5845" x2="94.5845" y1="461.082" y2="474.082"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="53.5845" x2="94.5845" y1="474.082" y2="474.082"/>
+        <polygon fill="#181818" points="63.5845,470.082,53.5845,474.082,63.5845,478.082,59.5845,474.082"
+                 style="stroke:#181818;stroke-width:1;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="137.5918"
+              x="59.5845" y="456.3398">Deactivate Magnetron
+        </text>
+        <rect fill="#EEEEEE" height="3" style="stroke:#EEEEEE;stroke-width:1;" width="323.4321" x="0" y="502.7373"/>
+        <line style="stroke:#000000;stroke-width:1;" x1="0" x2="323.4321" y1="502.7373" y2="502.7373"/>
+        <line style="stroke:#000000;stroke-width:1;" x1="0" x2="323.4321" y1="505.7373" y2="505.7373"/>
+        <rect fill="#EEEEEE" height="23.3105" style="stroke:#000000;stroke-width:2;" width="198.1201" x="62.656"
+              y="492.082"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing"
+              textLength="179.8354" x="68.656" y="508.6504">Cooling Period (5 seconds)
+        </text>
+        <line style="stroke:#181818;stroke-width:1;" x1="52.5845" x2="94.5845" y1="551.7031" y2="551.7031"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="94.5845" x2="94.5845" y1="551.7031" y2="564.7031"/>
+        <line style="stroke:#181818;stroke-width:1;" x1="47.5845" x2="94.5845" y1="564.7031" y2="564.7031"/>
+        <polygon fill="#181818" points="57.5845,560.7031,47.5845,564.7031,57.5845,568.7031,53.5845,564.7031"
+                 style="stroke:#181818;stroke-width:1;"/>
+        <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="214.665"
+              x="59.5845" y="546.9609">Wait before allowing door to open
+        </text><!--SRC=[XP4nQyCm48Lt_Og7fsGe54gNW0jDCdHegMbIEb_jioEmTKAw97-_SbeIfy5uENJelK_tJcgrPMHljWnof0DZQplh6gmjDO6wp1XFGMrfFJaTw39GnBcx5dr63gVx_c1CNt7tT55ZWI9mZDXeic6vLnLdg5Hx8EK1zUBuP_yrfb4JVrIqtGU7TuTNs-nqNFOXshzQjAcEgvxFqr7ZM8Cup5wODErgRaoUuwz1mS5AXTd3FIANugeuHvuFmObyMia2IsQFH5f9vrjMcxOmaQQkf-9iLFnKc3NJJPnJY9L8EmpnE9RXclT5Ll7DjGG6jQqSUqOb4g02yPpW5T_-xmy0]-->
+    </g>
+</svg>

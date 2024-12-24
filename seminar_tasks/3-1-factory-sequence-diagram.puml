@@ -1,0 +1,20 @@
+@startuml
+actor "Контроль качества" as QualityControl
+actor "Ремонтная зона" as RepairZone
+actor "Ремонтник" as Worker
+actor "Бригадир" as Supervisor
+
+title Регистрация и ремонт дефекта
+
+QualityControl -> RepairZone: Направить автомобиль в ремонт
+RepairZone -> Worker: Назначить рабочего
+Worker -> RepairZone: Зарегистрироваться как доступный
+RepairZone -> Worker: Передать задачу на диагностику
+Worker -> Worker: Выполнить диагностику
+Worker -> RepairZone: Зарегистрировать дефект (место, причина, номер автомобиля, дата)
+RepairZone -> Supervisor: Назначить ремонтника
+Supervisor -> Worker: Назначить ремонт
+Worker -> Worker: Исправить дефект
+Worker -> RepairZone: Зафиксировать время начала и конца ремонта
+RepairZone -> QualityControl: Вернуть автомобиль в зону тестирования или на конвейер
+@enduml

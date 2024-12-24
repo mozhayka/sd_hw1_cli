@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="526px" preserveAspectRatio="none" style="width:525px;height:526px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 525 526" width="525px" zoomAndPan="magnify">
+    <defs/>
+    <g><!--class Repository-->
+        <g id="elem_Repository">
+            <rect codeLine="1" fill="#F1F1F1" height="130.4414" id="Repository" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="170.3887" x="115.71" y="7"/>
+            <ellipse cx="160.5913" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M163.0645,29.1431 Q162.4834,29.4419 161.8443,29.5913 Q161.2051,29.7407 160.4996,29.7407 Q157.9927,29.7407 156.6729,28.0889 Q155.3531,26.437 155.3531,23.3159 Q155.3531,20.1865 156.6729,18.5347 Q157.9927,16.8828 160.4996,16.8828 Q161.2051,16.8828 161.8526,17.0322 Q162.5,17.1816 163.0645,17.4805 L163.0645,20.2031 Q162.4336,19.6221 161.8401,19.3523 Q161.2466,19.0825 160.6158,19.0825 Q159.271,19.0825 158.5862,20.1492 Q157.9014,21.2158 157.9014,23.3159 Q157.9014,25.4077 158.5862,26.4744 Q159.271,27.541 160.6158,27.541 Q161.2466,27.541 161.8401,27.2712 Q162.4336,27.0015 163.0645,26.4204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72.126"
+                  x="181.0913" y="28.291">Repository
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="116.71" x2="285.0987" y1="39" y2="39"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="158.3887"
+                  x="121.71" y="56.5352">List&lt;Branch&gt; branches
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="116.71" x2="285.0987" y1="63.4883" y2="63.4883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45.4111"
+                  x="121.71" y="81.0234">clone()
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43.1484"
+                  x="121.71" y="97.5117">fetch()
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34.6992"
+                  x="121.71" y="114">pull()
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42.4307"
+                  x="121.71" y="130.4883">push()
+            </text>
+        </g><!--class Commit-->
+        <g id="elem_Commit">
+            <rect codeLine="9" fill="#F1F1F1" height="97.4648" id="Commit" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="115.8037" x="7" y="422.38"/>
+            <ellipse cx="35.5422" cy="438.38" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M38.0153,444.5231 Q37.4343,444.8219 36.7951,444.9713 Q36.156,445.1207 35.4504,445.1207 Q32.9436,445.1207 31.6237,443.4689 Q30.3039,441.817 30.3039,438.6959 Q30.3039,435.5665 31.6237,433.9147 Q32.9436,432.2628 35.4504,432.2628 Q36.156,432.2628 36.8034,432.4122 Q37.4509,432.5616 38.0153,432.8605 L38.0153,435.5831 Q37.3845,435.0021 36.791,434.7323 Q36.1975,434.4625 35.5666,434.4625 Q34.2219,434.4625 33.5371,435.5292 Q32.8522,436.5958 32.8522,438.6959 Q32.8522,440.7877 33.5371,441.8544 Q34.2219,442.921 35.5666,442.921 Q36.1975,442.921 36.791,442.6512 Q37.3845,442.3815 38.0153,441.8004 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53.71"
+                  x="52.5516" y="443.671">Commit
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="121.8037" y1="454.38" y2="454.38"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103.8037"
+                  x="13" y="471.9152">String message
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65.2627"
+                  x="13" y="488.4034">Date date
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89.0723"
+                  x="13" y="504.8917">String author
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="121.8037" y1="511.8448" y2="511.8448"/>
+        </g><!--class Branch-->
+        <g id="elem_Branch">
+            <rect codeLine="15" fill="#F1F1F1" height="146.9297" id="Branch" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="174.6133" x="113.6" y="198.45"/>
+            <ellipse cx="173.6264" cy="214.45" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M176.0995,220.5931 Q175.5185,220.8919 174.8793,221.0413 Q174.2401,221.1907 173.5346,221.1907 Q171.0277,221.1907 169.7079,219.5389 Q168.3881,217.887 168.3881,214.7659 Q168.3881,211.6365 169.7079,209.9847 Q171.0277,208.3328 173.5346,208.3328 Q174.2401,208.3328 174.8876,208.4822 Q175.5351,208.6316 176.0995,208.9305 L176.0995,211.6531 Q175.4687,211.0721 174.8751,210.8023 Q174.2816,210.5325 173.6508,210.5325 Q172.3061,210.5325 171.6212,211.5992 Q170.9364,212.6658 170.9364,214.7659 Q170.9364,216.8577 171.6212,217.9244 Q172.3061,218.991 173.6508,218.991 Q174.2816,218.991 174.8751,218.7212 Q175.4687,218.4515 176.0995,217.8704 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46.0605"
+                  x="194.1264" y="219.741">Branch
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="114.6" x2="287.2133" y1="230.45" y2="230.45"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81.6895"
+                  x="119.6" y="247.9852">String name
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="162.6133"
+                  x="119.6" y="264.4734">List&lt;Commit&gt; commits
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="114.6" x2="287.2133" y1="271.4266" y2="271.4266"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.5723"
+                  x="119.6" y="288.9617">create()
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50.5996"
+                  x="119.6" y="305.45">delete()
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70.6426"
+                  x="119.6" y="321.9383">checkout()
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143.623"
+                  x="119.6" y="338.4266">log() : List&lt;Commit&gt;
+            </text>
+        </g><!--class MergeTool-->
+        <g id="elem_MergeTool">
+            <rect codeLine="24" fill="#F1F1F1" height="80.9766" id="MergeTool" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="360.6396" x="157.58" y="430.62"/>
+            <ellipse cx="297.5424" cy="446.62" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M300.0155,452.7631 Q299.4345,453.0619 298.7953,453.2113 Q298.1562,453.3607 297.4506,453.3607 Q294.9438,453.3607 293.6239,451.7089 Q292.3041,450.057 292.3041,446.9359 Q292.3041,443.8065 293.6239,442.1547 Q294.9438,440.5028 297.4506,440.5028 Q298.1562,440.5028 298.8036,440.6522 Q299.4511,440.8016 300.0155,441.1005 L300.0155,443.8231 Q299.3847,443.2421 298.7912,442.9723 Q298.1977,442.7025 297.5668,442.7025 Q296.2221,442.7025 295.5373,443.7692 Q294.8525,444.8358 294.8525,446.9359 Q294.8525,449.0277 295.5373,450.0944 Q296.2221,451.161 297.5668,451.161 Q298.1977,451.161 298.7912,450.8912 Q299.3847,450.6215 300.0155,450.0404 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="72.2148"
+                  x="318.0424" y="451.911">MergeTool
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="158.58" x2="517.2196" y1="462.62" y2="462.62"/>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="158.58" x2="517.2196" y1="470.62" y2="470.62"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="348.6396"
+                  x="163.58" y="488.1552">merge(sourceBranch: Branch, targetBranch: Branch)
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117.2227"
+                  x="163.58" y="504.6434">resolveConflicts()
+            </text>
+        </g><!--link Repository to Branch-->
+        <g id="link_Repository_Branch">
+            <path codeLine="29" d="M200.9,137.68 C200.9,156.95 200.9,172.21 200.9,191.98 " fill="none"
+                  id="Repository-to-Branch" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="200.9,197.98,204.9,188.98,200.9,192.98,196.9,188.98,200.9,197.98"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.2202"
+                  x="192.4984" y="157.7883">1
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6.2651"
+                  x="194.6261" y="187.8014">*
+            </text>
+        </g><!--link Branch to Commit-->
+        <g id="link_Branch_Commit">
+            <path codeLine="30" d="M150.65,345.78 C133.09,371.23 117.2464,394.2107 101.4464,417.1207 " fill="none"
+                  id="Branch-to-Commit" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="98.04,422.06,106.4424,416.922,100.8787,417.9439,99.8567,412.3802,98.04,422.06"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.2202"
+                  x="137.6584" y="365.8635">1
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6.2651"
+                  x="96.2968" y="411.6975">*
+            </text>
+        </g><!--link Branch to MergeTool-->
+        <g id="link_Branch_MergeTool">
+            <path codeLine="31" d="M251.53,345.78 C271.34,374.3 289.8866,400.9925 306.7066,425.2025 " fill="none"
+                  id="Branch-to-MergeTool" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="310.13,430.13,308.2799,420.4565,307.2772,426.0237,301.7099,425.021,310.13,430.13"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28.5645"
+                  x="282.67" y="388.9484">uses
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.2202"
+                  x="247.8382" y="365.8635">1
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.2202"
+                  x="297.0842" y="419.9969">1
+            </text>
+        </g><!--SRC=[PL2xRiCm3Dpz5OGdfsY6haRWeUcOBcr_G54OMwWa1Y9Le2Zoxr4a8RPH3UBZfBiZjLNCy84NOYCKVk6lWNGEXcNt6fJNqm37794peYrvx3OvFwFegUQNQEqZvNltsZGwi-_9EIEL-LE2yICuP5OZvjQR4eHJkfOFL9I9manIpAn9l78usoqo0-WSgzk0YRVwEg75Hv46qjyKfPQMncu3_Off5d_7CE8NaQtwxbvtJ35eBCRwQl0PH2LCrjsY4P39_k2U_DaQBLnsjDXz-zB2TZj0-zJMZqqTUuaKT_-G56URFKH6lW40]-->
+    </g>
+</svg>
