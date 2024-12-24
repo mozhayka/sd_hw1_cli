@@ -1,0 +1,366 @@
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="764.5833px" preserveAspectRatio="none" style="width:3492px;height:764px;" version="1.1"
+     viewBox="0 0 3492 764" width="3492.7083px" zoomAndPan="magnify">
+    <defs>
+        <linearGradient id="g151r5ld3tyt0l0" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFFFFF"/>
+            <stop offset="100%" stop-color="#FFFFFF"/>
+        </linearGradient>
+        <filter height="300%" id="f151r5ld3tyt0l" width="300%" x="-1" y="-1">
+            <feGaussianBlur result="blurOut" stdDeviation="2.0833"/>
+            <feColorMatrix in="blurOut" result="blurOut2" type="matrix"
+                           values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/>
+            <feOffset dx="4.1667" dy="4.1667" in="blurOut2" result="blurOut3"/>
+            <feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/>
+        </filter>
+        <linearGradient id="g151r5ld3tyt0l1" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#4DABF5"/>
+            <stop offset="100%" stop-color="#2196F3"/>
+        </linearGradient>
+    </defs>
+    <g><!--cluster ????????? ????????-->
+        <g id="cluster_&#1056;&#1077;&#1084;&#1086;&#1085;&#1090;&#1085;&#1099;&#1077; &#1086;&#1087;&#1077;&#1088;&#1072;&#1094;&#1080;&#1080;">
+            <rect fill="url(#g151r5ld3tyt0l0)" filter="url(#f151r5ld3tyt0l)" height="539.0938" rx="4.1667" ry="4.1667"
+                  style="stroke:#2196F3;stroke-width:2.0833;" width="692.7083" x="67.8438" y="208.5417"/>
+            <text fill="#2196F3" font-family="Verdana" font-size="12.5" font-weight="bold" lengthAdjust="spacing"
+                  textLength="155.4749" x="336.4605" y="233.6088">&#1056;&#1077;&#1084;&#1086;&#1085;&#1090;&#1085;&#1099;&#1077;
+                &#1086;&#1087;&#1077;&#1088;&#1072;&#1094;&#1080;&#1080;
+            </text>
+        </g><!--cluster ?????????? ?????????-->
+        <g id="cluster_&#1059;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1077; &#1088;&#1077;&#1089;&#1091;&#1088;&#1089;&#1072;&#1084;&#1080;">
+            <rect fill="url(#g151r5ld3tyt0l0)" filter="url(#f151r5ld3tyt0l)" height="369.3438" rx="4.1667" ry="4.1667"
+                  style="stroke:#2196F3;stroke-width:2.0833;" width="1552.0833" x="785.5521" y="203.7396"/>
+            <text fill="#2196F3" font-family="Verdana" font-size="12.5" font-weight="bold" lengthAdjust="spacing"
+                  textLength="168.103" x="1477.5422" y="228.8067">&#1059;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1077;
+                &#1088;&#1077;&#1089;&#1091;&#1088;&#1089;&#1072;&#1084;&#1080;
+            </text>
+        </g><!--cluster ??????????-->
+        <g id="cluster_&#1054;&#1090;&#1095;&#1077;&#1090;&#1085;&#1086;&#1089;&#1090;&#1100;">
+            <rect fill="url(#g151r5ld3tyt0l0)" filter="url(#f151r5ld3tyt0l)" height="175.0938" rx="4.1667" ry="4.1667"
+                  style="stroke:#2196F3;stroke-width:2.0833;" width="986.4583" x="2488.6771" y="215.9583"/>
+            <text fill="#2196F3" font-family="Verdana" font-size="12.5" font-weight="bold" lengthAdjust="spacing"
+                  textLength="80.719" x="2941.5468" y="241.0255">&#1054;&#1090;&#1095;&#1077;&#1090;&#1085;&#1086;&#1089;&#1090;&#1100;
+            </text>
+        </g>
+        <g id="elem_UC2">
+            <ellipse cx="618.8867" cy="342.0464" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)"
+                     rx="125.1783" ry="28.5985" style="stroke:#2196F3;stroke-width:2.0833;"/>
+            <text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="139.2761"
+                  x="549.2486" y="344.9344">&#1056;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1103;
+                &#1076;&#1077;&#1092;&#1077;&#1082;&#1090;&#1072;
+            </text>
+        </g>
+        <g id="elem_UC3">
+            <ellipse cx="270.9684" cy="342.0395" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)"
+                     rx="186.2914" ry="39.7583" style="stroke:#2196F3;stroke-width:2.0833;"/>
+            <text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="285.6567"
+                  x="128.1401" y="344.9275">&#1060;&#1080;&#1082;&#1089;&#1072;&#1094;&#1080;&#1103; &#1074;&#1088;&#1077;&#1084;&#1077;&#1085;&#1080;
+                &#1085;&#1072;&#1095;&#1072;&#1083;&#1072; &#1080; &#1082;&#1086;&#1085;&#1094;&#1072; &#1088;&#1077;&#1084;&#1086;&#1085;&#1090;&#1072;
+            </text>
+        </g>
+        <g id="elem_UC11">
+            <ellipse cx="270.9699" cy="521.5086" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)"
+                     rx="143.0637" ry="31.1127" style="stroke:#2196F3;stroke-width:2.0833;"/>
+            <text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="180.8777"
+                  x="180.5311" y="524.3966">&#1055;&#1088;&#1080;&#1085;&#1103;&#1090;&#1080;&#1077; &#1088;&#1072;&#1073;&#1086;&#1090;
+                &#1087;&#1086; &#1088;&#1077;&#1084;&#1086;&#1085;&#1090;&#1091;
+            </text>
+        </g>
+        <g id="elem_UC12">
+            <ellipse cx="499.091" cy="694.7265" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)" rx="168.6848"
+                     ry="36.237" style="stroke:#2196F3;stroke-width:2.0833;"/>
+            <text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="244.5068"
+                  x="376.8376" y="697.6145">&#1042;&#1086;&#1079;&#1074;&#1088;&#1072;&#1090; &#1072;&#1074;&#1090;&#1086;&#1084;&#1086;&#1073;&#1080;&#1083;&#1103;
+                &#1085;&#1072; &#1090;&#1077;&#1089;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;
+            </text>
+        </g>
+        <g id="elem_UC1">
+            <ellipse cx="1012.6394" cy="342.0383" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)"
+                     rx="210.2957" ry="44.5591" style="stroke:#2196F3;stroke-width:2.0833;"/>
+            <text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="339.8071"
+                  x="842.7359" y="344.9263">&#1059;&#1095;&#1077;&#1090; &#1076;&#1072;&#1085;&#1085;&#1099;&#1093;
+                &#1086; &#1088;&#1077;&#1084;&#1086;&#1085;&#1090;&#1085;&#1099;&#1093; &#1079;&#1086;&#1085;&#1072;&#1093;,
+                &#1084;&#1077;&#1089;&#1090;&#1072;&#1093; &#1080; &#1073;&#1088;&#1080;&#1075;&#1072;&#1076;&#1072;&#1093;
+            </text>
+        </g>
+        <g id="elem_UC6">
+            <ellipse cx="1809.5151" cy="342.0447" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)"
+                     rx="173.4006" ry="37.1801" style="stroke:#2196F3;stroke-width:2.0833;"/>
+            <text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="255.6824"
+                  x="1681.674" y="344.9327">&#1052;&#1086;&#1085;&#1080;&#1090;&#1086;&#1088;&#1080;&#1085;&#1075;
+                &#1089;&#1074;&#1086;&#1073;&#1086;&#1076;&#1085;&#1099;&#1093; &#1084;&#1077;&#1089;&#1090; &#1080;
+                &#1088;&#1072;&#1073;&#1086;&#1095;&#1080;&#1093;
+            </text>
+        </g>
+        <g id="elem_UC7">
+            <ellipse cx="1809.5072" cy="521.5077" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)"
+                     rx="162.0176" ry="34.9035" style="stroke:#2196F3;stroke-width:2.0833;"/>
+            <text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="228.4729"
+                  x="1695.2708" y="524.3957">&#1053;&#1072;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1077;
+                &#1072;&#1074;&#1090;&#1086;&#1084;&#1086;&#1073;&#1080;&#1083;&#1103; &#1074; &#1088;&#1077;&#1084;&#1086;&#1085;&#1090;
+            </text>
+        </g>
+        <g id="elem_UC4">
+            <ellipse cx="2169.9242" cy="342.0369" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)"
+                     rx="150.9138" ry="32.6828" style="stroke:#2196F3;stroke-width:2.0833;"/>
+            <text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="201.0193"
+                  x="2069.4146" y="344.9249">&#1053;&#1072;&#1079;&#1085;&#1072;&#1095;&#1077;&#1085;&#1080;&#1077;
+                &#1088;&#1077;&#1084;&#1086;&#1085;&#1090;&#1072; &#1088;&#1072;&#1073;&#1086;&#1095;&#1077;&#1084;&#1091;
+            </text>
+        </g>
+        <g id="elem_UC5">
+            <ellipse cx="1429.3045" cy="342.0422" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)"
+                     rx="170.0545" ry="36.5109" style="stroke:#2196F3;stroke-width:2.0833;"/>
+            <text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="247.7661"
+                  x="1305.4215" y="344.9301">&#1056;&#1077;&#1075;&#1080;&#1089;&#1090;&#1088;&#1072;&#1094;&#1080;&#1103;
+                &#1088;&#1072;&#1073;&#1086;&#1095;&#1077;&#1075;&#1086; &#1082;&#1072;&#1082; &#1076;&#1086;&#1089;&#1090;&#1091;&#1087;&#1085;&#1086;&#1075;&#1086;
+            </text>
+        </g>
+        <g id="elem_UC8">
+            <ellipse cx="2648.0528" cy="342.0418" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)"
+                     rx="142.8653" ry="31.0731" style="stroke:#2196F3;stroke-width:2.0833;"/>
+            <text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="180.3589"
+                  x="2557.8733" y="344.9298">&#1055;&#1086;&#1083;&#1091;&#1095;&#1077;&#1085;&#1080;&#1077; &#1089;&#1074;&#1086;&#1076;&#1085;&#1086;&#1075;&#1086;
+                &#1086;&#1090;&#1095;&#1077;&#1090;&#1072;
+            </text>
+        </g>
+        <g id="elem_UC9">
+            <ellipse cx="3310.5485" cy="342.0389" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)"
+                     rx="148.3193" ry="32.1639" style="stroke:#2196F3;stroke-width:2.0833;"/>
+            <text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="194.4397"
+                  x="3213.3286" y="344.9268">&#1055;&#1086;&#1083;&#1091;&#1095;&#1077;&#1085;&#1080;&#1077; &#1086;&#1090;&#1095;&#1077;&#1090;&#1072;
+                &#1086; &#1088;&#1077;&#1084;&#1086;&#1085;&#1090;&#1072;&#1093;
+            </text>
+        </g>
+        <g id="elem_UC10">
+            <ellipse cx="2976.1746" cy="342.0453" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)"
+                     rx="149.185" ry="32.337" style="stroke:#2196F3;stroke-width:2.0833;"/>
+            <text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="196.6431"
+                  x="2877.8531" y="344.9333">&#1055;&#1086;&#1083;&#1091;&#1095;&#1077;&#1085;&#1080;&#1077; &#1086;&#1090;&#1095;&#1077;&#1090;&#1072;
+                &#1087;&#1086; &#1088;&#1072;&#1073;&#1086;&#1095;&#1080;&#1084;
+            </text>
+        </g><!--entity Dispatcher-->
+        <g id="elem_Dispatcher">
+            <ellipse cx="2325.1342" cy="25" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)" rx="8.3333"
+                     ry="8.3333" style="stroke:#2196F3;stroke-width:1.0417;"/>
+            <path d="M2325.1342,33.3333 L2325.1342,61.4583 M2311.5926,41.6667 L2338.6759,41.6667 M2325.1342,61.4583 L2311.5926,77.0833 M2325.1342,61.4583 L2338.6759,77.0833 "
+                  fill="none" filter="url(#f151r5ld3tyt0l)" style="stroke:#2196F3;stroke-width:1.0417;"/>
+            <text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="68.4143"
+                  x="2290.9271" y="105.2755">&#1044;&#1080;&#1089;&#1087;&#1077;&#1090;&#1095;&#1077;&#1088;
+            </text>
+        </g><!--entity Foreman-->
+        <g id="elem_Foreman">
+            <ellipse cx="2808.46" cy="25" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)" rx="8.3333"
+                     ry="8.3333" style="stroke:#2196F3;stroke-width:1.0417;"/>
+            <path d="M2808.46,33.3333 L2808.46,61.4583 M2794.9184,41.6667 L2822.0017,41.6667 M2808.46,61.4583 L2794.9184,77.0833 M2808.46,61.4583 L2822.0017,77.0833 "
+                  fill="none" filter="url(#f151r5ld3tyt0l)" style="stroke:#2196F3;stroke-width:1.0417;"/>
+            <text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="61.3159"
+                  x="2777.8021" y="105.2755">&#1041;&#1088;&#1080;&#1075;&#1072;&#1076;&#1080;&#1088;
+            </text>
+        </g><!--entity Worker-->
+        <g id="elem_Worker">
+            <ellipse cx="368.8784" cy="25" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)" rx="8.3333"
+                     ry="8.3333" style="stroke:#2196F3;stroke-width:1.0417;"/>
+            <path d="M368.8784,33.3333 L368.8784,61.4583 M355.3368,41.6667 L382.4201,41.6667 M368.8784,61.4583 L355.3368,77.0833 M368.8784,61.4583 L382.4201,77.0833 "
+                  fill="none" filter="url(#f151r5ld3tyt0l)" style="stroke:#2196F3;stroke-width:1.0417;"/>
+            <text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="53.8818"
+                  x="341.9375" y="105.2755">&#1056;&#1072;&#1073;&#1086;&#1095;&#1080;&#1081;
+            </text>
+        </g><!--entity QC-->
+        <g id="elem_QC">
+            <ellipse cx="2499.087" cy="25" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)" rx="8.3333"
+                     ry="8.3333" style="stroke:#2196F3;stroke-width:1.0417;"/>
+            <path d="M2499.087,33.3333 L2499.087,61.4583 M2485.5453,41.6667 L2512.6287,41.6667 M2499.087,61.4583 L2485.5453,77.0833 M2499.087,61.4583 L2512.6287,77.0833 "
+                  fill="none" filter="url(#f151r5ld3tyt0l)" style="stroke:#2196F3;stroke-width:1.0417;"/>
+            <text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="165.3198"
+                  x="2416.4271" y="105.2755">&#1054;&#1090;&#1076;&#1077;&#1083; &#1082;&#1086;&#1085;&#1090;&#1088;&#1086;&#1083;&#1103;
+                &#1082;&#1072;&#1095;&#1077;&#1089;&#1090;&#1074;&#1072;
+            </text>
+        </g><!--entity Manager-->
+        <g id="elem_Manager">
+            <ellipse cx="2999.0906" cy="25" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)" rx="8.3333"
+                     ry="8.3333" style="stroke:#2196F3;stroke-width:1.0417;"/>
+            <path d="M2999.0906,33.3333 L2999.0906,61.4583 M2985.549,41.6667 L3012.6323,41.6667 M2999.0906,61.4583 L2985.549,77.0833 M2999.0906,61.4583 L3012.6323,77.0833 "
+                  fill="none" filter="url(#f151r5ld3tyt0l)" style="stroke:#2196F3;stroke-width:1.0417;"/>
+            <text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="105.0354"
+                  x="2946.5729" y="105.2755">&#1053;&#1072;&#1095;&#1072;&#1083;&#1100;&#1085;&#1080;&#1082; &#1094;&#1077;&#1093;&#1072;
+            </text>
+        </g><!--entity Accounting-->
+        <g id="elem_Accounting">
+            <ellipse cx="2679.2986" cy="25" fill="url(#g151r5ld3tyt0l1)" filter="url(#f151r5ld3tyt0l)" rx="8.3333"
+                     ry="8.3333" style="stroke:#2196F3;stroke-width:1.0417;"/>
+            <path d="M2679.2986,33.3333 L2679.2986,61.4583 M2665.757,41.6667 L2692.8403,41.6667 M2679.2986,61.4583 L2665.757,77.0833 M2679.2986,61.4583 L2692.8403,77.0833 "
+                  fill="none" filter="url(#f151r5ld3tyt0l)" style="stroke:#2196F3;stroke-width:1.0417;"/>
+            <text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="81.4514"
+                  x="2638.5729" y="105.2755">&#1041;&#1091;&#1093;&#1075;&#1072;&#1083;&#1090;&#1077;&#1088;&#1080;&#1103;
+            </text>
+        </g><!--link Dispatcher to UC6-->
+        <g id="link_Dispatcher_UC6">
+            <path d="M2280,67.7396 C2162.875,68.0833 1853.8958,76.0625 1790.7604,149.5729 C1753.875,192.5104 1771.6281,256.7496 1789.4718,299.1559 "
+                  fill="none" id="Dispatcher-to-UC6" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="1791.8958,304.9167,1792.1003,294.6595,1789.8758,300.116,1784.4193,297.8915,1791.8958,304.9167"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link Dispatcher to UC7-->
+        <g id="link_Dispatcher_UC7">
+            <path d="M2345.7188,118.6354 C2370.875,189.6146 2402.7292,319.0104 2338.6771,399.3854 C2291.7188,458.2917 2103.2399,490.1365 1963.6462,506.2719 "
+                  fill="none" id="Dispatcher-to-UC7" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="1957.4375,506.9896,1967.2289,510.0522,1962.6114,506.3915,1966.2721,501.774,1957.4375,506.9896"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link Dispatcher to UC8-->
+        <g id="link_Dispatcher_UC8">
+            <path d="M2370.0313,105.9688 C2435.1875,161.0625 2549.8105,257.9545 2608.6438,307.694 " fill="none"
+                  id="Dispatcher-to-UC8" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="2613.4167,311.7292,2608.9475,302.4946,2609.4393,308.3666,2603.5673,308.8584,2613.4167,311.7292"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link Foreman to UC4-->
+        <g id="link_Foreman_UC4">
+            <path d="M2766.8854,106.8229 C2761.1563,111.0729 2755.1563,115.0417 2749.0938,118.3229 C2642.8958,175.6979 2601.7188,153.0938 2488.6771,195.4063 C2395.375,230.3229 2296.607,277.3637 2233.5133,308.7283 "
+                  fill="none" id="Foreman-to-UC4" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="2227.9167,311.5104,2238.1664,311.0683,2232.5805,309.192,2234.4568,303.6061,2227.9167,311.5104"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link Foreman to UC8-->
+        <g id="link_Foreman_UC8">
+            <path d="M2778.6667,118.7188 C2745.5,175.1563 2696.1773,259.1013 2668.9273,305.4659 " fill="none"
+                  id="Foreman-to-UC8" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="2665.7604,310.8542,2674.1029,304.883,2668.3995,306.3639,2666.9185,300.6605,2665.7604,310.8542"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link Foreman to UC10-->
+        <g id="link_Foreman_UC10">
+            <path d="M2849.9063,87.875 C2874.8646,101.8437 2905.3438,122.8125 2924.0938,149.5729 C2958.375,198.5104 2969.4986,262.8221 2973.4986,303.2075 "
+                  fill="none" id="Foreman-to-UC10" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="2974.1146,309.4271,2977.3369,299.6871,2973.6012,304.2441,2969.0442,300.5084,2974.1146,309.4271"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link Worker to UC5-->
+        <g id="link_Worker_UC5">
+            <path d="M406.5625,70.9688 C553.2917,82.8333 1085.8542,129.6667 1240.7604,195.4063 C1301.6667,221.25 1355.6066,267.3161 1390.8566,301.4931 "
+                  fill="none" id="Worker-to-UC5" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="1395.3438,305.8438,1391.5134,296.3264,1391.6044,302.2182,1385.7126,302.3093,1395.3438,305.8438"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link Worker to UC2-->
+        <g id="link_Worker_UC2">
+            <path d="M406.5833,109.1771 C458.2813,165.6354 545.5499,260.9219 589.5915,309.0157 " fill="none"
+                  id="Worker-to-UC2" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="593.8125,313.625,590.5539,303.897,590.295,309.7839,584.4082,309.525,593.8125,313.625"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link Worker to UC3-->
+        <g id="link_Worker_UC3">
+            <path d="M350.6979,118.7188 C331.6667,171.7604 304.3294,247.9922 287.0481,296.1588 " fill="none"
+                  id="Worker-to-UC3" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="284.9375,302.0417,292.0254,294.6245,286.6964,297.1393,284.1816,291.8103,284.9375,302.0417"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link Worker to UC11-->
+        <g id="link_Worker_UC11">
+            <path d="M331.1875,71.0521 C264.3958,78.6979 126.6667,105.1771 66.8021,195.4063 C16.6667,270.9375 21.9271,320.6042 66.8021,399.3854 C93.4167,446.1146 140.1751,474.2714 185.2897,492.9902 "
+                  fill="none" id="Worker-to-UC11" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="191.0625,495.3854,184.0001,487.944,186.2518,493.3894,180.8065,495.6411,191.0625,495.3854"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link QC to UC12-->
+        <g id="link_QC_UC12">
+            <path d="M2490.5729,118.7083 C2469.6667,236.5313 2412.0729,523.2188 2337.6354,581.4167 C2207.9688,682.7813 1104.0521,693.7234 674.2812,694.1192 "
+                  fill="none" id="QC-to-UC12" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="668.0313,694.125,677.4101,698.283,673.2396,694.1202,677.4024,689.9497,668.0313,694.125"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link QC to UC8-->
+        <g id="link_QC_UC8">
+            <path d="M2542.5,118.7917 C2550.0208,128.6771 2557.4271,139.2083 2563.6771,149.5729 C2596.1146,203.3854 2621.0932,266.0155 2635.2703,304.7864 "
+                  fill="none" id="QC-to-UC8" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="2637.4167,310.6563,2638.1103,300.4205,2635.628,305.7647,2630.2838,303.2824,2637.4167,310.6563"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link Manager to UC9-->
+        <g id="link_Manager_UC9">
+            <path d="M3056.9375,118.7188 C3121.1563,175 3217.9972,259.8915 3271.018,306.3498 " fill="none"
+                  id="Manager-to-UC9" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="3275.7188,310.4688,3271.4136,301.1565,3271.8015,307.0363,3265.9217,307.4242,3275.7188,310.4688"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link Manager to UC8-->
+        <g id="link_Manager_UC8">
+            <path d="M2935.6458,107.0729 C2897.7604,131.1979 2849.25,163.5521 2808.4688,195.4063 C2760.5938,232.7917 2713.7642,276.593 2682.3996,307.0617 "
+                  fill="none" id="Manager-to-UC8" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="2677.9167,311.4167,2687.5444,307.8729,2681.6525,307.7876,2681.7378,301.8956,2677.9167,311.4167"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link Accounting to UC10-->
+        <g id="link_Accounting_UC10">
+            <path d="M2730.6667,115.25 C2791.5729,171.2604 2886.7013,258.7385 2938.3054,306.1864 " fill="none"
+                  id="Accounting-to-UC10" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="2942.9063,310.4167,2938.8252,301.0041,2939.0722,306.8915,2933.1849,307.1385,2942.9063,310.4167"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link Accounting to UC8-->
+        <g id="link_Accounting_UC8">
+            <path d="M2673.4896,118.7188 C2667.0521,175 2657.576,257.801 2652.2531,304.2594 " fill="none"
+                  id="Accounting-to-UC8" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="2651.5417,310.4688,2656.7484,301.629,2652.1345,305.2943,2648.4692,300.6804,2651.5417,310.4688"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+        </g><!--link UC2 to UC7-->
+        <g id="link_UC2_UC7">
+            <path d="M680.5313,367.3333 C711.5833,378.6667 750.0938,391.3854 785.5521,399.3854 C1088.3125,467.6354 1444.3985,498.5749 1646.7423,511.6895 "
+                  fill="none" id="UC2-to-UC7" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="1652.9792,512.0938,1643.8933,507.3295,1647.7817,511.7569,1643.3543,515.6453,1652.9792,512.0938"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+            <text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="221.2341"
+                  x="1103.3854" y="441.8796">&#1058;&#1088;&#1077;&#1073;&#1091;&#1077;&#1090; &#1085;&#1072;&#1087;&#1088;&#1072;&#1074;&#1083;&#1077;&#1085;&#1080;&#1103;
+                &#1072;&#1074;&#1090;&#1086;&#1084;&#1086;&#1073;&#1080;&#1083;&#1103;
+            </text>
+        </g><!--link UC3 to UC11-->
+        <g id="link_UC3_UC11">
+            <path d="M270.9688,382.0104 C270.9688,414.5417 270.9688,454.0313 270.9688,483.8958 " fill="none"
+                  id="UC3-to-UC11" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="270.9688,490.1458,275.1354,480.7708,270.9688,484.9375,266.8021,480.7708,270.9688,490.1458"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+            <text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="179.4373"
+                  x="282.4271" y="441.8796">&#1055;&#1086;&#1089;&#1083;&#1077; &#1079;&#1072;&#1074;&#1077;&#1088;&#1096;&#1077;&#1085;&#1080;&#1103;
+                &#1088;&#1077;&#1084;&#1086;&#1085;&#1090;&#1072;
+            </text>
+        </g><!--link UC11 to UC12-->
+        <g id="link_UC11_UC12">
+            <path d="M309.6667,551.5833 C349.4479,581.4271 406.3856,624.1456 448.521,655.7498 " fill="none"
+                  id="UC11-to-UC12" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="453.5208,659.5,448.5212,650.5415,449.3543,656.3748,443.5209,657.2079,453.5208,659.5"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+            <text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="264.3555"
+                  x="416.9167" y="613.7755">&#1040;&#1074;&#1090;&#1086;&#1084;&#1086;&#1073;&#1080;&#1083;&#1100;
+                &#1074;&#1086;&#1079;&#1074;&#1088;&#1072;&#1097;&#1077;&#1085; &#1085;&#1072; &#1090;&#1077;&#1089;&#1090;&#1080;&#1088;&#1086;&#1074;&#1072;&#1085;&#1080;&#1077;
+            </text>
+        </g><!--link UC6 to UC7-->
+        <g id="link_UC6_UC7">
+            <path d="M1809.5104,379.4063 C1809.5104,410.7292 1809.5104,449.375 1809.5104,480.0521 " fill="none"
+                  id="UC6-to-UC7" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="1809.5104,486.3021,1813.6771,476.9271,1809.5104,481.0938,1805.3438,476.9271,1809.5104,486.3021"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+            <text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="187.3901"
+                  x="1820.9688" y="441.8796">&#1048;&#1089;&#1087;&#1086;&#1083;&#1100;&#1079;&#1091;&#1077;&#1090;
+                &#1076;&#1072;&#1085;&#1085;&#1099;&#1077; &#1086; &#1084;&#1077;&#1089;&#1090;&#1072;&#1093;
+            </text>
+        </g><!--link UC4 to UC3-->
+        <g id="link_UC4_UC3">
+            <path d="M2143.6354,309.6771 C2113.3125,274.8854 2060.0313,221.1354 2001.1771,195.4063 C1916.125,158.2083 1885.1458,193.3333 1792.3229,193.4063 C1499.6146,193.625 753.6875,105.5 475.1354,195.4063 C409.9271,216.4479 352.4657,262.5585 314.2574,298.3815 "
+                  fill="none" id="UC4-to-UC3" style="stroke:#2196F3;stroke-width:3.125;"/>
+            <polygon fill="#2196F3"
+                     points="309.6979,302.6563,319.387,299.2837,313.4975,299.0939,313.6872,293.2044,309.6979,302.6563"
+                     style="stroke:#2196F3;stroke-width:3.125;"/>
+            <text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacing" textLength="168.6157"
+                  x="1803.7813" y="173.5984">&#1057;&#1074;&#1103;&#1079;&#1100; &#1088;&#1072;&#1073;&#1086;&#1095;&#1077;&#1075;&#1086;
+                &#1089; &#1079;&#1072;&#1076;&#1072;&#1095;&#1077;&#1081;
+            </text>
+        </g><!--SRC=[bLNBRjD05DtxAwPPKuccRnP8LIXi0Aa8rBLbJ1lH92X9LmWfTMW14Ic0MB201YWVu2IrugPD-WipVyIvrpDsR4SgL6gREtFlcNFkAmlDVRVYYehTTEjbsrfuxhueLrtnPBlqTElnWuVRmZcm6mtBifrchIuAygiCrP6ybe7or3lyRHM4tH3toerNTjFPT-knusVLag4SIb-U8oHokr-hknMx6llyn6rVJW4KoWlssAtLNyw0d2eFuO6y578iftA2HrluVwcwTE0pWoFu3AJFuJkbEFG7N_lmxSW9yCT2dS3xM7i-iglsNefk6tT33l185qXtsNFBSMg7rMQvkcTPTTTfsjMz0vV91_8g8eNVZp8GCAuvrCTJeGmBuhKby7FOS1sxOMA6b44Mmcua1HBLMroD0HNHUrOgPaB_a0QaFWuQ084O12HFu8_MAtr1TfIl4rZQBs9gu9Spy3qkrqHruHD22z7ZsdW2egOf4DNM84jB6PGlS1WnCvy2VNpqS4HnVS1otIP4oTE52xcUA1_NA32uHUjDEjbdyfeP3Q0lY7oP4a3QgaLfmIDp4dx6BU9HYka9r4aTYumSSpeY4yIFRmbAA_FpwGBPxCzqCyuCpynhtnaX9CrHEkLGWDk0vKyHgb_Iw8GSvnap4EEkPN3HotFqpq_l8ALD0wxF0HpfbfbDPz8ciyHm79TyvPywEXKyHBvfMZ62IC6KNTjegWdUmfq6NisM_5Hl68ySEQYJhs-Fjq5xLaQKxtC3BwY7DP1f_eqRKMQ3SlsIDC3cVmBfIKgstfNffDiaFrcZOd7nBZT2xcWzVxHXMNgpweELZBsHiV6Q5MrQVR2QDejfSpbjOkgjdP8nYibdyD1hLHziPcmu9DiquP8xWnz86C7Y3ZBxcolGH-FmE4_o4q7DFsSY2e1QZfapLe_wYS9evWa1ErkzZr4o-zBYEAEM0Jxbdka8xZgp-puGs0sh3hXhAOdV-8jrojzO8oCqtblSIwd5H0WhfaICy0lFTn7RoG-WEeh4dkkPloZy1G00]-->
+    </g>
+</svg>

@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="542px" preserveAspectRatio="none" style="width:655px;height:542px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 655 542" width="655px" zoomAndPan="magnify">
+    <defs/>
+    <g><!--class Order-->
+        <g id="elem_Order">
+            <rect codeLine="1" fill="#F1F1F1" height="97.4648" id="Order" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="197.2197" x="7" y="7"/>
+            <ellipse cx="81.8877" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M84.3608,29.1431 Q83.7798,29.4419 83.1406,29.5913 Q82.5015,29.7407 81.7959,29.7407 Q79.2891,29.7407 77.9692,28.0889 Q76.6494,26.437 76.6494,23.3159 Q76.6494,20.1865 77.9692,18.5347 Q79.2891,16.8828 81.7959,16.8828 Q82.5015,16.8828 83.1489,17.0322 Q83.7964,17.1816 84.3608,17.4805 L84.3608,20.2031 Q83.73,19.6221 83.1365,19.3523 Q82.543,19.0825 81.9121,19.0825 Q80.5674,19.0825 79.8826,20.1492 Q79.1978,21.2158 79.1978,23.3159 Q79.1978,25.4077 79.8826,26.4744 Q80.5674,27.541 81.9121,27.541 Q82.543,27.541 83.1365,27.2712 Q83.73,27.0015 84.3608,26.4204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38.9443"
+                  x="102.3877" y="28.291">Order
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="203.2197" y1="39" y2="39"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35.2598"
+                  x="13" y="56.5352">int id
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.1553"
+                  x="13" y="73.0234">int quantity
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="203.2197" y1="79.9766" y2="79.9766"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="185.2197"
+                  x="13" y="97.5117">void createProductionPlan()
+            </text>
+        </g><!--class Car-->
+        <g id="elem_Car">
+            <rect codeLine="7" fill="#F1F1F1" height="113.9531" id="Car" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="150.0654" x="30.58" y="197.96"/>
+            <ellipse cx="89.7895" cy="213.96" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M92.2626,220.1031 Q91.6816,220.4019 91.0424,220.5513 Q90.4032,220.7007 89.6977,220.7007 Q87.1908,220.7007 85.871,219.0489 Q84.5512,217.397 84.5512,214.2759 Q84.5512,211.1465 85.871,209.4947 Q87.1908,207.8428 89.6977,207.8428 Q90.4032,207.8428 91.0507,207.9922 Q91.6982,208.1416 92.2626,208.4405 L92.2626,211.1631 Q91.6318,210.5821 91.0383,210.3123 Q90.4447,210.0425 89.8139,210.0425 Q88.4692,210.0425 87.7843,211.1092 Q87.0995,212.1758 87.0995,214.2759 Q87.0995,216.3677 87.7843,217.4344 Q88.4692,218.501 89.8139,218.501 Q90.4447,218.501 91.0383,218.2312 Q91.6318,217.9615 92.2626,217.3804 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="23.1465"
+                  x="110.2895" y="219.251">Car
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="31.58" x2="179.6454" y1="229.96" y2="229.96"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64.3809"
+                  x="36.58" y="247.4952">String vin
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86.7275"
+                  x="36.58" y="263.9834">String model
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78.5449"
+                  x="36.58" y="280.4717">String color
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="31.58" x2="179.6454" y1="287.4248" y2="287.4248"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138.0654"
+                  x="36.58" y="304.96">void assemblyBody()
+            </text>
+        </g><!--class Defect-->
+        <g id="elem_Defect">
+            <rect codeLine="14" fill="#F1F1F1" height="130.4414" id="Defect" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="153.832" x="28.69" y="405.4"/>
+            <ellipse cx="79.5357" cy="421.4" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M82.0088,427.5431 Q81.4278,427.8419 80.7886,427.9913 Q80.1495,428.1407 79.4439,428.1407 Q76.9371,428.1407 75.6172,426.4889 Q74.2974,424.837 74.2974,421.7159 Q74.2974,418.5865 75.6172,416.9347 Q76.9371,415.2828 79.4439,415.2828 Q80.1495,415.2828 80.7969,415.4322 Q81.4444,415.5816 82.0088,415.8805 L82.0088,418.6031 Q81.378,418.0221 80.7845,417.7523 Q80.191,417.4825 79.5601,417.4825 Q78.2154,417.4825 77.5306,418.5492 Q76.8458,419.6158 76.8458,421.7159 Q76.8458,423.8077 77.5306,424.8744 Q78.2154,425.941 79.5601,425.941 Q80.191,425.941 80.7845,425.6712 Q81.378,425.4015 82.0088,424.8204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43.6406"
+                  x="100.0357" y="426.691">Defect
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="29.69" x2="181.522" y1="437.4" y2="437.4"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35.2598"
+                  x="34.69" y="454.9352">int id
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98.5195"
+                  x="34.69" y="471.4234">String location
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141.832"
+                  x="34.69" y="487.9117">String possibleCause
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="127.2373"
+                  x="34.69" y="504.4">Date dateOccurred
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="29.69" x2="181.522" y1="511.3531" y2="511.3531"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138.0859"
+                  x="34.69" y="528.8883">void registerDefect()
+            </text>
+        </g><!--class QualityControl-->
+        <g id="elem_QualityControl">
+            <rect codeLine="22" fill="#F1F1F1" height="80.9766" id="QualityControl" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="158.7813" x="247.22" y="15.25"/>
+            <ellipse cx="274.9347" cy="31.25" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M277.4078,37.3931 Q276.8268,37.6919 276.1876,37.8413 Q275.5485,37.9907 274.8429,37.9907 Q272.3361,37.9907 271.0162,36.3389 Q269.6964,34.687 269.6964,31.5659 Q269.6964,28.4365 271.0162,26.7847 Q272.3361,25.1328 274.8429,25.1328 Q275.5485,25.1328 276.1959,25.2822 Q276.8434,25.4316 277.4078,25.7305 L277.4078,28.4531 Q276.777,27.8721 276.1835,27.6023 Q275.59,27.3325 274.9591,27.3325 Q273.6144,27.3325 272.9296,28.3992 Q272.2448,29.4658 272.2448,31.5659 Q272.2448,33.6577 272.9296,34.7244 Q273.6144,35.791 274.9591,35.791 Q275.59,35.791 276.1835,35.5212 Q276.777,35.2515 277.4078,34.6704 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98.5264"
+                  x="291.7602" y="36.541">QualityControl
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="248.22" x2="405.0013" y1="47.25" y2="47.25"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79.3926"
+                  x="253.22" y="64.7852">Car carData
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="248.22" x2="405.0013" y1="71.7383" y2="71.7383"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146.7813"
+                  x="253.22" y="89.2734">void generateReport()
+            </text>
+        </g><!--class RepairTeam-->
+        <g id="elem_RepairTeam">
+            <rect codeLine="27" fill="#F1F1F1" height="97.4648" id="RepairTeam" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="206.8311" x="441.19" y="7"/>
+            <ellipse cx="500.1431" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M502.6163,29.1431 Q502.0352,29.4419 501.3961,29.5913 Q500.7569,29.7407 500.0513,29.7407 Q497.5445,29.7407 496.2247,28.0889 Q494.9048,26.437 494.9048,23.3159 Q494.9048,20.1865 496.2247,18.5347 Q497.5445,16.8828 500.0513,16.8828 Q500.7569,16.8828 501.4044,17.0322 Q502.0518,17.1816 502.6163,17.4805 L502.6163,20.2031 Q501.9854,19.6221 501.3919,19.3523 Q500.7984,19.0825 500.1675,19.0825 Q498.8228,19.0825 498.138,20.1492 Q497.4532,21.2158 497.4532,23.3159 Q497.4532,25.4077 498.138,26.4744 Q498.8228,27.541 500.1675,27.541 Q500.7984,27.541 501.3919,27.2712 Q501.9854,27.0015 502.6163,26.4204 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80.4248"
+                  x="520.6431" y="28.291">RepairTeam
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="442.19" x2="647.0211" y1="39" y2="39"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35.2598"
+                  x="447.19" y="56.5352">int id
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="194.8311"
+                  x="447.19" y="73.0234">List&lt;Worker&gt; teamMembers
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="442.19" x2="647.0211" y1="79.9766" y2="79.9766"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="184.1602"
+                  x="447.19" y="97.5117">void assignDefect(defectId)
+            </text>
+        </g><!--class Worker-->
+        <g id="elem_Worker">
+            <rect codeLine="33" fill="#F1F1F1" height="146.9297" id="Worker" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="143.5508" x="472.83" y="181.47"/>
+            <ellipse cx="516.4208" cy="197.47" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M518.894,203.6131 Q518.3129,203.9119 517.6737,204.0613 Q517.0346,204.2107 516.329,204.2107 Q513.8222,204.2107 512.5024,202.5589 Q511.1825,200.907 511.1825,197.7859 Q511.1825,194.6565 512.5024,193.0047 Q513.8222,191.3528 516.329,191.3528 Q517.0346,191.3528 517.6821,191.5022 Q518.3295,191.6516 518.894,191.9505 L518.894,194.6731 Q518.2631,194.0921 517.6696,193.8223 Q517.0761,193.5525 516.4452,193.5525 Q515.1005,193.5525 514.4157,194.6192 Q513.7309,195.6858 513.7309,197.7859 Q513.7309,199.8777 514.4157,200.9444 Q515.1005,202.011 516.4452,202.011 Q517.0761,202.011 517.6696,201.7412 Q518.2631,201.4715 518.894,200.8904 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48.0156"
+                  x="536.7743" y="202.761">Worker
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="473.83" x2="615.3808" y1="213.47" y2="213.47"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35.2598"
+                  x="478.83" y="231.0052">int id
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110.6396"
+                  x="478.83" y="247.4934">String firstName
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131.5508"
+                  x="478.83" y="263.9817">String secondName
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96.0518"
+                  x="478.83" y="280.47">String jobTitle
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114.2422"
+                  x="478.83" y="296.9583">int monthTenure
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="473.83" x2="615.3808" y1="303.9114" y2="303.9114"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107.7959"
+                  x="478.83" y="321.4466">void startWork()
+            </text>
+        </g><!--class RepairZone-->
+        <g id="elem_RepairZone">
+            <rect codeLine="42" fill="#F1F1F1" height="80.9766" id="RepairZone" rx="2.5" ry="2.5"
+                  style="stroke:#181818;stroke-width:0.5;" width="221.1045" x="216.06" y="214.45"/>
+            <ellipse cx="284.1015" cy="230.45" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1;"/>
+            <path d="M286.5746,236.5931 Q285.9936,236.8919 285.3544,237.0413 Q284.7153,237.1907 284.0097,237.1907 Q281.5029,237.1907 280.183,235.5389 Q278.8632,233.887 278.8632,230.7659 Q278.8632,227.6365 280.183,225.9847 Q281.5029,224.3328 284.0097,224.3328 Q284.7153,224.3328 285.3627,224.4822 Q286.0102,224.6316 286.5746,224.9305 L286.5746,227.6531 Q285.9438,227.0721 285.3503,226.8023 Q284.7568,226.5325 284.1259,226.5325 Q282.7812,226.5325 282.0964,227.5992 Q281.4116,228.6658 281.4116,230.7659 Q281.4116,232.8577 282.0964,233.9244 Q282.7812,234.991 284.1259,234.991 Q284.7568,234.991 285.3503,234.7212 Q285.9438,234.4515 286.5746,233.8704 Z "
+                  fill="#000000"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76.5215"
+                  x="304.6015" y="235.741">RepairZone
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="217.06" x2="436.1645" y1="246.45" y2="246.45"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35.2598"
+                  x="222.06" y="263.9852">int id
+            </text>
+            <line style="stroke:#181818;stroke-width:0.5;" x1="217.06" x2="436.1645" y1="270.9383" y2="270.9383"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="209.1045"
+                  x="222.06" y="288.4734">void assignRepair(RepairTeam)
+            </text>
+        </g><!--link Order to Car-->
+        <g id="link_Order_Car">
+            <path codeLine="47" d="M105.61,104.72 C105.61,132.77 105.61,162.31 105.61,191.67 " fill="none"
+                  id="Order-to-Car" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="105.61,197.67,109.61,188.67,105.61,192.67,101.61,188.67,105.61,197.67"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="58.2651"
+                  x="106.61" y="148.0384">produces
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.2202"
+                  x="97.0873" y="124.8997">1
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6.2651"
+                  x="99.2602" y="187.3639">*
+            </text>
+        </g><!--link Car to Defect-->
+        <g id="link_Car_Defect">
+            <path codeLine="48" d="M105.61,312.36 C105.61,340.8 105.61,369.42 105.61,398.93 " fill="none"
+                  id="Car-to-Defect" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="105.61,404.93,109.61,395.93,105.61,399.93,101.61,395.93,105.61,404.93"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21.874"
+                  x="106.61" y="371.9684">has
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.2202"
+                  x="97.1599" y="332.4531">1
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6.2651"
+                  x="99.2968" y="394.5101">*
+            </text>
+        </g><!--link RepairTeam to Worker-->
+        <g id="link_RepairTeam_Worker">
+            <path codeLine="50" d="M544.61,104.72 C544.61,127.64 544.61,149.56 544.61,175.02 " fill="none"
+                  id="RepairTeam-to-Worker" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="544.61,181.02,548.61,172.02,544.61,176.02,540.61,172.02,544.61,181.02"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52.7236"
+                  x="545.61" y="148.0384">employs
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.2202"
+                  x="536.0879" y="124.8997">1
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6.2651"
+                  x="538.3371" y="170.8433">*
+            </text>
+        </g><!--link QualityControl to RepairZone-->
+        <g id="link_QualityControl_RepairZone">
+            <path codeLine="51" d="M326.61,96.64 C326.61,130.86 326.61,173.89 326.61,208.09 " fill="none"
+                  id="QualityControl-to-RepairZone" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="326.61,214.09,330.61,205.09,326.61,209.09,322.61,205.09,326.61,214.09"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52.0254"
+                  x="327.61" y="148.0384">inspects
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8.2202"
+                  x="318.0143" y="116.6436">1
+            </text>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="6.2651"
+                  x="320.1347" y="203.6764">*
+            </text>
+        </g><!--SRC=[TP8_JyCm4CLtVmehKq7gm1gX3hGB4j02bP3OhlOrDJY-S7OgHOZlZlE7ncr4XYH-llpktOkL1U_bcZMo_1OoNiO5QVJfzQi65qneEk58Hal5204tJBfMmP3RM72pA_4ZXEfWI_X3lGOshf17uz9bIHfjAYYon2C_Ch3SsUQET9DoLxX75QOk1ueb1QsTLAl8UxEpk8JQOxUnYjQbZhUrKZKpwh4lOs5yGExxf9sVQx0nWYMvm6G71-sO2ZW2OMGKw90Z_GKhuZD6LC3m5g6SJl0G-zw-4NyYBsI89Oyn06H_beaftE1CTuzxdT3xZ__DPc_OXoSeCHKzAdBwKlsWtTO4YoTI6QS-RD7LZACV7u13stGwuZivd1f9fkZBPcCW7Q8_WjbD9kVpXSokioxWN5RTEKClscMwFHo7N1x02v74cnODkUGIoyfIuyN5hqnh4_jvjEwhYFU_]-->
+    </g>
+</svg>

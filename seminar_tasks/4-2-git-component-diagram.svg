@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css"
+     height="480px" preserveAspectRatio="none" style="width:516px;height:480px;background:#FFFFFF;" version="1.1"
+     viewBox="0 0 516 480" width="516px" zoomAndPan="magnify">
+    <defs/>
+    <g><!--cluster Version Control System-->
+        <g id="cluster_Version Control System">
+            <path d="M8.5,6 L178.8535,6 A3.75,3.75 0 0 1 181.3535,8.5 L188.3535,28.4883 L506.5,28.4883 A2.5,2.5 0 0 1 509,30.9883 L509,471.45 A2.5,2.5 0 0 1 506.5,473.95 L8.5,473.95 A2.5,2.5 0 0 1 6,471.45 L6,8.5 A2.5,2.5 0 0 1 8.5,6 "
+                  fill="none" style="stroke:#000000;stroke-width:1.5;"/>
+            <line style="stroke:#000000;stroke-width:1.5;" x1="6" x2="188.3535" y1="28.4883" y2="28.4883"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing"
+                  textLength="169.3535" x="10" y="21.5352">Version Control System
+            </text>
+        </g><!--entity Commit-->
+        <g id="elem_Commit">
+            <rect fill="#F1F1F1" height="46.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="93.71" x="238.15" y="164.49"/>
+            <rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="311.86" y="169.49"/>
+            <rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="309.86" y="171.49"/>
+            <rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="309.86" y="175.49"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53.71"
+                  x="253.15" y="198.0252">Commit
+            </text>
+        </g><!--entity Branches-->
+        <g id="elem_Branches">
+            <rect fill="#F1F1F1" height="46.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="100.9971" x="211.5" y="287.97"/>
+            <rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="292.4971"
+                  y="292.97"/>
+            <rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="290.4971" y="294.97"/>
+            <rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="290.4971" y="298.97"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60.9971"
+                  x="226.5" y="321.5052">Branches
+            </text>
+        </g><!--entity Checkout-->
+        <g id="elem_Checkout">
+            <rect fill="#F1F1F1" height="46.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="104.0527" x="209.97" y="411.46"/>
+            <rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="294.0227"
+                  y="416.46"/>
+            <rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="292.0227" y="418.46"/>
+            <rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="292.0227" y="422.46"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64.0527"
+                  x="224.97" y="444.9952">Checkout
+            </text>
+        </g><!--entity Log-->
+        <g id="elem_Log">
+            <rect fill="#F1F1F1" height="46.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="64.7939" x="21.6" y="164.49"/>
+            <rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="66.3939"
+                  y="169.49"/>
+            <rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="64.3939" y="171.49"/>
+            <rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="64.3939" y="175.49"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="24.7939"
+                  x="36.6" y="198.0252">Log
+            </text>
+        </g><!--entity Merge-->
+        <g id="elem_Merge">
+            <rect fill="#F1F1F1" height="46.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="82.1162" x="120.94" y="164.49"/>
+            <rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="183.0562"
+                  y="169.49"/>
+            <rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="181.0562" y="171.49"/>
+            <rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="181.0562" y="175.49"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42.1162"
+                  x="135.94" y="198.0252">Merge
+            </text>
+        </g><!--entity Remote Repositories-->
+        <g id="elem_Remote Repositories">
+            <rect fill="#F1F1F1" height="46.4883" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;"
+                  width="179.583" x="266.21" y="41"/>
+            <rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="425.793" y="46"/>
+            <rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="423.793" y="48"/>
+            <rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="423.793" y="52"/>
+            <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139.583"
+                  x="281.21" y="74.5352">Remote Repositories
+            </text>
+        </g><!--link Commit to Branches-->
+        <g id="link_Commit_Branches">
+            <path d="M285.84,211.41 C285.9,225.04 285.18,242.66 282,257.97 C279.93,267.96 278.4587,272.9854 274.7787,281.9954 "
+                  fill="none" id="Commit-to-Branches" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="272.51,287.55,279.6161,280.7306,274.4006,282.9212,272.21,277.7057,272.51,287.55"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55.2817"
+                  x="285.53" y="254.5384">Depends
+            </text>
+        </g><!--link Branches to Checkout-->
+        <g id="link_Branches_Checkout">
+            <path d="M262,334.78 C262,356.61 262,383.48 262,405.26 " fill="none" id="Branches-to-Checkout"
+                  style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818" points="262,411.26,266,402.26,262,406.26,258,402.26,262,411.26"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="29.5039"
+                  x="263" y="378.0284">Uses
+            </text>
+        </g><!--link Log to Branches-->
+        <g id="link_Log_Branches">
+            <path d="M53.88,211.18 C55.01,226.29 58.99,245.65 71,257.97 C107.46,295.4 161.9753,306.3713 205.1153,309.4613 "
+                  fill="none" id="Log-to-Branches" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="211.1,309.89,202.4088,305.2572,206.1128,309.5328,201.8372,313.2368,211.1,309.89"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="104.1777"
+                  x="72" y="254.5384">Accesses history
+            </text>
+        </g><!--link Merge to Branches-->
+        <g id="link_Merge_Branches">
+            <path d="M170.13,211.4 C175.94,225.69 184.73,244.01 196,257.97 C204.9,269.01 211.754,275.5482 222.774,283.9282 "
+                  fill="none" id="Merge-to-Branches" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="227.55,287.56,222.8073,278.9283,223.57,284.5335,217.9648,285.2963,227.55,287.56"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76.9209"
+                  x="197" y="254.5384">Operates on
+            </text>
+        </g><!--link Remote Repositories to Commit-->
+        <g id="link_Remote Repositories_Commit">
+            <path d="M331.21,87.97 C322.94,96.58 314.25,106.87 308,117.49 C299.46,132.01 295.0954,144.3245 291.4254,158.3845 "
+                  fill="none" id="Remote Repositories-to-Commit" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="289.91,164.19,296.0534,156.492,291.1728,159.3521,288.3127,154.4715,289.91,164.19"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="83.04"
+                  x="309" y="131.0584">Synchronizes
+            </text>
+        </g><!--link Remote Repositories to Branches-->
+        <g id="link_Remote Repositories_Branches">
+            <path d="M379.14,87.92 C386.3,96.44 393.27,106.7 397,117.49 C413.97,166.6 416.56,178.85 350,257.97 C339.94,269.94 331.5693,276.821 318.1293,284.681 "
+                  fill="none" id="Remote Repositories-to-Branches" style="stroke:#181818;stroke-width:1;"/>
+            <polygon fill="#181818"
+                     points="312.95,287.71,322.7383,286.6194,317.2661,285.1859,318.6997,279.7137,312.95,287.71"
+                     style="stroke:#181818;stroke-width:1;"/>
+            <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="89.978"
+                  x="407.96" y="192.7984">Sync branches
+            </text>
+        </g><!--SRC=[TP112i8m44NtESNGVI_GXQ1rgGWLtSSujA4c4p9nKSMxcqYKOZJBD__p7t5IZR97g8xeMPE5bcpmT87zn05D1NS1yIaoZYpQ05LBnkXGVUELbrODoCMX7L2DT2qR6-eBjaNVOq4xD1GGEdJ4Ef3NQUOXnDi5wdenCu06rkZGdbdCu2lpaOcP0sCC98kolrGAETvXq1m79v7DokJEePSX9icAdw9vE9isyMDZrvFLjpJ_lp4VIHquPV04]-->
+    </g>
+</svg>
