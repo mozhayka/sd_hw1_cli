@@ -1,0 +1,50 @@
+@startuml
+!define RECTANGLE_COLOR #E3F2FD
+
+actor "Пользователь 1С" as User1C
+
+package "Инфраструктура" {
+    node "Сервер 1С" as Server1C {
+        rectangle "Отчетность 1С" as Report1C {
+            color RECTANGLE_COLOR
+        }
+    }
+
+    node "Кластер Kubernetes" as KubernetesCluster {
+        node "Под бекенда" as BackendPod {
+            artifact "Go Backend" as Backend {
+                color RECTANGLE_COLOR
+            }
+        }
+
+        node "База данных" as DatabaseNode {
+            artifact "PostgreSQL" as Database {
+                color RECTANGLE_COLOR
+            }
+        }
+
+        node "Мониторинг" as MonitoringNode {
+            artifact "Prometheus" as Prometheus {
+                color RECTANGLE_COLOR
+            }
+            artifact "Grafana" as Grafana {
+                color RECTANGLE_COLOR
+            }
+        }
+    }
+
+    node "Балансировщик" as LoadBalancer {
+        artifact "NGINX Ingress" as Ingress {
+            color RECTANGLE_COLOR
+        }
+    }
+}
+
+User1C --> Report1C : HTTP/REST
+Report1C --> Backend : gRPC
+Backend --> Database : SQL (PostgreSQL)
+Backend --> Prometheus : HTTP/Pushgateway
+Prometheus --> Grafana : HTTP/JSON
+User1C --> Grafana : HTTP/Web
+Ingress --> Backend : HTTP/HTTPS
+@enduml
